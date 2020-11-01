@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./js/jquery.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>세탁을 위한 사람들</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="tnb">
+        <h1 class="tnb_logo">
+          <a href="#"
+            ><img
+              src="./img/main/logo.png"
+              alt="세탁을 위한 사람들 For your Clean life"
+          /></a>
+        </h1>
+        <ul class="tnb_user">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+        </ul>
+        <form action="#" method="POST" class="tnb_form">
+          <fieldset class="search">
+            <legend>통합검색</legend>
+            <label for="total_search">
+              <input type="search" id="total_search" placeholder="매장명 또는 지역명을 입력하세요.">
+              <input type="submit" value="검색">
+            </label>
+          </fieldset>
+        </form>
+      </div>
+      <div class="gnb">
+        <ul class="gnb_ul">
+          <li>
+            <a href="#">회사소개</a>
+            <ul class="gnb_ul_ul-1">
+              <li><a href="#">Ceo 인사말</a></li>
+              <li><a href="#">회사연혁</a></li>
+              <li><a href="#">인증 및 수상현황</a></li>
+              <li><a href="#">오시는 길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">세탁서비스</a>
+            <ul class="gnb_ul_ul-2">
+              <li><a href="#">일반세탁</a></li>
+              <li><a href="#">고급세탁</a></li>
+              <li><a href="#">명품세탁</a></li>
+              <li><a href="#">가죽, 모피, 카펫</a></li>
+              <li><a href="#">운동화, 구두, 부츠류</a></li>
+              <li><a href="#">침구류</a></li>
+              <li><a href="#">특수오염세탁</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">고객센터</a>
+            <ul class="gnb_ul_ul-3">
+              <li><a href="#">자주묻는 질문과 답</a></li>
+              <li><a href="#">고객유의사항</a></li>
+              <li><a href="#">고객불만 처리절차</a></li>
+              <li><a href="#">문의상담</a></li>
+              <li><a href="#">고객의 소리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">가맹점 사업안내</a>
+            <ul class="gnb_ul_ul-4">
+              <li><a href="#">가맹점 소개</a></li>
+              <li><a href="#">가맹점 개설 안내</a></li>
+              <li><a href="#">교육, 지원 시스템</a></li>
+              <li><a href="#">창업 FAQ</a></li>
+              <li><a href="#">창업 문의상담</a></li>
+              <li><a href="#">매장찾기</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">지사 사업안내</a>
+            <ul class="gnb_ul_ul-5">
+              <li><a href="#">지사 소개</a></li>
+              <li><a href="#">지사 개설 안내</a></li>
+              <li><a href="#">교육, 지원 시스템</a></li>
+              <li><a href="#">지사 개설 상담</a></li>
+              <li><a href="#">전국 지사현황</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">세위사INFO</a>
+            <ul class="gnb_ul_ul-6">
+              <li><a href="#">세탁을 위한 사람들 소식</a></li>
+              <li><a href="#">할인 이벤트</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="#">작업 사진</a></li>
+              <li><a href="#">세탁자료실</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="all-menu">
+          <a href="#"><img src="./img/main/btn_allmenu.png" alt="전체 메뉴"></a>
+          <ul>
+            <li>
+              <a href="#">회사소개</a>
+              <ul>
+                <li><a href="#">Ceo 인사말</a></li>
+                <li><a href="#">회사연혁</a></li>
+                <li><a href="#">인증 및 수상현황</a></li>
+                <li><a href="#">오시는 길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">세탁서비스</a>
+              <ul>
+                <li><a href="#">일반세탁</a></li>
+                <li><a href="#">고급세탁</a></li>
+                <li><a href="#">명품세탁</a></li>
+                <li><a href="#">가죽, 모피, 카펫</a></li>
+                <li><a href="#">운동화, 구두, 부츠류</a></li>
+                <li><a href="#">침구류</a></li>
+                <li><a href="#">특수오염세탁</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객센터</a>
+              <ul>
+                <li><a href="#">자주묻는 질문과 답</a></li>
+                <li><a href="#">고객유의사항</a></li>
+                <li><a href="#">고객불만 처리절차</a></li>
+                <li><a href="#">문의상담</a></li>
+                <li><a href="#">고객의 소리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">가맹점 사업안내</a>
+              <ul>
+                <li><a href="#">가맹점 소개</a></li>
+                <li><a href="#">가맹점 개설 안내</a></li>
+                <li><a href="#">교육, 지원 시스템</a></li>
+                <li><a href="#">창업 FAQ</a></li>
+                <li><a href="#">창업 문의상담</a></li>
+                <li><a href="#">매장찾기</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">지사 사업안내</a>
+              <ul>
+                <li><a href="#">지사 소개</a></li>
+                <li><a href="#">지사 개설 안내</a></li>
+                <li><a href="#">교육, 지원 시스템</a></li>
+                <li><a href="#">지사 개설 상담</a></li>
+                <li><a href="#">전국 지사현황</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">세위사INFO</a>
+              <ul>
+                <li><a href="#">세탁을 위한 사람들 소식</a></li>
+                <li><a href="#">할인 이벤트</a></li>
+                <li><a href="#">보도자료</a></li>
+                <li><a href="#">작업 사진</a></li>
+                <li><a href="#">세탁자료실</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div id="container">
+      <div class="bg-slide">
+        <ul>
+          <li><img src="./img/main/bg-slide-1.png" alt="세탁을 위한 사람들 배경 이미지1"></li>
+          <li><img src="./img/main/bg-slide-2.png" alt="세탁을 위한 사람들 배경 이미지1"></li>
+          <li><img src="./img/main/bg-slide-3.png" alt="세탁을 위한 사람들 배경 이미지1"></li>
+        </ul>
+      </div>
+      <div class="row1">
+        <p>
+          <em>가족을 생각한 기분좋은 세탁</em><br><em>세탁을 위한 사람들</em
+          ><br>다양한 기술과 경험 그리고 시설로 친환경 무공해 크리닝으로 더욱
+          깨끗하고,<br>알레르기까지 고려한 세탁으로 고객님께서 최고의 착용감을
+          느낄 수 있도록 최선을 다하고 있습니다.
+        </p>
+        <div class="dot-img">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="row2-wrap">
+          <h2>세탁을 위한 사람들 <em>가맹점 사업안내</em></h2>
+          <p>든든한 파트너 <em>세탁을 위한 사람들</em>이 여러분의 성공을 기원합니다.</p>
+          <div class="row2_list">
+            <ul class="row2_ul">
+              <li>
+                <a href="#" class="hover-scale">
+                  <img src="./img/main/row-2-img-1.png" alt="가맹점 개설안내 시장조사 부터 개점까지 한눈에"></a>
+                <p><em>가맹점 개설안내</em><br>시장조사 부터 개점까지 한눈에</p>
+                <span class="btn_info"><a href="#">상세보기</a></span>
+              </li>
+              <li>
+                <a href="#" class="hover-scale"><img src="./img/main/row-2-img-2.png" alt="교육,지원 시스템"></a>
+                <p><em>교육,지원 시스템</em><br>이론부터 현장실습까지 꼼꼼하게</p>
+                <span class="btn_info"><a href="#">상세보기</a></span>
+              </li>
+              <li>
+                <a href="#" class="hover-scale"><img src="./img/main/row-2-img-3.png" alt="창업 무엇이든 물어보세요"></a>
+                <p><em>창업 FAQ</em><br>무엇이든 물어보세요.</p>
+                <span class="btn_info"><a href="#">상세보기</a></span>
+              </li>
+              <li>
+                <a href="#" class="hover-scale"><img src="./img/main/row-2-img-4.png" alt="창업 문의상담"></a>
+                <p><em>창업 문의상담</em><br>유선상담 1688-8489</p>
+                <span class="btn_info"><a href="#">상세보기</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="row2-slide">
+            <ul>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./img/main/sub-slide-1.png"
+                    alt="침구류 30% 할인 (3/15~6/16 성수기 제외) 대형마트 : 매주 목/토 로드샵 : 매주 수/토 자세히보기 click"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./img/main/sub-slide-2.png"
+                    alt="전품목 10% 할인(매주 목요일) 홈플러스 입점매장(일부품목 제외) 자세히보기 click"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./img/main/sub-slide-3.png"
+                    alt="전품목 10% 할인(매주 수요일) 로드샵 매장(일부매장/일부품목 제외) 자세히보기 click"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="row2-tabmenu">
+            <input type="radio" name="tabmenu" id="main-tabmenu-1" checked>
+            <label for="main-tabmenu-1" class="main-tabmenu-label-1">세탁을 위한 사람들 소식</label>
+            <div class="main-tabmenu-div1">
+              <ul class="main-tabmenu-txt">
+                <li>
+                  <a href="">세탁을 위한 사람들 소식입니다.세탁을 위한 사람들 소식입니다.세탁을 위한 사람들 소식입니다.세탁을 위한 사람들 소식입니다.세탁을 위한 사람들 소식입니다.세탁을 위한 사람들 소식입니다.세탁을 위한 사람들 소식입니다.세탁을 위한 사람들 소식입니다.</a
+                  ><span>2020-07-12</span>
+                </li>
+                <li>
+                  <a href="">세탁을 위한 사람들 소식입니다.</a
+                  ><span>2020-07-12</span>
+                </li>
+                <li>
+                  <a href="">세탁을 위한 사람들 소식입니다.</a
+                  ><span>2020-07-12</span>
+                </li>
+                <li>
+                  <a href="">세탁을 위한 사람들 소식입니다.</a
+                  ><span>2020-07-12</span>
+                </li>
+                <li>
+                  <a href="">세탁을 위한 사람들 소식입니다.</a
+                  ><span>2020-07-12</span>
+                </li>
+              </ul>
+            </div>
+            <input type="radio" name="tabmenu" id="main-tabmenu-2">
+            <label for="main-tabmenu-2" class="main-tabmenu-label-2">보도자료</label>
+            <div class="main-tabmenu-div2">
+              <ul class="main-tabmenu-txt">
+                <li><a href="">보도자료 입니다.보도자료 입니다.보도자료 입니다.보도자료 입니다.보도자료 입니다.보도자료 입니다.보도자료 입니다.보도자료 입니다.</a><span>2020-07-12</span></li>
+                <li><a href="">보도자료 입니다.</a><span>2020-07-12</span></li>
+                <li><a href="">보도자료 입니다.</a><span>2020-07-12</span></li>
+                <li><a href="">보도자료 입니다.</a><span>2020-07-12</span></li>
+                <li><a href="">보도자료 입니다.</a><span>2020-07-12</span></li>
+              </ul>
+            </div>
+            <input type="radio" name="tabmenu" id="main-tabmenu-3">
+            <label for="main-tabmenu-3"  class="main-tabmenu-label-3">세탁자료실</label>
+            <div class="main-tabmenu-div3">
+              <ul class="main-tabmenu-txt">
+                <li><a href="">세탁자료실 입니다.세탁자료실 입니다.세탁자료실 입니다.세탁자료실 입니다.세탁자료실 입니다.세탁자료실 입니다.세탁자료실 입니다.세탁자료실 입니다.</a><span>2020-07-12</span></li>
+                <li><a href="">세탁자료실 입니다.</a><span>2020-07-12</span></li>
+                <li><a href="">세탁자료실 입니다.</a><span>2020-07-12</span></li>
+                <li><a href="">세탁자료실 입니다.</a><span>2020-07-12</span></li>
+                <li><a href="">세탁자료실 입니다.</a><span>2020-07-12</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row3">
+        <div class="row3-wrap">
+          <h3>대한민국 대표 세탁 전문 브랜드 <em>세탁을 위한 사람들</em></h3>
+          <ul>
+            <li><em>1997</em><br>1997년 창립</li>
+            <li><em>70</em><br>전국 70여개 가맹점</li>
+            <li><em>11</em><br>전국 11개 지사</li>
+            <li><em>12</em><br>12단계의 세탁전문가 과정 운영</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row4">
+        <div class="row4-wrap">
+          <h2>세탁을 위한 사람들 세탁서비스</h2>
+          <p>세탁을 위한 사람들은 차별화된 세탁서비스를 제공합니다.</p>
+          <ul>
+            <li>
+              <a href="#">
+                <img
+                  src="./img/main/sub-img-1-1.png"
+                  alt="와이셔츠 편하게! 깔끔하게! 와이셔츠 세탁서비스 세탁에서 다림질까지 view"
+                />
+                <img src="./img/main/sub-img-1-2.png" alt="와이셔츠">
+                <span
+                  ><em>편하게! 깔끔하게!<br />와이셔츠 세탁서비스</em>세탁에서
+                  다림질까지<br /><em>view</em></span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./img/main/sub-img-2-1.png"
+                  alt="먼지진드기 없는 세탁을 위한 사람들의 이불 세탁서비스 3단계 건조시스템으로 뽀송뽀송하게 view"
+                />
+                <img src="./img/main/sub-img-2-2.png" alt="이불">
+                <span
+                  ><em
+                    >먼지진드기 없는<br />세탁을 위한 사람들의<br />이불
+                    세탁서비스</em
+                  >3단계 건조시스템으로 뽀송뽀송하게<br /><em>view</em></span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./img/main/sub-img-3-1.png"
+                  alt="매주 수요일은 더 알뜰하게! 크리닝데이 혜택을 확인해 보세요"
+                />
+                <img src="./img/main/sub-img-3-2.png" alt="이벤트">
+                <span
+                  ><em>매주 수요일은 더 알뜰하게!</em> 크리닝데이 혜택을 확인해
+                  보세요<em>view</em></span
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="footer-sec-1">
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">지사모집</a></li>
+          <li><a href="#">가맹점모집</a></li>
+          <li><a href="#">온라인상담</a></li>
+        </ul>
+      </div>
+      <div class="footer-sec-2">
+        <address class="sec-2-address">
+          경기도 광주시 독고개실 132-32 TEL. 1688-8489 FAX 031-762-1919
+          COPYRIGHT (C) (주)유성 ALL RIGHTS RESEVED (주)유성 대표:유성천
+          사업자번호:131-86-14966
+        </address>
+        <div class="sec-2-visit-num">
+          <ul>
+            <li>
+              <img src="./img/main/visit_icon.png" alt="" />
+              <span>총방문자<br />1,234,567</span>
+            </li>
+            <li>
+              <img src="./img/main/visit_icon.png" alt="" />
+              <span>오늘 방문자<br />123</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    $(function () {
+      var $firstMenu = $('.gnb > ul > li'),
+      $header = $('header'),
+      $headerHeight = $header.outerHeight();
+
+      $firstMenu.mouseenter(function() {
+        var currentMenu = $(this);
+        var subHeight = currentMenu.find('ul').outerHeight();
+        $header.stop().animate({height: $headerHeight + subHeight + 'px'},400);
+        setTimeout(function () {
+          currentMenu.find('ul').show();
+        }, 0);
+      })
+      .mouseleave(function () {
+        $header.stop().animate({height: $headerHeight + 'px'},400);
+        $(this).find('ul').hide();
+      })
+    });
+  </script>
+</html>
