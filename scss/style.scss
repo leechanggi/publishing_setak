@@ -421,15 +421,14 @@ body {
         margin-top: 30px;
         width: 600px;
         height: 250px;
-        > ul {
-          > li {
-            &:nth-child(2) {
-              display: none;
-            }
-            &:nth-child(3) {
-              display: none;
-            }
+        overflow: hidden;
+        .bx-controls-direction {
+          .bx-prev {
           }
+          .bx-next {
+          }
+        }
+        .bx-pager_bx-default-pager {
         }
       }
       > .row2-tabmenu {

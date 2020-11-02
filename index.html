@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./js/jquery.js"></script>
-    <script src="./js/jquery.bxslider.min.js"></script>
+    <!-- <link href="./css/jquery.bxslider.css" rel="stylesheet"> -->
     <script src="./js/jquery-2.0.3.min.js"></script>
+    <script src="./js/jquery.bxslider.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>세탁을 위한 사람들</title>
   </head>
@@ -223,27 +223,21 @@
             </ul>
           </div>
           <div class="row2-slide">
-            <ul>
+            <ul class="row2_slide_wrap">
               <li>
-                <a href="#"
-                  ><img
-                    src="./img/main/sub-slide-1.png"
-                    alt="침구류 30% 할인 (3/15~6/16 성수기 제외) 대형마트 : 매주 목/토 로드샵 : 매주 수/토 자세히보기 click"
-                /></a>
+                <a href="#">
+                  <img src="./img/main/sub-slide-1.png" alt="침구류 30% 할인 (3/15~6/16 성수기 제외) 대형마트 : 매주 목/토 로드샵 : 매주 수/토 자세히보기 click">
+                </a>
               </li>
               <li>
-                <a href="#"
-                  ><img
-                    src="./img/main/sub-slide-2.png"
-                    alt="전품목 10% 할인(매주 목요일) 홈플러스 입점매장(일부품목 제외) 자세히보기 click"
-                /></a>
+                <a href="#">
+                  <img src="./img/main/sub-slide-2.png" alt="전품목 10% 할인(매주 목요일) 홈플러스 입점매장(일부품목 제외) 자세히보기 click">
+                </a>
               </li>
               <li>
-                <a href="#"
-                  ><img
-                    src="./img/main/sub-slide-3.png"
-                    alt="전품목 10% 할인(매주 수요일) 로드샵 매장(일부매장/일부품목 제외) 자세히보기 click"
-                /></a>
+                <a href="#">
+                  <img src="./img/main/sub-slide-3.png" alt="전품목 10% 할인(매주 수요일) 로드샵 매장(일부매장/일부품목 제외) 자세히보기 click">
+                </a>
               </li>
             </ul>
           </div>
@@ -397,6 +391,7 @@
     </footer>
   </body>
   <script>
+    //GNB 메뉴//
     $(function () {
       var $firstMenu = $('.gnb > ul > li'),
       $header = $('header'),
@@ -414,6 +409,7 @@
         $(this).find('ul').hide();
       })
     });
+    //전체 메뉴//
     var menu = document.getElementById("all_menu");
     function closemenu() {
       menu.style.top = "-100vh";
@@ -421,5 +417,15 @@
     function openmenu() {
       menu.style.top = "0";
     }
+    //bg 슬라이드//
+    $(function(){
+      $('.row2_slide_wrap').bxSlider({
+        moveSlides:1,
+        auto: true,
+        pager: true,
+        useCSS:false,
+        slideWidth: 600
+      });
+    });
   </script>
 </html>
