@@ -4,24 +4,24 @@ $mainColor-2: #01a89e;
 $mainColor-3: #464242;
 $mainColor-4: #2e2a2a;
 @keyframes scaleImage {
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
 @keyframes fadeInText {
-    100% {
-        opacity: 0.5;
-    }
+  100% {
+    opacity: 0.3;
+  }
 }
 @mixin els {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-@mixin lineClamp($h,$num) {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: $num;
-    height: $h;
-    overflow: hidden;
+@mixin lineClamp($h, $num) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $num;
+  height: $h;
+  overflow: hidden;
 }
