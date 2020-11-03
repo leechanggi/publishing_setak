@@ -435,8 +435,8 @@ body {
           }
         }
         .bx-default-pager {
-          .bx-pager-item{
-            > a{
+          .bx-pager-item {
+            > a {
               display: block;
               width: 15px;
               height: 15px;
@@ -447,17 +447,17 @@ body {
               top: 20px;
               right: 40px;
               text-indent: -9999px;
-              &.active{
+              &.active {
                 background-color: #fff;
               }
             }
-            &:first-child{
-              >a{
+            &:first-child {
+              > a {
                 right: 60px;
               }
             }
-            &:last-child{
-              >a{
+            &:last-child {
+              > a {
                 right: 20px;
               }
             }
@@ -635,6 +635,7 @@ body {
       height: 300px;
       text-align: center;
       color: #fff;
+      position: relative;
       h3 {
         padding-top: 70px;
         font-size: 30px;
@@ -645,15 +646,27 @@ body {
       }
       ul {
         clear: both;
+        overflow: hidden;
         padding-top: 40px;
         > li {
           float: left;
           width: 25%;
+          font-size: 40px;
+          font-weight: bold;
+        }
+      }
+      .row3-txt {
+        clear: both;
+        overflow: hidden;
+        position: absolute;
+        padding-top: 0;
+        top: 205px;
+        width: 100%;
+        > li {
+          float: left;
+          width: 25%;
           font-size: 18px;
-          > em {
-            font-size: 40px;
-            font-weight: bold;
-          }
+          font-weight: normal;
         }
       }
     }
@@ -836,19 +849,29 @@ body {
         color: $mainColor-3;
       }
       > .sec-2-visit-num {
-        position: absolute;
-        top: 30px;
-        left: 858px;
-        color: #c1c1c1;
         > ul {
-          overflow: hidden;
-          > li {
-            float: left;
-            margin-right: 25px;
-            text-align: center;
-            > span {
-              em {
-                color: $mainColor-4;
+          > li:nth-child(1) {
+            position: absolute;
+            top: 30px;
+            right: 255px;
+            width: 143px;
+            > .sec-2-txt {
+              color: #c5c5c5;
+              font-size: 16px;
+              + span {
+                font-size: 30px;
+              }
+            }
+          }
+          > li:nth-child(2) {
+            position: absolute;
+            top: 30px;
+            right: 70px;
+            text-align: left;
+            > .sec-2-txt {
+              color: #c5c5c5;
+              font-size: 16px;
+              + span {
                 font-size: 30px;
               }
             }

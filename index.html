@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link href="./css/jquery.bxslider.css" rel="stylesheet"> -->
     <script src="./js/jquery-2.0.3.min.js"></script>
     <script src="./js/jquery.bxslider.min.js"></script>
+    <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/jquery.animateNumber.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>세탁을 위한 사람들</title>
   </head>
@@ -296,10 +297,16 @@
         <div class="row3-wrap">
           <h3>대한민국 대표 세탁 전문 브랜드 <em>세탁을 위한 사람들</em></h3>
           <ul class="row3-threshold">
-            <li class="animate" data-rate="1997"><br>1997년 창립</li>
-            <li class="animate" data-rate="70"><br>전국 70여개 가맹점</li>
-            <li class="animate" data-rate="11"><br>전국 11개 지사</li>
-            <li class="animate" data-rate="12"><br>12단계 세탁전문가 과정</li>
+            <li class="animate1" data-rate="1997"></li>
+            <li class="animate2" data-rate="70"></li>
+            <li class="animate3" data-rate="11"></li>
+            <li class="animate4" data-rate="12"></li>
+          </ul>
+          <ul class="row3-txt">
+            <li>1997년 창립</li>
+            <li>전국 70여개 가맹점</li>
+            <li>전국 11개 지사</li>
+            <li>12단계 세탁전문가 과정</li>
           </ul>
         </div>
       </div>
@@ -373,12 +380,14 @@
           <div class="sec-2-visit-num">
             <ul>
               <li>
-                <img src="./img/main/visit_icon.png" alt="" />
-                <span>총방문자<br><em>1,234,567</em></span>
+                <img src="./img/main/visit_icon.png" alt="총방문자">
+                <span class="sec-2-txt">총방문자<br></span>
+                <span class="animate5" data-rate="1234567"></span>
               </li>
               <li>
-                <img src="./img/main/visit_icon.png" alt="" />
-                <span>오늘 방문자<br><em>123</em></span>
+                <img src="./img/main/visit_icon.png" alt="오늘 방문자">
+                <span class="sec-2-txt">오늘 방문자<br></span>
+                <span class="animate6" data-rate="1234"></span>
               </li>
             </ul>
           </div>
@@ -423,26 +432,91 @@
         slideWidth: 600
       });
     });
-    // 숫자 //
-    var executed = false;
-    $(window).scroll(function(){
-        var threshold = $('.row3-wrap').offset().top - 300;
-
-      if(!executed){
-        if($(window).scrollTop() >= threshold){
-          var progressRate = $('.animate').attr('data-rate');
-
-          $({number : 0}).animate(
-            {number : progressRate},
-            {duration:1500, 
-            progress:function(){
-              var now = this.number;
-              $('.animate').text(Math.ceil(now));
-            }
-          });
+    // 숫자증가 - row3 //
+    $(function () {
+      var executed = false;
+      $('.row3-threshold').waypoint(function () {
+        var targetNumber = $('.animate1').attr('data-rate')
+        if(!executed){
+          $('.animate1').animateNumber({ number: targetNumber},{duration: 2000});
           executed = true;
         }
+      },
+      {
+        offset:'80%'
       }
-    });
+      );
+    })
+    $(function () {
+      var executed = false;
+      $('.row3-threshold').waypoint(function () {
+        var targetNumber = $('.animate2').attr('data-rate')
+        if(!executed){
+          $('.animate2').animateNumber({ number: targetNumber},{duration: 2000});
+          executed = true;
+        }
+      },
+      {
+        offset:'80%'
+      }
+      );
+    })
+    $(function () {
+      var executed = false;
+      $('.row3-threshold').waypoint(function () {
+        var targetNumber = $('.animate3').attr('data-rate')
+        if(!executed){
+          $('.animate3').animateNumber({ number: targetNumber},{duration: 2000});
+          executed = true;
+        }
+      },
+      {
+        offset:'80%'
+      }
+      );
+    })
+    $(function () {
+      var executed = false;
+      $('.row3-threshold').waypoint(function () {
+        var targetNumber = $('.animate4').attr('data-rate')
+        if(!executed){
+          $('.animate4').animateNumber({ number: targetNumber},{duration: 2000});
+          executed = true;
+        }
+      },
+      {
+        offset:'80%'
+      }
+      );
+    })
+    // 숫자증가 - footer //
+    $(function () {
+      var executed = false;
+      $('.sec-2-visit-num').waypoint(function () {
+        var targetNumber = $('.animate5').attr('data-rate')
+        if(!executed){
+          $('.animate5').animateNumber({ number: targetNumber},{duration: 2000});
+          executed = true;
+        }
+      },
+      {
+        offset:'100%'
+      }
+      );
+    })
+    $(function () {
+      var executed = false;
+      $('.sec-2-visit-num').waypoint(function () {
+        var targetNumber = $('.animate6').attr('data-rate')
+        if(!executed){
+          $('.animate6').animateNumber({ number: targetNumber},{duration: 2000});
+          executed = true;
+        }
+      },
+      {
+        offset:'100%'
+      }
+      );
+    })
 </script>
 </html>
