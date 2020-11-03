@@ -30,7 +30,7 @@ body {
   }
   .tnb {
     position: relative;
-    width: 62.5%;
+    width: 1200px;
     height: 85px;
     margin: 0 auto;
     .tnb_logo {
@@ -67,7 +67,7 @@ body {
         }
         > a {
           &:hover {
-            color: $mainColor-1;
+            color: $mainColor-2;
             font-weight: bold;
           }
         }
@@ -104,7 +104,7 @@ body {
   }
   .gnb {
     position: relative;
-    width: 62.5%;
+    width: 1200px;
     height: 65px;
     margin: 0 auto;
     > .gnb_ul {
