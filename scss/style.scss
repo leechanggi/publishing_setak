@@ -67,7 +67,7 @@ body {
         }
         > a {
           &:hover {
-            color: $mainColor-2;
+            color: $mainColor-1;
             font-weight: bold;
           }
         }
@@ -191,6 +191,7 @@ body {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
   > .all-menu {
     position: fixed;
     width: 100%;
@@ -277,19 +278,6 @@ body {
     object-fit: cover;
     transform: scale(1.5);
     animation: scaleImage 5s ease-out forwards;
-    > ul {
-      > li {
-        &:nth-child(1) {
-          display: block;
-        }
-        &:nth-child(2) {
-          display: none;
-        }
-        &:nth-child(3) {
-          display: none;
-        }
-      }
-    }
   }
   .row1 {
     text-align: center;
@@ -422,13 +410,58 @@ body {
         width: 600px;
         height: 250px;
         overflow: hidden;
+        position: relative;
         .bx-controls-direction {
+          text-indent: -9999px;
           .bx-prev {
+            display: block;
+            width: 22px;
+            height: 50px;
+            background: url(../img/main/visual-arr-left.png) no-repeat 0 0;
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
           }
           .bx-next {
+            display: block;
+            width: 22px;
+            height: 50px;
+            background: url(../img/main/visual-arr-right.png) no-repeat 0 0;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
           }
         }
-        .bx-pager_bx-default-pager {
+        .bx-default-pager {
+          .bx-pager-item{
+            > a{
+              display: block;
+              width: 15px;
+              height: 15px;
+              background-color: transparent;
+              border: 2px solid #fff;
+              border-radius: 7.5px;
+              position: absolute;
+              top: 20px;
+              right: 40px;
+              text-indent: -9999px;
+              &.active{
+                background-color: #fff;
+              }
+            }
+            &:first-child{
+              >a{
+                right: 60px;
+              }
+            }
+            &:last-child{
+              >a{
+                right: 20px;
+              }
+            }
+          }
         }
       }
       > .row2-tabmenu {

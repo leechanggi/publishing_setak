@@ -174,11 +174,7 @@
         </div>
       </div>
       <div class="bg-slide">
-        <ul>
-          <li><img src="./img/main/bg-slide-1.png" alt="세탁을 위한 사람들 배경 이미지1"></li>
-          <li><img src="./img/main/bg-slide-2.png" alt="세탁을 위한 사람들 배경 이미지1"></li>
-          <li><img src="./img/main/bg-slide-3.png" alt="세탁을 위한 사람들 배경 이미지1"></li>
-        </ul>
+          <img src="./img/main/bg-slide-1.png" alt="세탁을 위한 사람들"></li>
       </div>
       <div class="row1">
         <p>
@@ -299,11 +295,11 @@
       <div class="row3">
         <div class="row3-wrap">
           <h3>대한민국 대표 세탁 전문 브랜드 <em>세탁을 위한 사람들</em></h3>
-          <ul>
-            <li><em>1997</em><br>1997년 창립</li>
-            <li><em>70</em><br>전국 70여개 가맹점</li>
-            <li><em>11</em><br>전국 11개 지사</li>
-            <li><em>12</em><br>12단계 세탁전문가 과정</li>
+          <ul class="row3-threshold">
+            <li class="animate" data-rate="1997"><br>1997년 창립</li>
+            <li class="animate" data-rate="70"><br>전국 70여개 가맹점</li>
+            <li class="animate" data-rate="11"><br>전국 11개 지사</li>
+            <li class="animate" data-rate="12"><br>12단계 세탁전문가 과정</li>
           </ul>
         </div>
       </div>
@@ -409,7 +405,7 @@
         $(this).find('ul').hide();
       })
     });
-    //전체 메뉴//
+    // 전체 메뉴 //
     var menu = document.getElementById("all_menu");
     function closemenu() {
       menu.style.top = "-100vh";
@@ -417,7 +413,7 @@
     function openmenu() {
       menu.style.top = "0";
     }
-    //bg 슬라이드//
+    // 서브 슬라이드 //
     $(function(){
       $('.row2_slide_wrap').bxSlider({
         moveSlides:1,
@@ -427,5 +423,26 @@
         slideWidth: 600
       });
     });
-  </script>
+    // 숫자 //
+    var executed = false;
+    $(window).scroll(function(){
+        var threshold = $('.row3-wrap').offset().top - 300;
+
+      if(!executed){
+        if($(window).scrollTop() >= threshold){
+          var progressRate = $('.animate').attr('data-rate');
+
+          $({number : 0}).animate(
+            {number : progressRate},
+            {duration:1500, 
+            progress:function(){
+              var now = this.number;
+              $('.animate').text(Math.ceil(now));
+            }
+          });
+          executed = true;
+        }
+      }
+    });
+</script>
 </html>
