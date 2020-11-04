@@ -378,7 +378,6 @@ body {
 
                     &:hover {
                         color: $mainColor-4;
-
                         &::before {
                             width: 100%;
                         }
@@ -386,7 +385,6 @@ body {
                 }
             }
         }
-
     }
 
     >.container-search {
@@ -506,57 +504,63 @@ body {
             }
         }
     }
-
-    >.total-list{
+    >.qna-list{
+        position: relative;
         width: 1200px;
         margin: 0 auto;
         margin-top: 100px;
-        >ul{
-            border-top: 1px solid $mainColor-4;
-            >li{
-                display: block;
-                height: 300px;
-                >span{
-                    position: relative;
-                    display: block;
-                    height: 80px;
-                    line-height: 80px;
-                    font-size: 22px;
-                    color: $mainColor-4;
-                    text-indent: 50px;
-                    border-top: 1px solid #ccc;
-                    border-bottom: 1px solid #ccc;
-                    &::before{
-                        position: absolute;
-                        content: '';
-                        width: 44px;
-                        height: 44px;
-                        background: url(../img/sub1/icon-q.png) no-repeat 50% 50%;
-                        top: 19px;
-                        left: 0;
-                    }
-                }
-                >ul{
-                    position: relative;
-                    >li{
-                        height: 220px;
-                        text-indent: 50px;
-                        &::before{
-                            position: absolute;
-                            content: '';
-                            width: 44px;
-                            height: 44px;
-                            background: url(../img/sub1/icon-a.png) no-repeat 50% 50%;
-                            top: 19px;
-                            left: 0;
-                        }
-                    }
-                }
+        border-top: 2px solid $mainColor-4;
+        .question{
+            display: block;
+            position: relative;
+            font-weight: normal;
+            cursor: pointer;
+            font-size: 22px;
+            height: 80px;
+            line-height: 80px;
+            border-bottom: 1px solid #ccc;
+            text-indent: 90px;
+            &::before{
+                position: absolute;
+                content: '';
+                width: 44px;
+                height: 44px;
+                background: url(../img/sub1/icon-q.png) no-repeat 50% 50%;
+                top: 19px;
+                left: 30px;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                width: 25px;
+                height: 25px;
+                top: 27.5px;
+                right: 30px;
+                background: url(../img/sub1/plus_i.png);
+            }
+        }
+        .answer{
+            position: relative;
+            display: none;
+            font-size: 18px;
+            line-height: 1.8;
+            padding: 34px 30px 40px 90px;
+            border-bottom: 1px solid #ccc;
+            &::before{
+                position: absolute;
+                content: '';
+                width: 44px;
+                height: 44px;
+                background: url(../img/sub1/icon-a.png) no-repeat 50% 50%;
+                top: 30px;
+                left: 30px;
             }
         }
     }
+    >.pager-wrap{
+        
+    }
 }
-
 #footer {
     width: 100%;
     height: 200px;
