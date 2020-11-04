@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-2.0.3.min.js"></script>
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/jquery.animateNumber.min.js"></script>
+    <link rel="stylesheet" href="./css/sub1.css">
+    <title>세탁을 위한 사람들 | 고객센터</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="tnb">
+            <h1 class="tnb_logo">
+                <a href="#"><img src="./img/main/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
+            </h1>
+            <ul class="tnb_user">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+            <form action="#" method="POST" class="tnb_form">
+                <fieldset class="search">
+                    <legend>통합검색</legend>
+                    <label for="total_search">
+                        <input type="search" id="total_search" placeholder="매장명 또는 지역명을 입력하세요.">
+                        <input type="submit" value="검색">
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="gnb">
+            <ul class="gnb_ul">
+                <li>
+                    <a href="#">회사소개</a>
+                    <ul class="gnb_ul_ul-1">
+                        <li><a href="#">Ceo 인사말</a></li>
+                        <li><a href="#">회사연혁</a></li>
+                        <li><a href="#">인증 및 수상현황</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">세탁서비스</a>
+                    <ul class="gnb_ul_ul-2">
+                        <li><a href="#">일반세탁</a></li>
+                        <li><a href="#">고급세탁</a></li>
+                        <li><a href="#">명품세탁</a></li>
+                        <li><a href="#">가죽, 모피, 카펫</a></li>
+                        <li><a href="#">운동화, 구두, 부츠류</a></li>
+                        <li><a href="#">침구류</a></li>
+                        <li><a href="#">특수오염세탁</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객센터</a>
+                    <ul class="gnb_ul_ul-3">
+                        <li><a href="#">자주묻는 질문과 답</a></li>
+                        <li><a href="#">고객유의사항</a></li>
+                        <li><a href="#">고객불만 처리절차</a></li>
+                        <li><a href="#">문의상담</a></li>
+                        <li><a href="#">고객의 소리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">가맹점 사업안내</a>
+                    <ul class="gnb_ul_ul-4">
+                        <li><a href="#">가맹점 소개</a></li>
+                        <li><a href="#">가맹점 개설 안내</a></li>
+                        <li><a href="#">교육, 지원 시스템</a></li>
+                        <li><a href="#">창업 FAQ</a></li>
+                        <li><a href="#">창업 문의상담</a></li>
+                        <li><a href="#">매장찾기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">지사 사업안내</a>
+                    <ul class="gnb_ul_ul-5">
+                        <li><a href="#">지사 소개</a></li>
+                        <li><a href="#">지사 개설 안내</a></li>
+                        <li><a href="#">교육, 지원 시스템</a></li>
+                        <li><a href="#">지사 개설 상담</a></li>
+                        <li><a href="#">전국 지사현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">세위사INFO</a>
+                    <ul class="gnb_ul_ul-6">
+                        <li><a href="#">세탁을 위한 사람들 소식</a></li>
+                        <li><a href="#">할인 이벤트</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">작업 사진</a></li>
+                        <li><a href="#">세탁자료실</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <img src="./img/main/btn_allmenu.png" alt="전체 메뉴" class="all-menu-icon" onclick="openmenu()">
+        </div>
+    </header>
+    <div id="container">
+        <div class="all-menu" id="all_menu">
+            <div class="all-menu-wrap">
+                <img src="./img/main/allmenu-close-icon.png" alt="전체 메뉴 닫기" class="all-menu-close-icon"
+                    onclick="closemenu()">
+                <ul class="all-menu__ul">
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul>
+                            <li><a href="#">Ceo 인사말</a></li>
+                            <li><a href="#">회사연혁</a></li>
+                            <li><a href="#">인증 및 수상현황</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">세탁서비스</a>
+                        <ul>
+                            <li><a href="#">일반세탁</a></li>
+                            <li><a href="#">고급세탁</a></li>
+                            <li><a href="#">명품세탁</a></li>
+                            <li><a href="#">가죽, 모피, 카펫</a></li>
+                            <li><a href="#">운동화, 구두, 부츠류</a></li>
+                            <li><a href="#">침구류</a></li>
+                            <li><a href="#">특수오염세탁</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                        <ul>
+                            <li><a href="#">자주묻는 질문과 답</a></li>
+                            <li><a href="#">고객유의사항</a></li>
+                            <li><a href="#">고객불만 처리절차</a></li>
+                            <li><a href="#">문의상담</a></li>
+                            <li><a href="#">고객의 소리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">가맹점 사업안내</a>
+                        <ul>
+                            <li><a href="#">가맹점 소개</a></li>
+                            <li><a href="#">가맹점 개설 안내</a></li>
+                            <li><a href="#">교육, 지원 시스템</a></li>
+                            <li><a href="#">창업 FAQ</a></li>
+                            <li><a href="#">창업 문의상담</a></li>
+                            <li><a href="#">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">지사 사업안내</a>
+                        <ul>
+                            <li><a href="#">지사 소개</a></li>
+                            <li><a href="#">지사 개설 안내</a></li>
+                            <li><a href="#">교육, 지원 시스템</a></li>
+                            <li><a href="#">지사 개설 상담</a></li>
+                            <li><a href="#">전국 지사현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">세위사INFO</a>
+                        <ul>
+                            <li><a href="#">세탁을 위한 사람들 소식</a></li>
+                            <li><a href="#">할인 이벤트</a></li>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">작업 사진</a></li>
+                            <li><a href="#">세탁자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-slide">
+            <img src="./img/sub1/sub-bg-img.jpg" alt="자주묻는 질문과 답"></li>
+        </div>
+        <div class="sub-title-txt">
+            <h2>고객센터</h2>
+            <p>
+                <a href="#">HOME </a>&gt;
+                <a href="#">고객센터 </a>&gt;
+                <a href="#">자주묻는 질문과 답</a>
+            </p>
+        </div>
+        <div class="container-menu">
+            <ul>
+                <li><a href="#" class="on">자주묻는 질문과 답</a></li>
+                <li><a href="#">고객유의사항</a></li>
+                <li><a href="#">고객불만 처리절차</a></li>
+                <li><a href="#">문의상담</a></li>
+            </ul>
+        </div>
+        <div class="container-search">
+            <form action="#" method="POST" class="container_form">
+                <fieldset class="search">
+                    <legend>자주묻는 질문과 답 통합검색</legend>
+                    <label for="total_search">
+                        <input type="search" id="total_search" placeholder="궁금하신 내용을 입력해주세요.">
+                        <input type="submit" value="검색">
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="top-list">
+            <ul>
+                <li><a href="#"><span><em>1.</em><br>세탁을 위한 사람들의 위치를 알려주세요.</span></a></li>
+                <li><a href="#"><span><em>2.</em><br>세탁 가격을 알고 싶습니다.</a></span></li>
+                <li><a href="#"><span><em>3.</em><br>단체복 세탁에 대해 문의하고 싶습니다.</a></span></li>
+                <li><a href="#"><span><em>4.</em><br>창업 초기 투자비용이 얼마나 듭니까?</a></span></li>
+                <li><a href="#"><span><em>5.</em><br>기술과 경험이 없어도 체인점 개설이 가능한가요?</a></span></li>
+                <li><a href="#"><span><em>6.</em><br>수거, 배달은 하지 않나요?</a></span></li>
+                <li><a href="#"><span><em>7.</em><br>수선도 가능한가요?</a></span></li>
+                <li><a href="#"><span><em>8.</em><br>세탁 기간은 얼마나 걸리나요?</a></span></li>
+                <li><a href="#"><span><em>9.</em><br>요일별 할인이벤트가 있나요?</a></span></li>
+                <li><a href="#"><span><em>10.</em><br>운동화, 구두, 부츠 세탁도 가능한가요?</span></a></li>
+            </ul>
+        </div>
+        <div class="total-list">
+            <ul>
+                <li class="total-list-1" class="on">
+                    <span>세탁을 위한 사람들의 위치를 알려주세요.</span>
+                    <ul>
+                        <li class="total-list-1_li">
+                            위치와 전화번호는 홈페이지에 안내되어 있습니다.
+                        </li>
+                    </ul>
+                </li>
+                <li class="total-list-2">
+                    <span>세탁 가격을 알고 싶습니다.</span>
+                    <ul>
+                        <li class="total-list-2_li">
+                            세탁가격은 일반세탁과 고급세탁으로 분리되어 있습니다.<br>자세한 가격은 매장에서 확인가능합니다.
+                        </li>
+                    </ul>
+                </li>
+                <li class="total-list-3">
+                    <span>단체복 세탁에 대해 문의하고 싶습니다.</span>
+                    <ul>
+                        <li class="total-list-3_li">
+                            단체복 대환영입니다.<br>전화문의 주세요.<br>성심성의껏 답변드리겠습니다.
+                        </li>
+                    </ul>
+                </li>
+                <li class="total-list-4">
+                    <span>창업 초기 투자비용이 얼마나 듭니까?</span>
+                    <ul>
+                        <li class="total-list-4_li">
+                            매장 임대료를 제외하면 약 300~500만원 정도 예상됩니다.<br>더 자세한 사항은 전화문의 주시기 바랍니다.
+                        </li>
+                    </ul>
+                </li>
+                <li class="total-list-5">
+                    <span>기술과 경험이 없어도 체인점 개설이 가능한가요?</span>
+                    <ul>
+                        <li class="total-list-5_li">
+                            네, 가능합니다.<br>경험이 없는 분들을 위하여본사에서 약 일주일간의 교육 과정이 있습니다.<br>이후에도 지속적인 관리를 해드리고 있습니다.<br>부담없이 도전하십시오.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="pager-wrap">
+            <a href="#" class="first-page">첫 페이지 이동</a>
+            <a href="#" class="prev-page">이전 페이지 이동</a>
+            <ul class="pager-list">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+            <a href="#" class="next-page">다음 페이지 이동</a>
+            <a href="#" class="last-page">마지막 페이지 이동</a>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-wrap">
+            <div class="footer-sec-1">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">지사모집</a></li>
+                    <li><a href="#">가맹점모집</a></li>
+                    <li><a href="#">온라인상담</a></li>
+                </ul>
+            </div>
+            <div class="footer-sec-2">
+                <address class="sec-2-address">
+                    경기도 광주시 독고개실 132-32 TEL. 1688-8489 FAX 031-762-1919
+                    <br>COPYRIGHT (C) (주)유성 ALL RIGHTS RESEVED <br>(주)유성 대표:유성천
+                    사업자번호:131-86-14966
+                </address>
+                <div class="sec-2-visit-num">
+                    <ul>
+                        <li>
+                            <img src="./img/main/visit_icon.png" alt="총방문자">
+                            <span class="sec-2-txt">총방문자<br></span>
+                            <span class="animate5" data-rate="1234567"></span>
+                        </li>
+                        <li>
+                            <img src="./img/main/visit_icon.png" alt="오늘 방문자">
+                            <span class="sec-2-txt">오늘 방문자<br></span>
+                            <span class="animate6" data-rate="1234"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    //GNB 메뉴//
+    $(function () {
+        var $firstMenu = $('.gnb > ul > li'),
+            $header = $('header'),
+            $headerHeight = $header.outerHeight();
+        $firstMenu.mouseenter(function () {
+                var currentMenu = $(this);
+                var subHeight = currentMenu.find('ul').outerHeight();
+                $header.stop().animate({
+                    height: $headerHeight + subHeight + 'px'
+                }, 400);
+                setTimeout(function () {
+                    currentMenu.find('ul').show();
+                }, 0);
+            })
+            .mouseleave(function () {
+                $header.stop().animate({
+                    height: $headerHeight + 'px'
+                }, 400);
+                $(this).find('ul').hide();
+            })
+    });
+    // 전체 메뉴 //
+    var menu = document.getElementById("all_menu");
+
+    function closemenu() {
+        menu.style.top = "-100vh";
+    }
+
+    function openmenu() {
+        menu.style.top = "0";
+    }
+    // 숫자증가 - footer //
+    $(function () {
+        var executed = false;
+        $('.sec-2-visit-num').waypoint(function () {
+            var targetNumber = $('.animate5').attr('data-rate')
+            if (!executed) {
+                $('.animate5').animateNumber({
+                    number: targetNumber
+                }, {
+                    duration: 2000
+                });
+                executed = true;
+            }
+        }, {
+            offset: '100%'
+        });
+    })
+    $(function () {
+        var executed = false;
+        $('.sec-2-visit-num').waypoint(function () {
+            var targetNumber = $('.animate6').attr('data-rate')
+            if (!executed) {
+                $('.animate6').animateNumber({
+                    number: targetNumber
+                }, {
+                    duration: 2000
+                });
+                executed = true;
+            }
+        }, {
+            offset: '100%'
+        });
+    })
+</script>
+
+</html>

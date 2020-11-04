@@ -3,11 +3,13 @@
 @import "reset";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+
 body {
   font: 16px/1.4 "Noto Sans KR", Malgun Gothic, "맑은 고딕", "dotum", "돋움",
     "Black Han Sans", "AppleGothic", sans-serif;
   font-weight: normal;
 }
+
 #header {
   width: 100%;
   position: absolute;
@@ -18,6 +20,7 @@ body {
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 1;
+
   &::before {
     content: "";
     display: block;
@@ -28,11 +31,13 @@ body {
     top: 85px;
     left: 0;
   }
+
   .tnb {
     position: relative;
     width: 1200px;
     height: 85px;
     margin: 0 auto;
+
     .tnb_logo {
       display: block;
       width: 252px;
@@ -40,17 +45,21 @@ body {
       margin-left: 30px;
       padding-top: 25px;
     }
+
     .tnb_user {
       position: absolute;
       top: 35px;
       right: 350px;
       clear: both;
-      > li {
+
+      >li {
         float: left;
         display: block;
         padding-right: 42px;
+
         &:first-child {
           position: relative;
+
           &::before {
             content: "";
             display: block;
@@ -62,10 +71,12 @@ body {
             height: 15px;
           }
         }
+
         &:last-child {
           padding-right: 0;
         }
-        > a {
+
+        >a {
           &:hover {
             color: $mainColor-2;
             font-weight: bold;
@@ -73,6 +84,7 @@ body {
         }
       }
     }
+
     .tnb_form {
       position: absolute;
       top: 25px;
@@ -81,6 +93,7 @@ body {
       height: 40px;
       border: 2px solid #fff;
       border-radius: 20px;
+
       input[type="search"] {
         width: 240px;
         height: 36px;
@@ -91,6 +104,7 @@ body {
         border: none;
         vertical-align: top;
       }
+
       input[type="submit"] {
         text-indent: -9999px;
         background: url(../img/main/search-icon.png) no-repeat 50% 50%;
@@ -102,23 +116,28 @@ body {
       }
     }
   }
+
   .gnb {
     position: relative;
     width: 1200px;
     height: 65px;
     margin: 0 auto;
-    > .gnb_ul {
+
+    >.gnb_ul {
       clear: both;
       position: absolute;
       top: 19px;
       right: 70px;
-      > li {
+
+      >li {
         float: left;
         display: block;
         margin-right: 40px;
         font-size: 20px;
-        > a {
+
+        >a {
           position: relative;
+
           &::before {
             position: absolute;
             content: "";
@@ -131,52 +150,64 @@ body {
             transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
             -webkit-transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
           }
+
           &:hover {
             &::before {
               width: 100%;
             }
           }
         }
+
         &:last-child {
           margin-right: 0px;
         }
-        > ul {
+
+        >ul {
           display: none;
           position: absolute;
           clear: both;
           height: 60px;
           line-height: 60px;
-          > li {
+
+          >li {
             color: $mainColor-3;
             float: left;
             font-size: 16px;
             color: $mainColor-3;
             padding: 17px 36px 13px 0px;
+
             &:hover {
               color: $mainColor-2;
             }
           }
         }
+
         .gnb_ul_ul-1 {
           left: 0;
         }
+
         .gnb_ul_ul-2 {
           left: 114px;
         }
+
         .gnb_ul_ul-3 {
           left: 245px;
         }
+
         .gnb_ul_ul-4 {
           left: 125px;
         }
+
         .gnb_ul_ul-5 {
           right: 105px;
         }
+
         .gnb_ul_ul-6 {
           right: -35px;
         }
       }
     }
+
     .all-menu-icon {
       position: absolute;
       width: 36px;
@@ -187,12 +218,14 @@ body {
     }
   }
 }
+
 #container {
   position: relative;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  > .all-menu {
+
+  >.all-menu {
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -201,17 +234,20 @@ body {
     top: -200vh;
     left: 0;
     transition: 0.7s;
+
     .all-menu-wrap {
       position: relative;
       width: 1200px;
       margin: 0 auto;
-      > img {
+
+      >img {
         position: absolute;
         top: -78px;
         right: 0px;
         cursor: pointer;
       }
-      > .all-menu__ul {
+
+      >.all-menu__ul {
         display: block;
         width: 1200px;
         margin: 0 auto;
@@ -219,13 +255,15 @@ body {
         margin-top: 170px;
         color: #fff;
         position: relative;
-        > li {
+
+        >li {
           float: left;
           width: 300px;
           height: 370px;
           padding: 0 37px;
           text-align: center;
-          > a {
+
+          >a {
             display: block;
             font-size: 26px;
             padding: 15px 0;
@@ -233,14 +271,17 @@ body {
             border-bottom: 1px solid #fff;
             font-weight: 500;
           }
-          > ul {
-            > li {
+
+          >ul {
+            >li {
               display: block;
               font-size: 18px;
               line-height: 36px;
               text-align: left;
-              > a {
+
+              >a {
                 position: relative;
+
                 &::after {
                   content: "";
                   position: absolute;
@@ -251,13 +292,16 @@ body {
                   bottom: 0;
                   transition: width 0.3s;
                 }
+
                 &:hover {
                   color: $mainColor-2;
+
                   &::after {
                     width: 100%;
                   }
                 }
               }
+
               &:first-child {
                 padding-top: 5px;
               }
@@ -267,6 +311,7 @@ body {
       }
     }
   }
+
   .bg-slide {
     position: absolute;
     width: 1920px;
@@ -279,6 +324,7 @@ body {
     transform: scale(1.5);
     animation: scaleImage 5s ease-out forwards;
   }
+
   .row1 {
     text-align: center;
     padding-top: 18.22916666666667vw; //350px
@@ -292,23 +338,28 @@ body {
     mix-blend-mode: multiply;
     opacity: 0;
     animation: fadeInText 5s ease-out forwards;
-    > p {
+
+    >p {
       font-size: 1.041666666666667vw; //20px
       line-height: 2;
-      > em {
+
+      >em {
         font-size: 5.208333333333333vw; //100px
         line-height: 1.2;
+
         &:first-child {
           font-size: 2.083333333333333vw; //40px
         }
       }
     }
   }
+
   .row2 {
     position: relative;
     width: 100%;
     height: 990px;
     margin: 0 auto;
+
     &::before {
       content: "";
       display: block;
@@ -320,48 +371,59 @@ body {
       left: 0;
       z-index: -1;
     }
+
     .row2-wrap {
       overflow: hidden;
       width: 1200px;
       margin: 0 auto;
-      > h2 {
+
+      >h2 {
         padding-top: 140px;
         text-align: center;
         font-size: 36px;
         font-weight: 400;
-        > em {
+
+        >em {
           font-weight: 700;
         }
       }
-      > p {
+
+      >p {
         font-size: 17px;
         text-align: center;
-        > em {
+
+        >em {
           font-weight: 700;
         }
       }
-      > .row2_list {
+
+      >.row2_list {
         margin: 0 auto;
         padding-top: 60px;
-        > .row2_ul {
+
+        >.row2_ul {
           overflow: hidden;
-          > li {
+
+          >li {
             float: left;
             width: 278px;
             height: 360px;
             margin-right: 29.33333333333333px;
             background-color: #fff;
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+
             &:last-child {
               margin-right: 0;
             }
-            > .hover-scale {
+
+            >.hover-scale {
               display: block;
               width: 278px;
               height: 240px;
               overflow: hidden;
+
               &:hover {
-                > img {
+                >img {
                   transform: scale(1.05);
                   -webkit-transform: scale(1.05);
                   -moz-transform: scale(1.05);
@@ -371,17 +433,20 @@ body {
                 }
               }
             }
-            > p {
+
+            >p {
               text-align: center;
               padding-top: 10px;
               font-size: 15px;
               color: $mainColor-3;
+
               em {
                 font-size: 20px;
                 color: #000;
               }
             }
-            > .btn_info {
+
+            >.btn_info {
               display: block;
               text-align: center;
               margin: 10px auto 0;
@@ -394,6 +459,7 @@ body {
               box-shadow: 0 4px 16px rgba(58, 132, 219, 0.1);
               font-size: 14px;
               transition: all 1s, color 0.3s;
+
               &:hover {
                 border: 2px solid #fff;
                 color: #fff;
@@ -404,15 +470,18 @@ body {
           }
         }
       }
-      > .row2-slide {
+
+      >.row2-slide {
         float: left;
         margin-top: 30px;
         width: 600px;
         height: 250px;
         overflow: hidden;
         position: relative;
+
         .bx-controls-direction {
           text-indent: -9999px;
+
           .bx-prev {
             display: block;
             width: 22px;
@@ -423,6 +492,7 @@ body {
             left: 10px;
             transform: translateY(-50%);
           }
+
           .bx-next {
             display: block;
             width: 22px;
@@ -434,9 +504,10 @@ body {
             transform: translateY(-50%);
           }
         }
+
         .bx-default-pager {
           .bx-pager-item {
-            > a {
+            >a {
               display: block;
               width: 15px;
               height: 15px;
@@ -447,58 +518,69 @@ body {
               top: 20px;
               right: 40px;
               text-indent: -9999px;
+
               &.active {
                 background-color: #fff;
               }
             }
+
             &:first-child {
-              > a {
+              >a {
                 right: 60px;
               }
             }
+
             &:last-child {
-              > a {
+              >a {
                 right: 20px;
               }
             }
           }
         }
       }
-      > .row2-tabmenu {
+
+      >.row2-tabmenu {
         position: relative;
         float: right;
         margin-top: 30px;
         width: 600px;
         height: 250px;
         overflow: hidden;
-        > input[type="radio"] {
+
+        >input[type="radio"] {
           position: absolute;
           left: -9999px;
+
           &:checked {
-            + label {
+            +label {
               color: #000;
               font-weight: bold;
-              + div {
+
+              +div {
                 display: block;
               }
             }
           }
+
           &:focus {
-            + label {
+            +label {
               &::before {
                 display: block;
               }
             }
           }
-          + label {
+
+          +label {
             &::before {
               display: none;
             }
-            + div {
+
+            +div {
               display: none;
             }
           }
         }
+
         label {
           &::before {
             position: absolute;
@@ -512,6 +594,7 @@ body {
             color: $mainColor-4;
             z-index: 2;
           }
+
           &::after {
             content: "";
             display: block;
@@ -523,37 +606,45 @@ body {
             left: 173px;
           }
         }
+
         .main-tabmenu-label-1 {
           position: absolute;
           top: 20px;
           left: 20px;
           z-index: 2;
         }
+
         .main-tabmenu-label-2 {
           position: absolute;
           top: 20px;
           left: 207px;
           z-index: 2;
+
           &::before {
             left: 24px;
           }
+
           &::after {
             left: 70px;
           }
         }
+
         .main-tabmenu-label-3 {
           position: absolute;
           top: 20px;
           left: 290px;
           z-index: 2;
+
           &::before {
             left: 30px;
           }
+
           &::after {
             display: none;
           }
         }
-        > div {
+
+        >div {
           background-color: #fff;
           width: 600px;
           height: 250px;
@@ -562,39 +653,46 @@ body {
           font-size: 16px;
           color: $mainColor-3;
           line-height: 2;
-          > p {
+
+          >p {
             position: absolute;
             top: 20px;
             right: 40px;
             font-size: 14px;
           }
         }
-        > .main-tabmenu-div2 {
+
+        >.main-tabmenu-div2 {
           position: absolute;
           top: 0;
           left: 0;
           display: none;
         }
-        > .main-tabmenu-div3 {
+
+        >.main-tabmenu-div3 {
           position: absolute;
           top: 0;
           left: 0;
           display: none;
         }
+
         .main-tabmenu-txt {
           width: 100%;
-          > li {
+
+          >li {
             display: block;
             height: 34px;
             line-height: 34px;
-            > a {
+
+            >a {
               width: 400px;
               height: 34px;
               line-height: 34px;
               display: inline-block;
               @include els;
             }
-            > span {
+
+            >span {
               position: absolute;
               right: 40px;
               height: 34px;
@@ -605,10 +703,12 @@ body {
       }
     }
   }
+
   .row3 {
     width: 100%;
     margin: 0 auto;
     position: relative;
+
     &::before {
       content: "";
       width: 100%;
@@ -619,6 +719,7 @@ body {
       left: 0;
       z-index: -1;
     }
+
     &::after {
       content: "";
       width: 100%;
@@ -629,6 +730,7 @@ body {
       bottom: 0;
       z-index: -9999;
     }
+
     .row3-wrap {
       width: 1200px;
       margin: 0 auto;
@@ -636,25 +738,30 @@ body {
       text-align: center;
       color: #fff;
       position: relative;
+
       h3 {
         padding-top: 70px;
         font-size: 30px;
         font-weight: normal;
-        > em {
+
+        >em {
           font-weight: bold;
         }
       }
+
       ul {
         clear: both;
         overflow: hidden;
         padding-top: 40px;
-        > li {
+
+        >li {
           float: left;
           width: 25%;
           font-size: 40px;
           font-weight: bold;
         }
       }
+
       .row3-txt {
         clear: both;
         overflow: hidden;
@@ -662,7 +769,8 @@ body {
         padding-top: 0;
         top: 205px;
         width: 100%;
-        > li {
+
+        >li {
           float: left;
           width: 25%;
           font-size: 18px;
@@ -671,34 +779,42 @@ body {
       }
     }
   }
+
   .row4 {
     width: 100%;
     height: 1010px;
     margin: 0 auto;
     background: #fff;
+
     .row4-wrap {
       width: 1200px;
       text-align: center;
       margin: 0 auto;
       position: relative;
-      > h2 {
+
+      >h2 {
         padding-top: 100px;
         color: $mainColor-1;
         font-size: 48px;
         font-weight: normal;
-        > em {
+
+        >em {
           font-weight: bold;
         }
       }
-      > p {
+
+      >p {
         font-size: 18px;
       }
-      > ul {
+
+      >ul {
         height: 740px;
         overflow: hidden;
-        > li {
+
+        >li {
           position: relative;
           text-align: left;
+
           &:hover {
             img:first-child {
               transform: scale(1.05);
@@ -710,66 +826,77 @@ body {
             }
           }
         }
+
         .sub-img-1 {
           margin-top: 100px;
           width: 738px;
           height: 310px;
           overflow: hidden;
-          > a {
-            > .txt-img {
+
+          >a {
+            >.txt-img {
               position: absolute;
               top: 45px;
               left: 50px;
             }
-            > span {
+
+            >span {
               position: absolute;
               top: 93px;
               left: 50px;
               color: $mainColor-4;
-              > em:first-child {
+
+              >em:first-child {
                 font-family: "Black Han Sans", "Noto Sans KR", "맑은 고딕",
                   sans-serif;
                 font-size: 32px;
                 line-height: 1;
                 color: #000;
               }
-              > em:last-child {
+
+              >em:last-child {
                 text-decoration: underline;
                 font-size: 18px;
               }
             }
           }
         }
+
         .sub-img-2 {
           margin-top: 20px;
           width: 738px;
           height: 310px;
           overflow: hidden;
-          > a {
-            > .txt-img {
+
+          >a {
+            >.txt-img {
               position: absolute;
               top: 45px;
               left: 50px;
             }
-            > span {
+
+            >span {
               position: absolute;
               top: 93px;
               left: 50px;
               color: $mainColor-4;
-              > em:first-child {
+
+              >em:first-child {
                 font-family: "Black Han Sans", "Noto Sans KR", "맑은 고딕",
                   sans-serif;
                 font-size: 32px;
                 line-height: 1;
                 color: #000;
               }
-              > em:last-child {
+
+              >em:last-child {
                 text-decoration: underline;
                 font-size: 18px;
               }
             }
           }
         }
+
         .sub-img-3 {
           margin-top: 0px;
           margin-left: 0px;
@@ -779,25 +906,29 @@ body {
           left: 758px;
           text-align: center;
           overflow: hidden;
-          > a {
-            > .txt-img {
+
+          >a {
+            >.txt-img {
               position: absolute;
               top: 45px;
               left: 181px;
             }
-            > span {
+
+            >span {
               position: absolute;
               top: 90px;
               left: 51px;
               color: $mainColor-4;
               line-height: 1.4;
-              > em:first-child {
+
+              >em:first-child {
                 font-family: "Black Han Sans", "Noto Sans KR", "맑은 고딕",
                   sans-serif;
                 font-size: 32px;
                 color: #000;
               }
-              > em:last-child {
+
+              >em:last-child {
                 text-decoration: underline;
                 font-size: 18px;
               }
@@ -808,11 +939,13 @@ body {
     }
   }
 }
+
 #footer {
   width: 100%;
   height: 200px;
   background: #fff;
   position: relative;
+
   &::before {
     content: "";
     width: 100%;
@@ -824,54 +957,66 @@ body {
     border-bottom: 1px solid #c3c3c3;
     background-color: transparent;
   }
-  > .footer-wrap {
+
+  >.footer-wrap {
     width: 1200px;
     margin: 0 auto;
-    > .footer-sec-1 {
+
+    >.footer-sec-1 {
       position: relative;
       height: 60px;
       line-height: 60px;
-      > ul {
+
+      >ul {
         overflow: hidden;
-        > li {
+
+        >li {
           float: left;
           margin: 0 45px;
           color: $mainColor-3;
         }
       }
     }
-    > .footer-sec-2 {
+
+    >.footer-sec-2 {
       position: relative;
-      > .sec-2-address {
+
+      >.sec-2-address {
         position: absolute;
         top: 20px;
         left: 45px;
         color: $mainColor-3;
       }
-      > .sec-2-visit-num {
-        > ul {
-          > li:nth-child(1) {
+
+      >.sec-2-visit-num {
+        >ul {
+          >li:nth-child(1) {
             position: absolute;
             top: 30px;
             right: 255px;
             width: 143px;
-            > .sec-2-txt {
+
+            >.sec-2-txt {
               color: #c5c5c5;
               font-size: 16px;
-              + span {
+
+              +span {
                 font-size: 30px;
               }
             }
           }
-          > li:nth-child(2) {
+
+          >li:nth-child(2) {
             position: absolute;
             top: 30px;
             right: 70px;
             text-align: left;
-            > .sec-2-txt {
+
+            >.sec-2-txt {
               color: #c5c5c5;
               font-size: 16px;
-              + span {
+
+              +span {
                 font-size: 30px;
               }
             }
