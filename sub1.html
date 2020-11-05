@@ -183,12 +183,12 @@
                 <a href="#">자주묻는 질문과 답</a>
             </p>
         </div>
-        <div class="container-menu">
-            <ul>
-                <li><a href="#" class="on">자주묻는 질문과 답</a></li>
-                <li><a href="#">고객유의사항</a></li>
-                <li><a href="#">고객불만 처리절차</a></li>
-                <li><a href="#">문의상담</a></li>
+        <div class="containerMenu">
+            <ul class="containerMenu__ul">
+                <li><a href="#" class="list on">자주묻는 질문과 답</a></li>
+                <li><a href="#" class="list">고객유의사항</a></li>
+                <li><a href="#" class="list">고객불만 처리절차</a></li>
+                <li><a href="#" class="list">문의상담</a></li>
             </ul>
         </div>
         <div class="container-search">
@@ -257,39 +257,41 @@
             </ul>
         </div>
         <div class="qna-list">
-            <h3 class="question">세탁을 위한 사람들의 위치를 알려주세요.</h3>
+            <div class="question">세탁을 위한 사람들의 위치를 알려주세요.</div>
             <div class="answer">
                 <p>위치와 전화번호는 홈페이지에 안내되어 있습니다.</p>
             </div>
-            <h3 class="question">세탁 가격을 알고 싶습니다.</h3>
+            <div class="question">세탁 가격을 알고 싶습니다.</div>
             <div class="answer">
                 <p>세탁가격은 일반세탁과 고급세탁으로 분리되어 있습니다.<br>자세한 가격은 매장에서 확인가능합니다.</p>
             </div>
-            <h3 class="question">단체복 세탁에 대해 문의하고 싶습니다.</h3>
+            <div class="question">단체복 세탁에 대해 문의하고 싶습니다.</div>
             <div class="answer">
                 <p>단체복 대환영입니다.<br>전화문의 주세요.<br>성심성의껏 답변드리겠습니다.</p>
             </div>
-            <h3 class="question">창업 초기 투자비용이 얼마나 듭니까?</h3>
+            <div class="question">창업 초기 투자비용이 얼마나 듭니까?</div>
             <div class="answer">
                 <p>매장 임대료를 제외하면 약 300~500만원 정도 예상됩니다.<br>더 자세한 사항은 전화문의 주시기 바랍니다.</p>
             </div>
-            <h3 class="question">기술과 경험이 없어도 체인점 개설이 가능한가요?</h3>
+            <div class="question">기술과 경험이 없어도 체인점 개설이 가능한가요?</div>
             <div class="answer">
                 <p>네, 가능합니다.<br>경험이 없는 분들을 위하여본사에서 약 일주일간의 교육 과정이 있습니다.<br>이후에도 지속적인 관리를 해드리고 있습니다.<br>부담없이 전화하십시오.</p>
             </div>
         </div>
-        <div class="pager-wrap">
-            <a href="#" class="first-page">첫 페이지 이동</a>
-            <a href="#" class="prev-page">이전 페이지 이동</a>
-            <ul class="pager-list">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-            </ul>
-            <a href="#" class="next-page">다음 페이지 이동</a>
-            <a href="#" class="last-page">마지막 페이지 이동</a>
+        <div class="pager-list-wrap">
+            <div class="pager-wrap">
+                <ul class="pagerList">
+                    <li class="first"><a href="#">첫 페이지 이동</a></li>
+                    <li class="prev"><a href="#">이전 페이지 이동</a></li>
+                    <li class="pageNumber active"><a href="#">1</a></li>
+                    <li class="pageNumber"><a href="#">2</a></li>
+                    <li class="pageNumber"><a href="#">3</a></li>
+                    <li class="pageNumber"><a href="#">4</a></li>
+                    <li class="pageNumber"><a href="#">5</a></li>
+                    <li class="next"><a href="#">다음 페이지 이동</a></li>
+                    <li class="last"><a href="#">마지막 페이지 이동</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <footer id="footer">
@@ -393,8 +395,50 @@
     })
     // 질문과 답변 아코디언 //
     $('.question').click(function(){
-        $(this).next().slideToggle().siblings('.answer').slideUp();
+        if ($(this).hasClass('on')) {
+            $('.question.on').removeClass('on');
+        } else {
+            $(this).addClass('on').siblings('.question.on').removeClass('on');
+        }
     });
+    // Page-numbering //
+    $(document).ready(function(){
+        $('.next').click(function(){
+            $('.pagerList').find('.pageNumber.active').next().addClass('active');
+            $('.pagerList').find('.pageNumber.active').prev().removeClass('active');
+        })
+    })
+    $(document).ready(function(){
+        $('.last').click(function(){
+            $('.pagerList').find('.pageNumber.active').removeClass('active');
+            $('.pagerList').find('.pageNumber').last().addClass('active');
+        })
+    })
+    $(document).ready(function(){
+        $('.prev').click(function(){
+            $('.pagerList').find('.pageNumber.active').prev().addClass('active');
+            $('.pagerList').find('.pageNumber.active').next().removeClass('active');
+        })
+    })
+    $(document).ready(function(){
+        $('.first').click(function(){
+            $('.pagerList').find('.pageNumber.active').removeClass('active');
+            $('.pagerList').find('.pageNumber').first().addClass('active');
+        })
+    })
+    $(document).ready(function(){
+        $('.pageNumber').click(function(){
+            $('.pagerList').find('.pageNumber.active').removeClass('active');
+            $(this).addClass('active');
+        })
+    })
+    // containerMenu //
+    $(document).ready(function(){
+        $('.list').click(function(){
+            $('.containerMenu__ul').find('.list.on').removeClass('on');
+            $(this).addClass('on');
+        })
+    })
 </script>
 
 </html>

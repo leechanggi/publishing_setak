@@ -343,7 +343,7 @@ body {
         }
     }
 
-    >.container-menu {
+    >.containerMenu {
         width: 1200px;
         margin: 0 auto;
 
@@ -377,6 +377,12 @@ body {
                     }
 
                     &:hover {
+                        color: $mainColor-4;
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                    &.on {
                         color: $mainColor-4;
                         &::before {
                             width: 100%;
@@ -511,7 +517,6 @@ body {
         margin-top: 100px;
         border-top: 2px solid $mainColor-4;
         .question{
-            display: block;
             position: relative;
             font-weight: normal;
             cursor: pointer;
@@ -536,7 +541,15 @@ body {
                 height: 25px;
                 top: 27.5px;
                 right: 30px;
-                background: url(../img/sub1/plus_i.png);
+                background: url(../img/sub1/plus_i.png) no-repeat 50% 50%;
+            }
+        }
+        .on{
+            &::before{
+                background-image: url(../img/sub1/icon-q-active.png);
+            }
+            &::after{
+                background-image: url(../img/sub1/minus_i.png);
             }
         }
         .answer{
@@ -557,8 +570,105 @@ body {
             }
         }
     }
-    >.pager-wrap{
+    >.pager-list-wrap {
+        width: 1200px;
+        margin: 0 auto;
+        >.pager-wrap {
+            margin: 60px auto 120px;
+            width: 450px;
+            height: 45px;
+            line-height: 45px;
+            overflow: hidden;
+            text-align: center;
+            >ul >li{
+                float: left;
+                width: 50px;
+                height: 45px;
+                font-size: 18px;
+                >a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .first > a {
+                position: relative;
+                float: left;
+                width: 50px;
+                height: 45px;
+                text-indent: -9999px;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 14px;
+                    height: 12px;
+                    background: url(../img/sub1/page_first.gif) no-repeat 50% 50%;
+                    top: calc(50% - 6px);
+                    left: calc(50% - 7px);
+                }
+            }
+
+            .prev > a {
+                position: relative;
+                float: left;
+                width: 50px;
+                height: 45px;
+                text-indent: -9999px;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 14px;
+                    height: 12px;
+                    background: url(../img/sub1/page_prev.gif) no-repeat 50% 50%;
+                    top: calc(50% - 6px);
+                    left: calc(50% - 7px);
+                }
+            }
+
+            .next > a {
+                position: relative;
+                float: left;
+                width: 50px;
+                height: 45px;
+                text-indent: -9999px;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 14px;
+                    height: 12px;
+                    background: url(../img/sub1/page_next.gif) no-repeat 50% 50%;
+                    top: calc(50% - 6px);
+                    left: calc(50% - 7px);
+                }
+            }
+
+            .last > a {
+                position: relative;
+                float: left;
+                width: 50px;
+                height: 45px;
+                text-indent: -9999px;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 14px;
+                    height: 12px;
+                    background: url(../img/sub1/page_last.gif) no-repeat 50% 50%;
+                    top: calc(50% - 6px);
+                    left: calc(50% - 7px);
+                }
+            }
+            .pagerList{
+                .pageNumber{
+                    background-color: #fff;
+                    &:hover a, &.active a{
+                        background-color: $mainColor-5;
+                        color: #fff;
+                    }
+                }
+            }
         
+        }
     }
 }
 #footer {

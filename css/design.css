@@ -1,26 +1,2 @@
-@-webkit-keyframes scaleImage {
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes scaleImage {
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@-webkit-keyframes fadeInText {
-  100% {
-    opacity: 0.3;
-  }
-}
-
-@keyframes fadeInText {
-  100% {
-    opacity: 0.3;
-  }
-}
+@-webkit-keyframes scaleImage{100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scaleImage{100%{-webkit-transform:scale(1);transform:scale(1)}}@-webkit-keyframes fadeInText{100%{opacity:0.3}}@keyframes fadeInText{100%{opacity:0.3}}
 /*# sourceMappingURL=design.css.map */
