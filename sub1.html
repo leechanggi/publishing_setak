@@ -395,6 +395,7 @@
     })
     // 질문과 답변 아코디언 //
     $('.question').click(function(){
+        $(this).next().slideToggle().siblings('.answer').slideUp();
         if ($(this).hasClass('on')) {
             $('.question.on').removeClass('on');
         } else {
