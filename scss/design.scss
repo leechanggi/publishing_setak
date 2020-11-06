@@ -14,6 +14,20 @@ $mainColor-5: #615e93;
     opacity: 0.3;
   }
 }
+@keyframes warning{
+  0%{
+    transform: translateX(-4px);
+  }
+  25%{
+    transform: translateX(4px);
+  }
+  50%{
+    transform: translateX(-4px);
+  }
+  75%{
+    transform: translateX(4px);
+  }
+}
 @mixin els {
   overflow: hidden;
   white-space: nowrap;

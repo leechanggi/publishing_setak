@@ -311,7 +311,91 @@ body {
             }
         }
     }
-
+    >.login-form{
+        position: fixed;
+        width: 360px;
+        margin: 0 auto;
+        height: 100vh;
+        border-top-left-radius: 75px;
+        border-bottom-left-radius: 75px;
+        background: $mainColor-4;
+        z-index: 9998;
+        top: 0;
+        right: -100vw;
+        box-shadow: 0px 0px 5px $mainColor-4;
+        color: #fff;
+        text-align: center;
+        transition: 0.5s;
+        >.login-logo{
+          padding-bottom: 50px;
+          margin-top: 200px;
+        }
+        >.close_login{
+          position: absolute;
+          top: 40px;
+          right: 30px;
+          cursor: pointer;
+        }
+        >.int-area{
+          position: relative;
+          margin: 0 auto;
+          width: 300px;
+          margin-top: 50px;
+          >input{
+            width: 100%;
+            padding: 20px 10px 10px;
+            background: transparent;
+            border-style: none;
+            border-bottom: 1px solid #999;
+            font-size: 18px;
+            color: #fff;
+            outline: none;
+            &:focus + label, &:valid + label{
+              top: -10px;
+              font-size: 16px;
+              color: $mainColor-1;
+            }
+          }
+          >label{
+            position: absolute;
+            top: 17px;
+            left: 11px;
+            font-size: 18px;
+            color: #999;
+            transition: all .5s ease;
+            &.warning{
+              color: red !important;
+              animation: warning .3s ease;
+              animation-iteration-count: 3;
+            }
+          }
+        }
+        >.btn-area{
+          margin-top: 100px;
+          >button{
+            width: 250px;
+            height: 50px;
+            background: $mainColor-1;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+          }
+        }
+        .caption{
+          margin-top: 20px;
+          text-align: center;
+          >a{
+            font-size: 15px;
+            color: #999;
+            text-decoration: none;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
     >.bg-slide {
         position: absolute;
         width: 100%;

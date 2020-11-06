@@ -20,7 +20,7 @@
                 <a href="#"><img src="./img/main/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
             </h1>
             <ul class="tnb_user">
-                <li><a href="#">로그인</a></li>
+                <li><a href="#" onclick="openmenu_login()">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
             </ul>
             <form action="#" method="POST" class="tnb_form">
@@ -172,6 +172,27 @@
                 </ul>
             </div>
         </div>
+        <div class="login-form" id="login-form">
+            <h2 class="login-logo">
+                <a href="#"><img src="./img/main/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
+            </h2>
+            <img class="close_login" src="./img/main/allmenu-close-icon-login.png" alt="로그인 닫기"
+                onclick="closemenu_login()">
+            <div class="int-area">
+                <input type="text" name="id" id="id" autocomplete="off" required>
+                <label for="id">세탁을 위한 사람들 계정</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
+                <label for="pw">비밀번호</label>
+            </div>
+            <div class="btn-area">
+                <button type="submit" id="btn">로그인</button>
+            </div>
+            <div class="caption">
+                <a href="">혹시 계정을 잊으셨나요?</a>
+            </div>
+        </div>
         <div class="bg-slide">
             <img src="./img/sub1/sub-bg-img.jpg" alt="자주묻는 질문과 답"></li>
         </div>
@@ -256,7 +277,7 @@
                 </li>
             </ul>
         </div>
-        <div class="qna-list">
+        <div class="qna-list" id="qna-list">
             <div class="question">세탁을 위한 사람들의 위치를 알려주세요.</div>
             <div class="answer">
                 <p>위치와 전화번호는 홈페이지에 안내되어 있습니다.</p>
@@ -278,18 +299,18 @@
                 <p>네, 가능합니다.<br>경험이 없는 분들을 위하여본사에서 약 일주일간의 교육 과정이 있습니다.<br>이후에도 지속적인 관리를 해드리고 있습니다.<br>부담없이 전화하십시오.</p>
             </div>
         </div>
-        <div class="pager-list-wrap">
+        <div class="pager-list-wrap" id="pager-list-wrap">
             <div class="pager-wrap">
                 <ul class="pagerList">
-                    <li class="first"><a href="#">첫 페이지 이동</a></li>
-                    <li class="prev"><a href="#">이전 페이지 이동</a></li>
-                    <li class="pageNumber active"><a href="#">1</a></li>
-                    <li class="pageNumber"><a href="#">2</a></li>
-                    <li class="pageNumber"><a href="#">3</a></li>
-                    <li class="pageNumber"><a href="#">4</a></li>
-                    <li class="pageNumber"><a href="#">5</a></li>
-                    <li class="next"><a href="#">다음 페이지 이동</a></li>
-                    <li class="last"><a href="#">마지막 페이지 이동</a></li>
+                    <li class="first"><a href="#qna-list">첫 페이지 이동</a></li>
+                    <li class="prev"><a href="#qna-list">이전 페이지 이동</a></li>
+                    <li class="pageNumber active"><a href="#qna-list">1</a></li>
+                    <li class="pageNumber"><a href="#qna-list">2</a></li>
+                    <li class="pageNumber"><a href="#qna-list">3</a></li>
+                    <li class="pageNumber"><a href="#qna-list">4</a></li>
+                    <li class="pageNumber"><a href="#qna-list">5</a></li>
+                    <li class="next"><a href="#qna-list">다음 페이지 이동</a></li>
+                    <li class="last"><a href="#qna-list">마지막 페이지 이동</a></li>
                 </ul>
             </div>
         </div>
@@ -329,117 +350,5 @@
         </div>
     </footer>
 </body>
-<script>
-    //GNB 메뉴//
-    $(function () {
-        var $firstMenu = $('.gnb > ul > li'),
-            $header = $('header'),
-            $headerHeight = $header.outerHeight();
-        $firstMenu.mouseenter(function () {
-                var currentMenu = $(this);
-                var subHeight = currentMenu.find('ul').outerHeight();
-                $header.stop().animate({
-                    height: $headerHeight + subHeight + 'px'
-                }, 400);
-                setTimeout(function () {
-                    currentMenu.find('ul').show();
-                }, 0);
-            })
-            .mouseleave(function () {
-                $header.stop().animate({
-                    height: $headerHeight + 'px'
-                }, 400);
-                $(this).find('ul').hide();
-            })
-    });
-    // 전체 메뉴 //
-    var menu = document.getElementById("all_menu");
-    function closemenu() {
-        menu.style.top = "-100vh";
-    }
-    function openmenu() {
-        menu.style.top = "0";
-    }
-    // 숫자증가 - footer //
-    $(function () {
-        var executed = false;
-        $('.sec-2-visit-num').waypoint(function () {
-            var targetNumber = $('.animate5').attr('data-rate')
-            if (!executed) {
-                $('.animate5').animateNumber({
-                    number: targetNumber
-                }, {
-                    duration: 2000
-                });
-                executed = true;
-            }
-        }, {
-            offset: '100%'
-        });
-    })
-    $(function () {
-        var executed = false;
-        $('.sec-2-visit-num').waypoint(function () {
-            var targetNumber = $('.animate6').attr('data-rate')
-            if (!executed) {
-                $('.animate6').animateNumber({
-                    number: targetNumber
-                }, {
-                    duration: 2000
-                });
-                executed = true;
-            }
-        }, {
-            offset: '100%'
-        });
-    })
-    // 질문과 답변 아코디언 //
-    $('.question').click(function(){
-        $(this).next().slideToggle().siblings('.answer').slideUp();
-        if ($(this).hasClass('on')) {
-            $('.question.on').removeClass('on');
-        } else {
-            $(this).addClass('on').siblings('.question.on').removeClass('on');
-        }
-    });
-    // Page-numbering //
-    $(document).ready(function(){
-        $('.next').click(function(){
-            $('.pagerList').find('.pageNumber.active').next().addClass('active');
-            $('.pagerList').find('.pageNumber.active').prev().removeClass('active');
-        })
-    })
-    $(document).ready(function(){
-        $('.last').click(function(){
-            $('.pagerList').find('.pageNumber.active').removeClass('active');
-            $('.pagerList').find('.pageNumber').last().addClass('active');
-        })
-    })
-    $(document).ready(function(){
-        $('.prev').click(function(){
-            $('.pagerList').find('.pageNumber.active').prev().addClass('active');
-            $('.pagerList').find('.pageNumber.active').next().removeClass('active');
-        })
-    })
-    $(document).ready(function(){
-        $('.first').click(function(){
-            $('.pagerList').find('.pageNumber.active').removeClass('active');
-            $('.pagerList').find('.pageNumber').first().addClass('active');
-        })
-    })
-    $(document).ready(function(){
-        $('.pageNumber').click(function(){
-            $('.pagerList').find('.pageNumber.active').removeClass('active');
-            $(this).addClass('active');
-        })
-    })
-    // containerMenu //
-    $(document).ready(function(){
-        $('.list').click(function(){
-            $('.containerMenu__ul').find('.list.on').removeClass('on');
-            $(this).addClass('on');
-        })
-    })
-</script>
-
+<script src="./js/index.js"></script>
 </html>

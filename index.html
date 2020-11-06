@@ -9,8 +9,9 @@
   <script src="./js/jquery.bxslider.min.js"></script>
   <script src="./js/jquery.waypoints.min.js"></script>
   <script src="./js/jquery.animateNumber.min.js"></script>
+  <script src="./js/index.js"></script>
   <link rel="stylesheet" href="./css/style.css">
-  <title>세탁을 위한 사람들</title>
+  <title>세탁을 위한 사람들 | HOME</title>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
         <a href="#"><img src="./img/main/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
       </h1>
       <ul class="tnb_user">
-        <li><a href="#">로그인</a></li>
+        <li><a href="#" onclick="openmenu_login()">로그인</a></li>
         <li><a href="#">회원가입</a></li>
       </ul>
       <form action="#" method="POST" class="tnb_form">
@@ -170,6 +171,26 @@
             </ul>
           </li>
         </ul>
+      </div>
+    </div>
+    <div class="login-form" id="login-form">
+      <h2 class="login-logo">
+        <a href="#"><img src="./img/main/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
+      </h2>
+        <img class="close_login" src="./img/main/allmenu-close-icon-login.png" alt="로그인 닫기" onclick="closemenu_login()">
+      <div class="int-area">
+        <input type="text" name="id" id="id" autocomplete="off" required>
+        <label for="id">세탁을 위한 사람들 계정</label>
+      </div>
+      <div class="int-area">
+        <input type="password" name="pw" id="pw" autocomplete="off" required>
+        <label for="pw">비밀번호</label>
+      </div>
+      <div class="btn-area">
+        <button type="submit" id="btn">로그인</button>
+      </div>
+      <div class="caption">
+        <a href="">혹시 계정을 잊으셨나요?</a>
       </div>
     </div>
     <div class="bg-slide">
@@ -369,147 +390,5 @@
     </div>
   </footer>
 </body>
-<script>
-  //GNB 메뉴//
-  $(function () {
-    var $firstMenu = $('.gnb > ul > li'),
-      $header = $('header'),
-      $headerHeight = $header.outerHeight();
-    $firstMenu.mouseenter(function () {
-        var currentMenu = $(this);
-        var subHeight = currentMenu.find('ul').outerHeight();
-        $header.stop().animate({
-          height: $headerHeight + subHeight + 'px'
-        }, 400);
-        setTimeout(function () {
-          currentMenu.find('ul').show();
-        }, 0);
-      })
-      .mouseleave(function () {
-        $header.stop().animate({
-          height: $headerHeight + 'px'
-        }, 400);
-        $(this).find('ul').hide();
-      })
-  });
-  // 전체 메뉴 //
-  var menu = document.getElementById("all_menu");
-
-  function closemenu() {
-    menu.style.top = "-100vh";
-  }
-
-  function openmenu() {
-    menu.style.top = "0";
-  }
-  // 서브 슬라이드 //
-  $(function () {
-    $('.row2_slide_wrap').bxSlider({
-      moveSlides: 1,
-      auto: true,
-      pager: true,
-      useCSS: false,
-      slideWidth: 600
-    });
-  });
-  // 숫자증가 - row3 //
-  $(function () {
-    var executed = false;
-    $('.row3-threshold').waypoint(function () {
-      var targetNumber = $('.animate1').attr('data-rate')
-      if (!executed) {
-        $('.animate1').animateNumber({
-          number: targetNumber
-        }, {
-          duration: 2000
-        });
-        executed = true;
-      }
-    }, {
-      offset: '80%'
-    });
-  })
-  $(function () {
-    var executed = false;
-    $('.row3-threshold').waypoint(function () {
-      var targetNumber = $('.animate2').attr('data-rate')
-      if (!executed) {
-        $('.animate2').animateNumber({
-          number: targetNumber
-        }, {
-          duration: 2000
-        });
-        executed = true;
-      }
-    }, {
-      offset: '80%'
-    });
-  })
-  $(function () {
-    var executed = false;
-    $('.row3-threshold').waypoint(function () {
-      var targetNumber = $('.animate3').attr('data-rate')
-      if (!executed) {
-        $('.animate3').animateNumber({
-          number: targetNumber
-        }, {
-          duration: 2000
-        });
-        executed = true;
-      }
-    }, {
-      offset: '80%'
-    });
-  })
-  $(function () {
-    var executed = false;
-    $('.row3-threshold').waypoint(function () {
-      var targetNumber = $('.animate4').attr('data-rate')
-      if (!executed) {
-        $('.animate4').animateNumber({
-          number: targetNumber
-        }, {
-          duration: 2000
-        });
-        executed = true;
-      }
-    }, {
-      offset: '80%'
-    });
-  })
-  // 숫자증가 - footer //
-  $(function () {
-    var executed = false;
-    $('.sec-2-visit-num').waypoint(function () {
-      var targetNumber = $('.animate5').attr('data-rate')
-      if (!executed) {
-        $('.animate5').animateNumber({
-          number: targetNumber
-        }, {
-          duration: 2000
-        });
-        executed = true;
-      }
-    }, {
-      offset: '100%'
-    });
-  })
-  $(function () {
-    var executed = false;
-    $('.sec-2-visit-num').waypoint(function () {
-      var targetNumber = $('.animate6').attr('data-rate')
-      if (!executed) {
-        $('.animate6').animateNumber({
-          number: targetNumber
-        }, {
-          duration: 2000
-        });
-        executed = true;
-      }
-    }, {
-      offset: '100%'
-    });
-  })
-</script>
-
+<script src="./js/index.js"></script>
 </html>
