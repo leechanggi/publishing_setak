@@ -3,36 +3,44 @@ $mainColor-1: #3a84db;
 $mainColor-2: #01a187;
 $mainColor-3: #464242;
 $mainColor-4: #2e2a2a;
-$mainColor-5: #615e93;
+$mainColor-5: #6C49B8;
+
 @keyframes scaleImage {
   100% {
     transform: scale(1);
   }
 }
+
 @keyframes fadeInText {
   100% {
     opacity: 0.3;
   }
 }
-@keyframes warning{
-  0%{
+
+@keyframes warning {
+  0% {
     transform: translateX(-4px);
   }
-  25%{
+
+  25% {
     transform: translateX(4px);
   }
-  50%{
+
+  50% {
     transform: translateX(-4px);
   }
-  75%{
+
+  75% {
     transform: translateX(4px);
   }
 }
+
 @mixin els {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
 @mixin lineClamp($h, $num) {
   display: -webkit-box;
   -webkit-box-orient: vertical;

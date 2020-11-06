@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
 body {
     font: 16px/1.4 "Noto Sans KR", Malgun Gothic, "맑은 고딕", "dotum", "돋움",
         "Black Han Sans", "AppleGothic", sans-serif;
@@ -311,13 +312,14 @@ body {
             }
         }
     }
-    >.login-form{
+
+    >.login-form {
         position: fixed;
         width: 360px;
         margin: 0 auto;
         height: 100vh;
-        border-top-left-radius: 75px;
-        border-bottom-left-radius: 75px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
         background: $mainColor-4;
         z-index: 9998;
         top: 0;
@@ -326,76 +328,90 @@ body {
         color: #fff;
         text-align: center;
         transition: 0.5s;
-        >.login-logo{
-          padding-bottom: 50px;
-          margin-top: 200px;
+
+        >.login-logo {
+            padding-bottom: 50px;
+            margin-top: 200px;
         }
-        >.close_login{
-          position: absolute;
-          top: 40px;
-          right: 30px;
-          cursor: pointer;
-        }
-        >.int-area{
-          position: relative;
-          margin: 0 auto;
-          width: 300px;
-          margin-top: 50px;
-          >input{
-            width: 100%;
-            padding: 20px 10px 10px;
-            background: transparent;
-            border-style: none;
-            border-bottom: 1px solid #999;
-            font-size: 18px;
-            color: #fff;
-            outline: none;
-            &:focus + label, &:valid + label{
-              top: -10px;
-              font-size: 16px;
-              color: $mainColor-1;
-            }
-          }
-          >label{
+
+        >.close_login {
             position: absolute;
-            top: 17px;
-            left: 11px;
-            font-size: 18px;
-            color: #999;
-            transition: all .5s ease;
-            &.warning{
-              color: red !important;
-              animation: warning .3s ease;
-              animation-iteration-count: 3;
-            }
-          }
-        }
-        >.btn-area{
-          margin-top: 100px;
-          >button{
-            width: 250px;
-            height: 50px;
-            background: $mainColor-1;
-            color: #fff;
-            font-size: 18px;
-            border: none;
-            border-radius: 25px;
+            top: 40px;
+            right: 30px;
             cursor: pointer;
-          }
         }
-        .caption{
-          margin-top: 20px;
-          text-align: center;
-          >a{
-            font-size: 15px;
-            color: #999;
-            text-decoration: none;
-            &:hover{
-              text-decoration: underline;
+
+        >.int-area {
+            position: relative;
+            margin: 0 auto;
+            width: 300px;
+            margin-top: 50px;
+
+            >input {
+                width: 100%;
+                padding: 20px 10px 10px;
+                background: transparent;
+                border-style: none;
+                border-bottom: 1px solid #999;
+                font-size: 18px;
+                color: #fff;
+                outline: none;
+
+                &:focus+label,
+                &:valid+label {
+                    top: -10px;
+                    font-size: 16px;
+                    color: $mainColor-1;
+                }
             }
-          }
+
+            >label {
+                position: absolute;
+                top: 17px;
+                left: 11px;
+                font-size: 18px;
+                color: #999;
+                transition: all .5s ease;
+
+                &.warning {
+                    color: red !important;
+                    animation: warning .3s ease;
+                    animation-iteration-count: 3;
+                }
+            }
         }
-      }
+
+        >.btn-area {
+            margin-top: 100px;
+
+            >button {
+                width: 250px;
+                height: 50px;
+                background: $mainColor-1;
+                color: #fff;
+                font-size: 18px;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+            }
+        }
+
+        .caption {
+            margin-top: 20px;
+            text-align: center;
+
+            >a {
+                font-size: 15px;
+                color: #999;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
     >.bg-slide {
         position: absolute;
         width: 100%;
@@ -462,12 +478,15 @@ body {
 
                     &:hover {
                         color: $mainColor-4;
+
                         &::before {
                             width: 100%;
                         }
                     }
+
                     &.on {
                         color: $mainColor-4;
+
                         &::before {
                             width: 100%;
                         }
@@ -526,23 +545,28 @@ body {
         margin: 0 auto;
         margin-top: 100px;
         overflow: hidden;
+
         >ul {
             li {
-                &:hover{
-                    > a{
+                &:hover {
+                    >a {
                         background-color: $mainColor-5;
                         border: none;
-                        &::before{
+
+                        &::before {
                             background: url(../img/sub1/arrow-right.png) round 0 0;
                         }
-                        >span{
+
+                        >span {
                             color: #fff;
-                            >em{
+
+                            >em {
                                 color: #fff;
                             }
                         }
                     }
                 }
+
                 >a {
                     position: relative;
                     display: block;
@@ -554,7 +578,8 @@ body {
                     margin-right: 20px;
                     margin-bottom: 20px;
                     transition: all 300ms ease-out;
-                    &::before{
+
+                    &::before {
                         content: '';
                         position: absolute;
                         width: 25px;
@@ -563,7 +588,8 @@ body {
                         top: 20px;
                         right: 20px;
                     }
-                    >span{
+
+                    >span {
                         position: absolute;
                         top: 10px;
                         left: 30px;
@@ -571,7 +597,8 @@ body {
                         color: #666;
                         font-size: 18px;
                         font-weight: 300;
-                        >em{
+
+                        >em {
                             display: block;
                             color: $mainColor-4;
                             font-size: 40px;
@@ -581,26 +608,30 @@ body {
                         }
                     }
                 }
-                &:nth-child(5){
-                    >a{
+
+                &:nth-child(5) {
+                    >a {
                         margin-right: 0;
                     }
                 }
-                &:nth-child(10){
-                    >a{
+
+                &:nth-child(10) {
+                    >a {
                         margin-right: 0;
                     }
                 }
             }
         }
     }
-    >.qna-list{
+
+    >.qna-list {
         position: relative;
         width: 1200px;
         margin: 0 auto;
         margin-top: 100px;
         border-top: 2px solid $mainColor-4;
-        .question{
+
+        .question {
             position: relative;
             font-weight: normal;
             cursor: pointer;
@@ -609,7 +640,8 @@ body {
             line-height: 80px;
             border-bottom: 1px solid #ccc;
             text-indent: 90px;
-            &::before{
+
+            &::before {
                 position: absolute;
                 content: '';
                 width: 44px;
@@ -618,7 +650,8 @@ body {
                 top: 19px;
                 left: 30px;
             }
-            &::after{
+
+            &::after {
                 position: absolute;
                 content: '';
                 width: 25px;
@@ -628,22 +661,26 @@ body {
                 background: url(../img/sub1/plus_i.png) no-repeat 50% 50%;
             }
         }
-        .on{
-            &::before{
+
+        .on {
+            &::before {
                 background-image: url(../img/sub1/icon-q-active.png);
             }
-            &::after{
+
+            &::after {
                 background-image: url(../img/sub1/minus_i.png);
             }
         }
-        .answer{
+
+        .answer {
             position: relative;
             display: none;
             font-size: 18px;
             line-height: 1.8;
             padding: 34px 30px 40px 90px;
             border-bottom: 1px solid #ccc;
-            &::before{
+
+            &::before {
                 position: absolute;
                 content: '';
                 width: 44px;
@@ -654,9 +691,11 @@ body {
             }
         }
     }
+
     >.pager-list-wrap {
         width: 1200px;
         margin: 0 auto;
+
         >.pager-wrap {
             margin: 60px auto 120px;
             width: 450px;
@@ -664,23 +703,27 @@ body {
             line-height: 45px;
             overflow: hidden;
             text-align: center;
-            >ul >li{
+
+            >ul>li {
                 float: left;
                 width: 50px;
                 height: 45px;
                 font-size: 18px;
-                >a{
+
+                >a {
                     display: block;
                     width: 100%;
                     height: 100%;
                 }
             }
-            .first > a {
+
+            .first>a {
                 position: relative;
                 float: left;
                 width: 50px;
                 height: 45px;
                 text-indent: -9999px;
+
                 &::before {
                     position: absolute;
                     content: '';
@@ -692,12 +735,13 @@ body {
                 }
             }
 
-            .prev > a {
+            .prev>a {
                 position: relative;
                 float: left;
                 width: 50px;
                 height: 45px;
                 text-indent: -9999px;
+
                 &::before {
                     position: absolute;
                     content: '';
@@ -709,12 +753,13 @@ body {
                 }
             }
 
-            .next > a {
+            .next>a {
                 position: relative;
                 float: left;
                 width: 50px;
                 height: 45px;
                 text-indent: -9999px;
+
                 &::before {
                     position: absolute;
                     content: '';
@@ -726,12 +771,13 @@ body {
                 }
             }
 
-            .last > a {
+            .last>a {
                 position: relative;
                 float: left;
                 width: 50px;
                 height: 45px;
                 text-indent: -9999px;
+
                 &::before {
                     position: absolute;
                     content: '';
@@ -742,19 +788,23 @@ body {
                     left: calc(50% - 7px);
                 }
             }
-            .pagerList{
-                .pageNumber{
+
+            .pagerList {
+                .pageNumber {
                     background-color: #fff;
-                    &:hover a, &.active a{
+
+                    &:hover a,
+                    &.active a {
                         background-color: $mainColor-5;
                         color: #fff;
                     }
                 }
             }
-        
+
         }
     }
 }
+
 #footer {
     width: 100%;
     height: 200px;
