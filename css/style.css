@@ -256,7 +256,7 @@ body {
 
 #header .tnb .tnb_form input[type="submit"] {
   text-indent: -9999px;
-  background: url(../img/main/search-icon.png) no-repeat 50% 50%;
+  background: url(../img/common/search-icon.png) no-repeat 50% 50%;
   width: 20px;
   height: 36px;
   margin: 0;
