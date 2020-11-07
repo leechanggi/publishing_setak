@@ -203,14 +203,26 @@
         <!-- details -->
         <div class="icon-img-wrap">
             <ul class="icon-img">
-                <li><img src="./img/sub3/join_icon1.png" alt="약관동의">STEP.1<em>약관동의</em></li>
-                <li><img src="./img/sub3/join_icon2.png" alt="가입인증">STEP.2<em>가입인증</em></li>
-                <li><img src="./img/sub3/join_icon3.png" alt="회원정보 입력">STEP.3<em>회원정보 입력</em></li>
-                <li><img src="./img/sub3/join_icon4.png" alt="가입완료">STEP.4<em>가입완료</em></li>
+                <li class="icon-img_li on">
+                    <a href="#step1" class="icon-img_li_a"><img src="./img/sub3/join_icon1.png" alt="약관동의"></a>
+                    <span>STEP.1<em> 약관동의</em></span>
+                </li>
+                <li class="icon-img_li">
+                    <a href="#step2" class="icon-img_li_a"><img src="./img/sub3/join_icon2.png" alt="가입인증"></a>
+                    <span>STEP.2<em> 가입인증</em></span>
+                </li>
+                <li class="icon-img_li">
+                    <a href="#step3" class="icon-img_li_a"><img src="./img/sub3/join_icon3.png" alt="회원정보 입력"></a>
+                    <span>STEP.3<em> 회원정보 입력</em></span>
+                </li>
+                <li class="icon-img_li">
+                    <a href="#btn-box" class="icon-img_li_a"><img src="./img/sub3/join_icon4.png" alt="가입완료"></a>
+                    <span>STEP.4<em> 가입완료</em></span>
+                </li>
             </ul>
         </div>
         <div class="join-wrap">
-            <div class="step1">
+            <div class="step1" id="step1">
                 <h3>STEP1. 약관동의</h3>
                 <div class="step1-txt_1">
                     <div>회원가입약관</div>
@@ -505,7 +517,7 @@
                 </div>
                 <a href="#" class="step1-sub">모두 동의함</a>
             </div>
-            <div class="step2">
+            <div class="step2" id="step2">
                 <h3>STEP2. 가입인증</h3>
                 <div class="step2-txt_1">
                     <img src="./img/sub3/find_complete_i_phone.svg" alt="휴대폰 인증 이미지">
@@ -523,7 +535,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="step3">
+            <div class="step3" id="step3">
                 <h3>STEP3. 회원정보 입력</h3>
                 <form action="#" method="POST">
                     <ul>
@@ -590,7 +602,7 @@
                         </li>
                     </ul>
                 </form>
-                <div class="btn-box">
+                <div class="btn-box" id="btn-box">
                     <a href="#">취소</a>
                     <a href="#">가입완료</a>
                 </div>

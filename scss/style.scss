@@ -366,7 +366,7 @@ body {
         color: #999;
         transition: all .5s ease;
         &.warning{
-          color: red !important;
+          color: $mainColor-6 !important;
           animation: warning .3s ease;
           animation-iteration-count: 3;
         }

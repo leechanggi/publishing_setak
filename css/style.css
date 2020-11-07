@@ -526,7 +526,7 @@ body {
 }
 
 #container > .login-form > .int-area > label.warning {
-  color: red !important;
+  color: #ff1e56 !important;
   -webkit-animation: warning .3s ease;
           animation: warning .3s ease;
   -webkit-animation-iteration-count: 3;

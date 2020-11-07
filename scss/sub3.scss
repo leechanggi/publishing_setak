@@ -375,7 +375,7 @@ body {
                 transition: all .5s ease;
 
                 &.warning {
-                    color: red !important;
+                    color: $mainColor-6 !important;
                     animation: warning .3s ease;
                     animation-iteration-count: 3;
                 }
@@ -446,54 +446,64 @@ body {
             width: 1200px;
             margin: 0 auto;
             overflow: hidden;
-            padding: 50px 0 100px 0;
-            li{
+            > li{
                 position: relative;
+                width: 25%;
+                height: 300px;
                 float: left;
-                width: 150px;
-                height: 150px;
-                text-align: center;
-                padding-top: 30px;
-                margin: 0px 75px 0px;
-                font-size: 18px;
-                >em{
-                    position: absolute;
-                    width: 150px;
-                    left: 50%;
-                    bottom: -30px;
-                    transform: translateX(-50%);
-                }
-                &::before{
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
+                >a {
+                    position: relative;
+                    margin: 0 auto;
+                    margin-top: 50px;
+                    display: block;
                     width: 150px;
                     height: 150px;
                     border-radius: 75px;
-                    background-color: #fff;
-                    z-index: -1;
-                    box-shadow: 0 0 3px gray;
-                }
-                &::after{
-                    content: '';
-                    position: absolute;
-                    top: 65px;
-                    right: -80px;
-                    width: 14px;
-                    height: 26px;
-                    background: url(../img/sub3/arr-right.png);
-                }
-                &:nth-child(4){
+                    background-color: #2471c8;
+                    border: 1px solid #ccc;
+                    >img{
+                        position: absolute;
+                        width: 44px;
+                        height: 40px;
+                        top: 65px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
                     &::after{
-                        display: none;
+                        content: '';
+                        position: absolute;
+                        top: 65px;
+                        right: -75px;
+                        width: 14px;
+                        height: 26px;
+                        background: url(../img/sub3/arr-right.png);
                     }
                 }
-                >img{
+                &:nth-child(4){
+                    >a{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                }
+                >span{
                     position: absolute;
-                    top: 70px;
-                    left: 57px;
+                    top: 85px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 13px;
+                    color: #fff;
+                    >em{
+                        position: absolute;
+                        width: 100px;
+                        height: 20px;
+                        text-align: center;
+                        bottom: -120px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-size: 15px;
+                        color: $mainColor-4;
+                    }
                 }
             }
         }
@@ -686,6 +696,17 @@ body {
                             position: absolute;
                             top: 0;
                             left: 0;
+                            >a{
+                                display: inline-block;
+                                width: 100px;
+                                height: 36px;
+                                line-height: 36px;
+                                border-radius: 18px;
+                                text-align: center;
+                                background-color: $mainColor-3;
+                                color: #fff;
+                                font-size: 14px;
+                            }
                         }
                         >.addr-row2{
                             position: absolute;

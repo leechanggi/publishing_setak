@@ -528,7 +528,7 @@ body {
 }
 
 #container > .login-form > .int-area > label.warning {
-  color: red !important;
+  color: #ff1e56 !important;
   -webkit-animation: warning .3s ease;
           animation: warning .3s ease;
   -webkit-animation-iteration-count: 3;
@@ -567,14 +567,14 @@ body {
 
 #container > .bg-slide {
   position: absolute;
-  width: 100%;
+  width: 1920px;
   height: 350px;
   overflow: hidden;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 #container > .sub-title-txt {

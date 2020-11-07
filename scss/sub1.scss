@@ -376,7 +376,7 @@ body {
                 transition: all .5s ease;
 
                 &.warning {
-                    color: red !important;
+                    color: $mainColor-6 !important;
                     animation: warning .3s ease;
                     animation-iteration-count: 3;
                 }
@@ -416,13 +416,13 @@ body {
 
     >.bg-slide {
         position: absolute;
-        width: 100%;
+        width: 1920px;
         height: 350px;
         overflow: hidden;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: -1;
-        object-fit: cover;
     }
 
     >.sub-title-txt {
