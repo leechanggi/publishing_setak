@@ -4,10 +4,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
 body {
     font: 16px/1.4 "Noto Sans KR", Malgun Gothic, "맑은 고딕", "dotum", "돋움",
-        "Black Han Sans", "AppleGothic", sans-serif;
+        "Black Han Sans", 'Do Hyeon', "AppleGothic", sans-serif;
     font-weight: normal;
 }
 
@@ -650,6 +651,168 @@ body {
         }
     }
     // details //
+    .wrap-event{
+        margin: 0 auto;
+        width: 1200px;
+        > ul{
+            clear: both;
+            margin: 100px 0;
+            > li{
+                display: block;
+                width: 370px;
+                height: 500px;
+                margin-right: 45px;
+                margin-bottom: 100px;
+                float: left;
+                perspective: 1000px;
+                -webkit-perspective: 1000px;
+                -moz-perspective: 1000px;
+                background-color: transparent;
+                &:nth-child(3n){
+                    margin-right: 0;
+                }
+                > ul{
+                    width: 370px;
+                    height: 500px;
+                    margin: 0 auto;
+                    transform-style: preserve-3d;
+                    transform: translateZ(-130px);
+                    transition: transform 350ms;
+                    -webkit-transform-style: preserve-3d;
+                    -moz-transform-style: preserve-3d;
+                    -webkit-transform: translateZ(-130px);
+                    -moz-transform: translateZ(-130px);
+                    -webkit-transition: -webkit-transform 500ms;
+                    -moz-transition: -moz-transform 500ms;
+                    &:hover, :focus{
+                        transform: rotateY(-78deg) translateZ(20px);
+                        -webkit-transform: rotateY(-78deg) translateZ(20px);
+                        -moz-transform: rotateY(-78deg) translateZ(20px);
+                    }
+                    .img-5, .img-6{
+                        &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 270px;
+                        height: 500px;
+                        background: url(../img/sub2/list-none.png);
+                        z-index: 2;
+                        }
+                    }
+                    .img-5-1, .img-6-1{
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 259px;
+                            height: 502px;
+                            background: url(../img/sub2/list-none-1.png);
+                            z-index: 2;
+                        }
+                    }
+                    > li{
+                        position: absolute;
+                        width: 270px;
+                        height: 500px;
+                        top: 0;
+                        left: 50px;
+                        background-color: $mainColor-3;
+                        backface-visibility: hidden;
+                        transition: box-shadow 500ms;
+                        -webkit-backface-visibility: hidden;
+                        -moz-backface-visibility: hidden;
+                        -webkit-transition: box-shadow 500ms;
+                        -moz-transition: box-shadow 500ms;
+                        font-family: 'Do Hyeon', "Noto Sans KR", Malgun Gothic, "맑은 고딕", "dotum", "돋움", "AppleGothic", sans-serif; ;
+                        &:first-child{
+                            position: relative;
+                            transform: translateZ(130px);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            -webkit-transform: translateZ(130px);
+                            -moz-transform: translateZ(130px);
+                            box-shadow: inset 0px 0px 40px rgba(255,255,255,0);
+                            > span{
+                                position: absolute;
+                                width: 100%;
+                                top: 190px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                text-align: center;
+                                color: #fff;
+                                font-size: 35px;
+                            }
+                            &:hover, :focus{
+                                box-shadow: inset 300px 0px 40px rgba(255,255,255,0.8);
+                            }
+                            &::after{
+                                content: '';
+                                width: 270px;
+                                height: 500px;
+                                position: absolute;
+                                bottom: 0;
+                                box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+                                transform-origin: 100% 100%;
+                                transform: rotateX(90deg) translateY(130px);
+                                transition: box-shadow 350ms;
+                                -webkit-transform-origin: 100% 100%;
+                                -moz-transform-origin: 100% 100%;
+                                -webkit-transform: rotateX(90deg) translateY(130px);
+                                -moz-transform: rotateX(90deg) translateY(130px);
+                                -webkit-transition: box-shadow 500ms;
+                                -moz-transition: box-shadow 500ms;
+                            }
+                            &:hover, :focus{
+                                &::after{
+                                    box-shadow: 20px -5px 50px rgba(0,0,0,0.3);
+                                }
+                            }
+                        }
+                        &:last-child{
+                            transform: rotateY(90deg) translateZ(130px);
+                            -webkit-transform: rotateY(90deg) translateZ(130px);
+                            -moz-transform: rotateY(90deg) translateZ(130px);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 259px;
+                            height: 502px;
+                            top: -2px;
+                            background-color: $mainColor-1;
+                            box-shadow: inset -300px 0px 40px rgba(0,0,0,0.5);
+                            >span{
+                                position: absolute;
+                                width: 100%;
+                                top: 80px;
+                                right: 20px;
+                                text-align: right;
+                                color: #fff;
+                                font-size: 24px;
+                            }
+                            >a{
+                                position: absolute;
+                                top: 220px;
+                                right: 20px;
+                                width: 80px;
+                                height: 30px;
+                                line-height: 30px;
+                                border-radius: 15px;
+                                background-color: $mainColor-6;
+                                text-align: center;
+                                color: #fff;
+                            }
+                            &:hover, :focus{
+                                box-shadow: inset 0px 0px 40px rgba(0,0,0,0);
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
 }
 #footer {
     width: 100%;

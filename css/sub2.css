@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 @-webkit-keyframes scaleImage {
   100% {
     -webkit-transform: scale(1);
@@ -66,7 +67,7 @@
 }
 
 body {
-  font: 16px/1.4 "Noto Sans KR", Malgun Gothic, "맑은 고딕", "dotum", "돋움", "Red Hat Display", "AppleGothic", sans-serif;
+  font: 16px/1.4 "Noto Sans KR", Malgun Gothic, "맑은 고딕", "dotum", "돋움", "Black Han Sans", "AppleGothic", sans-serif;
 }
 
 * {
@@ -155,7 +156,7 @@ a {
 }
 
 body {
-  font: 16px/1.4 "Noto Sans KR", Malgun Gothic, "맑은 고딕", "dotum", "돋움", "Black Han Sans", "AppleGothic", sans-serif;
+  font: 16px/1.4 "Noto Sans KR", Malgun Gothic, "맑은 고딕", "dotum", "돋움", "Black Han Sans", 'Do Hyeon', "AppleGothic", sans-serif;
   font-weight: normal;
 }
 
@@ -798,6 +799,195 @@ body {
 #container > .pager-list-wrap > .pager-wrap .pagerList .pageNumber.active a {
   background-color: #f40552;
   color: #fff;
+}
+
+#container .wrap-event {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+#container .wrap-event > ul {
+  clear: both;
+  margin: 100px 0;
+}
+
+#container .wrap-event > ul > li {
+  display: block;
+  width: 370px;
+  height: 500px;
+  margin-right: 45px;
+  margin-bottom: 100px;
+  float: left;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  background-color: transparent;
+}
+
+#container .wrap-event > ul > li:nth-child(3n) {
+  margin-right: 0;
+}
+
+#container .wrap-event > ul > li > ul {
+  width: 370px;
+  height: 500px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transform: translateZ(-130px);
+  -webkit-transition: -webkit-transform 350ms;
+  transition: -webkit-transform 350ms;
+  transition: transform 350ms;
+  transition: transform 350ms, -webkit-transform 350ms;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform: translateZ(-130px);
+  -moz-transform: translateZ(-130px);
+  -webkit-transition: -webkit-transform 500ms;
+  -moz-transition: -moz-transform 500ms;
+}
+
+#container .wrap-event > ul > li > ul:hover, #container .wrap-event > ul > li > ul :focus {
+  transform: rotateY(-78deg) translateZ(20px);
+  -webkit-transform: rotateY(-78deg) translateZ(20px);
+  -moz-transform: rotateY(-78deg) translateZ(20px);
+}
+
+#container .wrap-event > ul > li > ul .img-5::before, #container .wrap-event > ul > li > ul .img-6::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 500px;
+  background: url(../img/sub2/list-none.png);
+  z-index: 2;
+}
+
+#container .wrap-event > ul > li > ul .img-5-1::before, #container .wrap-event > ul > li > ul .img-6-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 259px;
+  height: 502px;
+  background: url(../img/sub2/list-none-1.png);
+  z-index: 2;
+}
+
+#container .wrap-event > ul > li > ul > li {
+  position: absolute;
+  width: 270px;
+  height: 500px;
+  top: 0;
+  left: 50px;
+  background-color: #464242;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-box-shadow 500ms;
+  transition: -webkit-box-shadow 500ms;
+  transition: box-shadow 500ms;
+  transition: box-shadow 500ms, -webkit-box-shadow 500ms;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transition: box-shadow 500ms;
+  -moz-transition: box-shadow 500ms;
+  font-family: 'Do Hyeon', "Noto Sans KR", Malgun Gothic, "맑은 고딕", "dotum", "돋움", "AppleGothic", sans-serif;
+}
+
+#container .wrap-event > ul > li > ul > li:first-child {
+  position: relative;
+  transform: translateZ(130px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transform: translateZ(130px);
+  -moz-transform: translateZ(130px);
+  -webkit-box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
+          box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
+}
+
+#container .wrap-event > ul > li > ul > li:first-child > span {
+  position: absolute;
+  width: 100%;
+  top: 190px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+}
+
+#container .wrap-event > ul > li > ul > li:first-child:hover, #container .wrap-event > ul > li > ul > li:first-child :focus {
+  -webkit-box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
+          box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
+}
+
+#container .wrap-event > ul > li > ul > li:first-child::after {
+  content: '';
+  width: 270px;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+  transform-origin: 100% 100%;
+  transform: rotateX(90deg) translateY(130px);
+  -webkit-transition: -webkit-box-shadow 350ms;
+  transition: -webkit-box-shadow 350ms;
+  transition: box-shadow 350ms;
+  transition: box-shadow 350ms, -webkit-box-shadow 350ms;
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -webkit-transform: rotateX(90deg) translateY(130px);
+  -moz-transform: rotateX(90deg) translateY(130px);
+  -webkit-transition: box-shadow 500ms;
+  -moz-transition: box-shadow 500ms;
+}
+
+#container .wrap-event > ul > li > ul > li:first-child:hover::after, #container .wrap-event > ul > li > ul > li:first-child :focus::after {
+  -webkit-box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
+}
+
+#container .wrap-event > ul > li > ul > li:last-child {
+  transform: rotateY(90deg) translateZ(130px);
+  -webkit-transform: rotateY(90deg) translateZ(130px);
+  -moz-transform: rotateY(90deg) translateZ(130px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 259px;
+  height: 502px;
+  top: -2px;
+  background-color: #3a84db;
+  -webkit-box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5);
+          box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5);
+}
+
+#container .wrap-event > ul > li > ul > li:last-child > span {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  right: 20px;
+  text-align: right;
+  color: #fff;
+  font-size: 24px;
+}
+
+#container .wrap-event > ul > li > ul > li:last-child > a {
+  position: absolute;
+  top: 220px;
+  right: 20px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  background-color: #f40552;
+  text-align: center;
+  color: #fff;
+}
+
+#container .wrap-event > ul > li > ul > li:last-child:hover, #container .wrap-event > ul > li > ul > li:last-child :focus {
+  -webkit-box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
+          box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
 }
 
 #footer {
