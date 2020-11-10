@@ -1006,7 +1006,9 @@ body {
           left: 758px;
           text-align: center;
           overflow: hidden;
-
+          .img-mobile{
+            display: none;
+          }
           >a {
             >.txt-img {
               position: absolute;
@@ -1331,6 +1333,7 @@ body {
     }
     .row4{
       width: 100%;
+      height: 100%;
       .row4-wrap{
         width: 100%;
         >h2{
@@ -1342,14 +1345,40 @@ body {
         }
         >p{
           font-size: 14px;
+          padding-bottom: 40px;
         }
         >ul{
+          margin: 0 20px;
           height: 100%;
           >li{
-            
+            margin-bottom: 20px;
+          }
+          .sub-img-1{
+            margin-top: 0;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+          }
+          .sub-img-2{
+            margin-top: 0;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+          }
+          .sub-img-3{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            .img-pc{
+              display: none;
+            }
+            .img-mobile{
+              display: block;
+            }
           }
         }
-        
       }
     }
   }
