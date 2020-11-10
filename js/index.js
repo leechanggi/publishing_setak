@@ -34,10 +34,12 @@ function openmenu() {
 $(function () {
     $('.row2_slide_wrap').bxSlider({
         moveSlides: 1,
+        maxSlides : 3,
         auto: true,
         pager: true,
-        useCSS: false,
-        slideWidth: 600
+        useCSS: true,
+        slideWidth: 600,
+        shrinkItems: true
     });
 });
 // 숫자증가 - row3 //
