@@ -34,7 +34,7 @@ function openmenu() {
 $(function () {
     $('.row2_slide_wrap').bxSlider({
         moveSlides: 1,
-        maxSlides : 3,
+        maxSlides : 2,
         auto: true,
         pager: true,
         useCSS: true,
