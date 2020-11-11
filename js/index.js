@@ -21,15 +21,41 @@ $(function () {
         })
 });
 // 전체 메뉴 //
+$(window).on('resize', windeowResizeHandler);
+function windeowResizeHandler(){
+    var winWidth = $(this).innerWidth();
+    if (winWidth >= 1200) {
+        $('html').removeClass('mobile')
+        $('html').addClass('pc')
+    } else {
+        $('html').removeClass('pc')
+        $('html').addClass('mobile')
+    }
+}
 var menu = document.getElementById("all_menu");
-
-function closemenu() {
-    menu.style.top = "-100vh";
+if ($('html').hasClass('pc') == true) {
+    function closemenu() {
+        menu.style.top = "-300vh";
+    }
+    function openmenu() {
+        menu.style.top = "0";
+    }
+} else {
+    function closemenu() {
+        menu.style.left = "-300vw";
+    }
+    function openmenu() {
+        menu.style.left = "0";
+    }
 }
+// var menu = document.getElementById("all_menu");
 
-function openmenu() {
-    menu.style.top = "0";
-}
+// function closemenu() {
+//     menu.style.top = "-300vh";
+// }
+// function openmenu() {
+//     menu.style.top = "0";
+// }
 // 서브 슬라이드 //
 $(function () {
     $('.row2_slide_wrap').bxSlider({

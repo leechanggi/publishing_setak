@@ -231,8 +231,7 @@ body {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 9999;
-    top: -200vh;
-    left: 0;
+    top: -300vh;
     transition: 0.7s;
   
     .all-menu-wrap {
@@ -1160,7 +1159,94 @@ body {
   #container{
     // final - start
     .all-menu{
-      display: none;
+      // display: none;
+      position: fixed;
+      width: 260px;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      top: 0vw;
+      left: -300vw;
+      transition: 0.7s;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+
+      .all-menu-wrap{
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+
+        >img{
+          position: absolute;
+          top: 0px;
+          right: -48px;
+          width: 48px;
+          height: 48px;
+          cursor: pointer;
+          box-shadow: 3px 0 5px gray;
+        }
+        >.all-menu__ul{
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+          overflow: hidden;
+          margin-top: 100px;
+          color: #fff;
+          position: relative;
+          >li{
+            float: none;
+            width: auto;
+            height: auto;
+            padding: 0;
+            text-align: center;
+            >a{
+              position: relative;
+              font-size: 22px;
+              height: 40px;
+              line-height: 40px;
+              text-align: left;
+              text-indent: 20px;
+              padding: 0;
+              border-top: 1px solid $mainColor-2;
+              border-bottom: none;
+              font-weight: normal;
+              &::after{
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                top: 5px;
+                right: 10px;
+                background: url(../img/common/plus_i.png) 
+                no-repeat 50% 50%;
+                background-size: cover;
+                cursor: pointer;
+              }
+            }
+            >ul{
+              display: none;
+              >li{
+                font-size: 16px;
+                height: 30px;
+                line-height: 30px;
+                text-align: left;
+                text-indent: 30px;
+                &:first-child{
+                  padding-top: 0;
+                  border-top: 1px solid #fff;
+                }
+                &:last-child{
+                  margin-bottom: 5px;
+                }
+              }
+            }
+            &:last-child{
+              >a{
+                border-bottom: 1px solid $mainColor-2;
+              }
+            }
+          }
+        }
+      }
     }
     .login-form{
       display: none;
@@ -1510,7 +1596,93 @@ body {
   #container{
     // final - start
     .all-menu{
-      display: none;
+      // display: none;
+      position: fixed;
+      width: 260px;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      top: 0vw;
+      left: -300vw;
+      transition: 0.7s;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      .all-menu-wrap{
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+
+        >img{
+          position: absolute;
+          top: 0px;
+          right: -48px;
+          width: 48px;
+          height: 48px;
+          cursor: pointer;
+          box-shadow: 3px 0 5px gray;
+        }
+        >.all-menu__ul{
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+          overflow: hidden;
+          margin-top: 100px;
+          color: #fff;
+          position: relative;
+          >li{
+            float: none;
+            width: auto;
+            height: auto;
+            padding: 0;
+            text-align: center;
+            >a{
+              position: relative;
+              font-size: 20px;
+              height: 40px;
+              line-height: 40px;
+              text-align: left;
+              text-indent: 20px;
+              padding: 0;
+              border-top: 1px solid $mainColor-2;
+              border-bottom: none;
+              font-weight: 400;
+              &::after{
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                top: 5px;
+                right: 10px;
+                background: url(../img/common/plus_i.png) 
+                no-repeat 50% 50%;
+                background-size: cover;
+                cursor: pointer;
+              }
+            }
+            >ul{
+              display: none;
+              >li{
+                font-size: 16px;
+                height: 30px;
+                line-height: 30px;
+                text-align: left;
+                text-indent: 30px;
+                &:first-child{
+                  padding-top: 0;
+                  border-top: 1px solid #fff;
+                }
+                &:last-child{
+                  margin-bottom: 5px;
+                }
+              }
+            }
+            &:last-child{
+              >a{
+                border-bottom: 1px solid $mainColor-2;
+              }
+            }
+          }
+        }
+      }
     }
     .login-form{
       display: none;
