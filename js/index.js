@@ -56,6 +56,7 @@ if ($('html').hasClass('pc') == true) {
 // function openmenu() {
 //     menu.style.top = "0";
 // }
+
 // 서브 슬라이드 //
 $(function () {
     $('.row2_slide_wrap').bxSlider({
