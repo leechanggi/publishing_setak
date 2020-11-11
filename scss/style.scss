@@ -1216,7 +1216,7 @@ body {
             >li{
               width: 23.16666666666667vw; //278px
               height: 30vw; //240px
-              margin-right: 2.444444444444444vw; //29.3333px
+              margin-right: 1.5vw; //18px
               >.hover-scale{
                 width: 23.16666666666667vw; //278px
                 height: 20vw; //240px
@@ -1306,6 +1306,7 @@ body {
       height: 100%;
       .row4-wrap{
         width: 100%;
+        height: 100%;
         >h2{
           font-size: 36px;
           padding-top: 70px;
@@ -1319,95 +1320,120 @@ body {
         }
         >ul{
           margin: 0 20px;
-          height: 100%;
-          >li{
-            margin-bottom: 20px;
-          }
-          .sub-img-1{
+          height: 64.16666666666667vw; //770px
+          overflow: hidden;
+          >li {
             position: relative;
-            margin-top: 0;
-            width: 100%;
-            height: auto;
-            overflow: hidden;
-            >a{
-              >.txt-img{
-                position: absolute;
-                width: 15vw; //54px(360)
-                height: 5.555555555555556vw; //20px(360)
-                top: 4.166666666666667vw; //15px(360)
-                left: 4.166666666666667vw; //15px(360)
-              }
-              >span{
-                top: 11.11111111111111vw; //40px(360)
-                left: 5.555555555555556vw; //20px(360)
-                font-size: 3.611111111111111vw; //13px(360)
-                >em:first-child{
-                  font-size: 5.555555555555556vw; //20px(360)
-                }
-                >em:last-child{
-                  font-size: 3.888888888888889vw; //14px(360)
-                }
-              }
-            }
-          }
-          .sub-img-2{
-            margin-top: 0;
-            width: 100%;
-            height: auto;
-            overflow: hidden;
-            >a{
-              >.txt-img{
-                position: absolute;
-                width: 15vw; //54px(360)
-                height: 5.555555555555556vw; //20px(360)
-                top: 4.166666666666667vw; //15px(360)
-                left: 4.166666666666667vw; //15px(360)
-              }
-              >span{
-                top: 11.11111111111111vw; //40px(360)
-                left: 5.555555555555556vw; //20px(360)
-                font-size: 3.611111111111111vw; //13px(360)
-                >em:first-child{
-                  font-size: 5.555555555555556vw; //20px(360)
-                }
-                >em:last-child{
-                  font-size: 3.888888888888889vw; //14px(360)
-                }
-              }
-            }
-          }
-          .sub-img-3{
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            overflow: hidden;
             text-align: left;
-            >a{
-              >.txt-img{
+          }
+          .sub-img-1 {
+            margin-top: 8.333333333333333vw; //100px
+            width: 61.5vw; //738px
+            height: 25.83333333333333vw; //310px
+            overflow: hidden;
+  
+            >a {
+              >.txt-img {
                 position: absolute;
-                width: 15vw; //54px(360)
-                height: 5.555555555555556vw; //20px(360)
-                top: 4.166666666666667vw; //15px(360)
-                left: 4.166666666666667vw; //15px(360)
+                top: 3.75vw; //45px
+                left: 4.166666666666667vw; //50px
               }
-              >span{
-                top: 11.11111111111111vw; //40px(360)
-                left: 5.555555555555556vw; //20px(360)
-                font-size: 3.611111111111111vw; //13px(360)
-                >em:first-child{
-                  font-size: 5.555555555555556vw; //20px(360)
+  
+              >span {
+                position: absolute;
+                top: 7.75vw; //95px
+                left: 4.166666666666667vw; //50px
+                color: $mainColor-4;
+  
+                >em:first-child {
+                  font-family: "Black Han Sans", "Noto Sans KR", "맑은 고딕",
+                    sans-serif;
+                  font-size: 2.666666666666667vw; //32px
+                  line-height: 1;
+                  color: #000;
                 }
-                >em:last-child{
-                  font-size: 3.888888888888889vw; //14px(360)
+  
+                >em:last-child {
+                  text-decoration: underline;
+                  font-size: 1.5vw; //18px
                 }
               }
             }
-            .img-pc{
+          }
+  
+          .sub-img-2 {
+            margin-top: 20px;
+            width: 61.5vw;
+            height: 25.83333333333333vw;
+            overflow: hidden;
+  
+            >a {
+              >.txt-img {
+                position: absolute;
+                top: 3.75vw;
+                left: 4.166666666666667vw;
+              }
+  
+              >span {
+                position: absolute;
+                top: 7.75vw;
+                left: 4.166666666666667vw;
+                color: $mainColor-4;
+  
+                >em:first-child {
+                  font-family: "Black Han Sans", "Noto Sans KR", "맑은 고딕",
+                    sans-serif;
+                  font-size: 2.666666666666667vw;
+                  line-height: 1;
+                  color: #000;
+                }
+  
+                >em:last-child {
+                  text-decoration: underline;
+                  font-size: 1.5vw;
+                }
+              }
+            }
+          }
+  
+          .sub-img-3 {
+            margin-top: 0px;
+            margin-left: 0px;
+            width: 36.83333333333333vw; //442px
+            height: 53.33333333333333vw; //640px
+            top: -53.33333333333333vw; //-640px
+            left: 63.16666666666667vw; //758px
+            text-align: center;
+            overflow: hidden;
+            .img-mobile{
               display: none;
             }
-            .img-mobile{
-              display: block;
+            >a {
+              >.txt-img {
+                position: absolute;
+                top: 3.75vw; //45px
+                left: 12.58333333333333vw; //151px
+              }
+  
+              >span {
+                position: absolute;
+                top: 7.5vw; //90px
+                left: 2.583333333333333vw; //31px
+                color: $mainColor-4;
+                line-height: 1.4;
+  
+                >em:first-child {
+                  font-family: "Black Han Sans", "Noto Sans KR", "맑은 고딕",
+                    sans-serif;
+                  font-size: 2.666666666666667vw;//32px
+                  color: #000;
+                }
+  
+                >em:last-child {
+                  text-decoration: underline;
+                  font-size: 1.5vw; //18px
+                }
+              }
             }
           }
         }
@@ -1415,7 +1441,42 @@ body {
     }
   }
   #footer{
-    display: none;
+    height: 100%;
+    &::before{
+      display: none;
+    }
+    >.footer-wrap{
+      width: 100%;
+      >.footer-sec-1{
+        display: none;
+      }
+      >.footer-sec-2{
+        >.sec-2-address{
+          display: none;
+        }
+        >.sec-2-visit-num{
+          >ul{
+            overflow: hidden;
+            clear: both;
+            padding: 20px 0;
+            margin: 0 20px;
+            border-top: 1px solid #ccc;
+            >li:nth-child(1){
+              position: static;
+              float: left;
+              width: 50%;
+              text-align: center;
+            }
+            >li:nth-child(2){
+              position: static;
+              float: left;
+              width: 50%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 767px){
