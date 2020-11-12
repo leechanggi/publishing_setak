@@ -262,6 +262,10 @@ body {
           height: 370px;
           padding: 0 37px;
           text-align: center;
+          display: block;
+          & .on{
+            display: block;
+          }
 
           >a {
             display: block;
@@ -327,8 +331,8 @@ body {
     text-align: center;
     transition: 0.5s;
     >.login-logo{
-      padding-bottom: 50px;
-      margin-top: 15.625vh;
+      padding-bottom: 7.8125vh; //(640)
+      margin-top: 15.625vh; //(640)
     }
     >.close_login{
       position: absolute;
@@ -373,7 +377,7 @@ body {
       }
     }
     >.btn-area{
-      margin-top: 100px;
+      margin-top: 15.625vw; //(640)
       >button{
         width: 250px;
         height: 50px;
@@ -1628,7 +1632,6 @@ body {
     }
   }
   #container{
-    // final - start
     .all-menu{
       position: fixed;
       width: 260px;
@@ -1706,7 +1709,7 @@ body {
               position: absolute;
               width: 25px;
               height: 25px;
-              top: 5px;
+              top: 7.5px;
               right: 10px;
               background: url(../img/common/plus_i.png) 
               no-repeat 50% 50%;
@@ -1749,7 +1752,6 @@ body {
     .login-form{
       z-index: 9999;
     }
-    // final - end
     .bg-slide{
       height: 550px;
       top: 0;

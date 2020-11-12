@@ -1,3 +1,8 @@
+setTimeout(function() {
+    onresize = function(){
+        document.location.reload()
+    };
+}, 5000);
 // html - pc || tab_mob
 $(window).on('resize', windeowResizeHandler);
 function windeowResizeHandler(){
@@ -41,7 +46,7 @@ function openmenu() {
 }
 function closemenu() {
     var menu = document.getElementById("all_menu");
-    if ($('html').hasClass('pc') == true) {
+    if ($('html').hasClass('pc')) {
         menu.style.top = "-300vh";
         menu.style.left = "0";
     } else {
@@ -59,8 +64,10 @@ $('.all-menu-active').click(function (a) {
         } else {
             $(this).addClass('on').siblings().removeClass('on');
         }
+    }else{
+        $(this).find('.all-menu-active.on').removeClass('on');
     }
-     a.preventDefault();
+    a.preventDefault();
 });
 // 서브 슬라이드 //
 $(function () {
