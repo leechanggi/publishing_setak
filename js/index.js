@@ -1,3 +1,16 @@
+// html - pc || tab_mob
+$(window).on('resize', windeowResizeHandler);
+function windeowResizeHandler(){
+    var winWidth = $(this).innerWidth();
+    if (winWidth >= 1200) {
+        $('html').removeClass('tab_mob')
+        $('html').addClass('pc')
+    } else {
+        $('html').removeClass('pc')
+        $('html').addClass('tab_mob')
+    }
+}
+$(window).trigger('resize');
 //GNB 메뉴//
 $(function () {
     var $firstMenu = $('.gnb > ul > li'),
@@ -21,27 +34,13 @@ $(function () {
         })
 });
 // 전체 메뉴 //
-windeowResizeHandler()
-$(window).on('resize', windeowResizeHandler);
-function windeowResizeHandler(){
-    var winWidth = $(this).innerWidth();
-    if (winWidth >= 1200) {
-        $('html').removeClass('tab_mob')
-        $('html').addClass('pc')
-    } else {
-        $('html').removeClass('pc')
-        $('html').addClass('tab_mob')
-    }
-}
-
 function openmenu() {
-    const menu = document.getElementById("all_menu");
+    var menu = document.getElementById("all_menu");
     menu.style.top = "0";
     menu.style.left = "0";
 }
-
 function closemenu() {
-    const menu = document.getElementById("all_menu");
+    var menu = document.getElementById("all_menu");
     if ($('html').hasClass('pc') == true) {
         menu.style.top = "-300vh";
         menu.style.left = "0";
@@ -50,19 +49,19 @@ function closemenu() {
         menu.style.top = "0";
     }
 }
-if ($('html').hasClass('tab_mob') == true){
-    $('.all-menu-active').click(function () {
+$('.all-menu-active').click(function (a) {
+    if ($('html').hasClass('tab_mob')){
         $(this).children('.all-menu-respon').slideToggle()
         $(this).siblings().children('.all-menu-respon').slideUp();
         if ($(this).hasClass('on')) {
-            $(this).removeClass('on');
             $(this).siblings().removeClass('on');
+            $(this).removeClass('on');
         } else {
             $(this).addClass('on').siblings().removeClass('on');
         }
-    });
-}else{}
-
+    }
+     a.preventDefault();
+});
 // 서브 슬라이드 //
 $(function () {
     $('.row2_slide_wrap').bxSlider({
