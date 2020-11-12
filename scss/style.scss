@@ -232,6 +232,7 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 9999;
     top: -300vh;
+    left: 0;
     transition: 0.7s;
   
     .all-menu-wrap {
@@ -327,12 +328,12 @@ body {
     transition: 0.5s;
     >.login-logo{
       padding-bottom: 50px;
-      margin-top: 200px;
+      margin-top: 15.625vh;
     }
     >.close_login{
       position: absolute;
-      top: 40px;
-      right: 30px;
+      top: 20px;
+      right: 20px;
       width: 30px;
       height: 30px;
       cursor: pointer;
@@ -1157,14 +1158,12 @@ body {
     }
   }
   #container{
-    // final - start
     .all-menu{
-      // display: none;
       position: fixed;
       width: 260px;
       height: 100vh;
       background-color: rgba(0, 0, 0, 0.9);
-      top: 0vw;
+      top: 0;
       left: -300vw;
       transition: 0.7s;
       border-top-right-radius: 50px;
@@ -1184,6 +1183,28 @@ body {
           cursor: pointer;
           box-shadow: 3px 0 5px gray;
         }
+
+        >.all-menu-user_section{
+          margin: 20px;
+          display: block;
+          font-size: 18px;
+          text-align: center;
+          color: #fff;
+          position: relative;
+          &::after{
+            content: '';
+            position: absolute;
+            left: 102px;
+            top: 5px;
+            width: 1px;
+            height: 17px;
+            background-color: #fff;
+          }
+          .all-menu-signup{
+            margin-left: 20px;
+          }
+        }
+
         >.all-menu__ul{
           display: block;
           width: 100%;
@@ -1192,12 +1213,35 @@ body {
           margin-top: 100px;
           color: #fff;
           position: relative;
+          .all-menu-active{
+            &.on{
+              &::after{
+                background: url(../img/common/minus_i.png);
+              }
+            }
+          }
           >li{
             float: none;
             width: auto;
             height: auto;
             padding: 0;
             text-align: center;
+            position: relative;
+            &:last-child{
+              border-bottom: 1px solid $mainColor-2;
+            }
+            &::after{
+              content: '';
+              position: absolute;
+              width: 25px;
+              height: 25px;
+              top: 7.5px;
+              right: 10px;
+              background: url(../img/common/plus_i.png) 
+              no-repeat 50% 50%;
+              background-size: cover;
+              cursor: pointer;
+            }
             >a{
               position: relative;
               font-size: 22px;
@@ -1209,18 +1253,6 @@ body {
               border-top: 1px solid $mainColor-2;
               border-bottom: none;
               font-weight: normal;
-              &::after{
-                content: '';
-                position: absolute;
-                width: 25px;
-                height: 25px;
-                top: 5px;
-                right: 10px;
-                background: url(../img/common/plus_i.png) 
-                no-repeat 50% 50%;
-                background-size: cover;
-                cursor: pointer;
-              }
             }
             >ul{
               display: none;
@@ -1239,19 +1271,13 @@ body {
                 }
               }
             }
-            &:last-child{
-              >a{
-                border-bottom: 1px solid $mainColor-2;
-              }
-            }
           }
         }
       }
     }
     .login-form{
-      display: none;
+      z-index: 9999;
     }
-    // final - end
     .bg-slide{
       height: 550px;
       top: 0;
@@ -1560,6 +1586,14 @@ body {
               text-align: center;
             }
           }
+          &::after{
+            content: 'COPYRIGHT (C) (주)유성 ALL RIGHTS RESEVED';
+            display: block;
+            width: 100%;
+            height: 30px;
+            background-color: #fff;
+            text-align: center;
+          }
         }
       }
     }
@@ -1600,11 +1634,12 @@ body {
       width: 260px;
       height: 100vh;
       background-color: rgba(0, 0, 0, 0.9);
-      top: 0vw;
+      top: 0;
       left: -300vw;
       transition: 0.7s;
       border-top-right-radius: 50px;
       border-bottom-right-radius: 50px;
+
       .all-menu-wrap{
         position: relative;
         width: 100%;
@@ -1619,6 +1654,28 @@ body {
           cursor: pointer;
           box-shadow: 3px 0 5px gray;
         }
+
+        >.all-menu-user_section{
+          margin: 20px;
+          display: block;
+          font-size: 18px;
+          text-align: center;
+          color: #fff;
+          position: relative;
+          &::after{
+            content: '';
+            position: absolute;
+            left: 102px;
+            top: 5px;
+            width: 1px;
+            height: 17px;
+            background-color: #fff;
+          }
+          .all-menu-signup{
+            margin-left: 20px;
+          }
+        }
+
         >.all-menu__ul{
           display: block;
           width: 100%;
@@ -1627,15 +1684,38 @@ body {
           margin-top: 100px;
           color: #fff;
           position: relative;
+          .all-menu-active{
+            &.on{
+              &::after{
+                background: url(../img/common/minus_i.png);
+              }
+            }
+          }
           >li{
             float: none;
             width: auto;
             height: auto;
             padding: 0;
             text-align: center;
+            position: relative;
+            &:last-child{
+              border-bottom: 1px solid $mainColor-2;
+            }
+            &::after{
+              content: '';
+              position: absolute;
+              width: 25px;
+              height: 25px;
+              top: 5px;
+              right: 10px;
+              background: url(../img/common/plus_i.png) 
+              no-repeat 50% 50%;
+              background-size: cover;
+              cursor: pointer;
+            }
             >a{
               position: relative;
-              font-size: 20px;
+              font-size: 22px;
               height: 40px;
               line-height: 40px;
               text-align: left;
@@ -1643,19 +1723,7 @@ body {
               padding: 0;
               border-top: 1px solid $mainColor-2;
               border-bottom: none;
-              font-weight: 400;
-              &::after{
-                content: '';
-                position: absolute;
-                width: 25px;
-                height: 25px;
-                top: 5px;
-                right: 10px;
-                background: url(../img/common/plus_i.png) 
-                no-repeat 50% 50%;
-                background-size: cover;
-                cursor: pointer;
-              }
+              font-weight: normal;
             }
             >ul{
               display: none;
@@ -1674,17 +1742,12 @@ body {
                 }
               }
             }
-            &:last-child{
-              >a{
-                border-bottom: 1px solid $mainColor-2;
-              }
-            }
           }
         }
       }
     }
     .login-form{
-      display: none;
+      z-index: 9999;
     }
     // final - end
     .bg-slide{
@@ -2001,6 +2064,14 @@ body {
               width: 50%;
               text-align: center;
             }
+          }
+          &::after{
+            content: 'COPYRIGHT (C) (주)유성 ALL RIGHTS RESEVED';
+            display: block;
+            width: 100%;
+            height: 30px;
+            background-color: #fff;
+            text-align: center;
           }
         }
       }

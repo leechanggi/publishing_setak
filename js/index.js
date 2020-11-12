@@ -21,41 +21,47 @@ $(function () {
         })
 });
 // 전체 메뉴 //
+windeowResizeHandler()
 $(window).on('resize', windeowResizeHandler);
 function windeowResizeHandler(){
     var winWidth = $(this).innerWidth();
     if (winWidth >= 1200) {
-        $('html').removeClass('mobile')
+        $('html').removeClass('tab_mob')
         $('html').addClass('pc')
     } else {
         $('html').removeClass('pc')
-        $('html').addClass('mobile')
+        $('html').addClass('tab_mob')
     }
 }
-var menu = document.getElementById("all_menu");
-if ($('html').hasClass('pc') == true) {
-    function closemenu() {
+
+function openmenu() {
+    const menu = document.getElementById("all_menu");
+    menu.style.top = "0";
+    menu.style.left = "0";
+}
+
+function closemenu() {
+    const menu = document.getElementById("all_menu");
+    if ($('html').hasClass('pc') == true) {
         menu.style.top = "-300vh";
-    }
-    function openmenu() {
+        menu.style.left = "0";
+    } else {
+        menu.style.left = "-300vw";
         menu.style.top = "0";
     }
-} else {
-    function closemenu() {
-        menu.style.left = "-300vw";
-    }
-    function openmenu() {
-        menu.style.left = "0";
-    }
 }
-// var menu = document.getElementById("all_menu");
-
-// function closemenu() {
-//     menu.style.top = "-300vh";
-// }
-// function openmenu() {
-//     menu.style.top = "0";
-// }
+if ($('html').hasClass('tab_mob') == true){
+    $('.all-menu-active').click(function () {
+        $(this).children('.all-menu-respon').slideToggle()
+        $(this).siblings().children('.all-menu-respon').slideUp();
+        if ($(this).hasClass('on')) {
+            $(this).removeClass('on');
+            $(this).siblings().removeClass('on');
+        } else {
+            $(this).addClass('on').siblings().removeClass('on');
+        }
+    });
+}else{}
 
 // 서브 슬라이드 //
 $(function () {

@@ -248,6 +248,10 @@ body {
                 cursor: pointer;
             }
 
+            >.user_section{
+                display: none;
+            }
+
             >.all-menu__ul {
                 display: block;
                 width: 1200px;
