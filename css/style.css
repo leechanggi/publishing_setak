@@ -393,6 +393,8 @@ body {
   position: absolute;
   top: -78px;
   right: 0px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
@@ -1310,6 +1312,14 @@ body {
   font-size: 30px;
 }
 
+#footer > .btn-top {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+
 @media (min-width: 768px) and (max-width: 1199px) {
   #header {
     width: 100%;
@@ -1358,9 +1368,9 @@ body {
   #container .all-menu .all-menu-wrap > img {
     position: absolute;
     top: 0px;
-    right: -48px;
-    width: 48px;
-    height: 48px;
+    right: -40px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     -webkit-box-shadow: 3px 0 5px gray;
             box-shadow: 3px 0 5px gray;
@@ -1737,6 +1747,13 @@ body {
     background-color: #fff;
     text-align: center;
   }
+  #footer > .btn-top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1787,9 +1804,9 @@ body {
   #container .all-menu .all-menu-wrap > img {
     position: absolute;
     top: 0px;
-    right: -48px;
-    width: 48px;
-    height: 48px;
+    right: -40px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     -webkit-box-shadow: 3px 0 5px gray;
             box-shadow: 3px 0 5px gray;
@@ -2186,6 +2203,13 @@ body {
     height: 30px;
     background-color: #fff;
     text-align: center;
+  }
+  #footer > .btn-top {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
   }
 }
 
