@@ -136,7 +136,7 @@ a {
 }
 
 .skip-menu a {
-  background-color: #ed1b29;
+  background-color: #01a187;
   color: #fff;
   position: fixed;
   left: 0;
@@ -399,11 +399,19 @@ body {
 #container > .all-menu .all-menu-wrap > .all-menu__ul {
   display: block;
   width: 1200px;
+  height: 70vh;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: scroll;
   margin-top: 170px;
   color: #fff;
   position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#container > .all-menu .all-menu-wrap > .all-menu__ul::-webkit-scrollbar {
+  display: none;
 }
 
 #container > .all-menu .all-menu-wrap > .all-menu__ul > li {
@@ -463,6 +471,10 @@ body {
   padding-top: 5px;
 }
 
+#container > .all-menu .all-menu-wrap .all-menu-user_section {
+  display: none;
+}
+
 #container > .login-form {
   position: fixed;
   width: 360px;
@@ -483,7 +495,7 @@ body {
 }
 
 #container > .login-form > .login-logo {
-  padding-bottom: 7.8125vh;
+  padding-bottom: 3.125vh;
   margin-top: 15.625vh;
 }
 
@@ -496,14 +508,27 @@ body {
   cursor: pointer;
 }
 
-#container > .login-form > .int-area {
+#container > .login-form > .login-wrap {
+  width: 100%;
+  height: 50vh;
+  overflow-x: auto;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#container > .login-form > .login-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+#container > .login-form .int-area {
   position: relative;
   margin: 0 auto;
   width: 300px;
   margin-top: 50px;
 }
 
-#container > .login-form > .int-area > input {
+#container > .login-form .int-area > input {
   width: 100%;
   padding: 20px 10px 10px;
   background: transparent;
@@ -514,13 +539,13 @@ body {
   outline: none;
 }
 
-#container > .login-form > .int-area > input:focus + label, #container > .login-form > .int-area > input:valid + label {
+#container > .login-form .int-area > input:focus + label, #container > .login-form .int-area > input:valid + label {
   top: -10px;
   font-size: 16px;
   color: #3a84db;
 }
 
-#container > .login-form > .int-area > label {
+#container > .login-form .int-area > label {
   position: absolute;
   top: 17px;
   left: 11px;
@@ -530,7 +555,7 @@ body {
   transition: all .5s ease;
 }
 
-#container > .login-form > .int-area > label.warning {
+#container > .login-form .int-area > label.warning {
   color: #f40552 !important;
   -webkit-animation: warning .3s ease;
           animation: warning .3s ease;
@@ -538,11 +563,11 @@ body {
           animation-iteration-count: 3;
 }
 
-#container > .login-form > .btn-area {
-  margin-top: 15.625vw;
+#container > .login-form .btn-area {
+  margin-top: 7.8125vw;
 }
 
-#container > .login-form > .btn-area > button {
+#container > .login-form .btn-area > button {
   width: 250px;
   height: 50px;
   background: #3a84db;
@@ -1343,7 +1368,7 @@ body {
   #container .all-menu .all-menu-wrap > .all-menu-user_section {
     margin: 20px;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     color: #fff;
     position: relative;
@@ -1363,11 +1388,18 @@ body {
   #container .all-menu .all-menu-wrap > .all-menu__ul {
     display: block;
     width: 100%;
+    height: 60vh;
     margin: 0 auto;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: scroll;
     margin-top: 100px;
     color: #fff;
     position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  #container .all-menu .all-menu-wrap > .all-menu__ul::-webkit-scrollbar {
+    display: none;
   }
   #container .all-menu .all-menu-wrap > .all-menu__ul .all-menu-active.on::after {
     background: url(../img/common/minus_i.png);
@@ -1765,7 +1797,7 @@ body {
   #container .all-menu .all-menu-wrap > .all-menu-user_section {
     margin: 20px;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     color: #fff;
     position: relative;
@@ -1785,11 +1817,18 @@ body {
   #container .all-menu .all-menu-wrap > .all-menu__ul {
     display: block;
     width: 100%;
+    height: 60vh;
     margin: 0 auto;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: scroll;
     margin-top: 100px;
     color: #fff;
     position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  #container .all-menu .all-menu-wrap > .all-menu__ul::-webkit-scrollbar {
+    display: none;
   }
   #container .all-menu .all-menu-wrap > .all-menu__ul .all-menu-active.on::after {
     background: url(../img/common/minus_i.png);
