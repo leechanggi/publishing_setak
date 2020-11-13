@@ -1,13 +1,14 @@
 setTimeout(function() {
-    onresize = function(){
+    window.onresize = function(){
         document.location.reload()
     };
-}, 5000);
+}, 3000);
 // html - pc || tab_mob
 $(window).on('resize', windeowResizeHandler);
 function windeowResizeHandler(){
     var winWidth = $(this).innerWidth();
-    if (winWidth >= 1200) {
+    var scrollWidth  = 17
+    if (winWidth >= 1200 - scrollWidth ) {
         $('html').removeClass('tab_mob')
         $('html').addClass('pc')
     } else {
@@ -253,3 +254,15 @@ $(document).ready(function () {
         $(this).addClass('on');
     })
 })
+//
+if ($('html').hasClass('tab_mob')){
+    $('.top-list-wrap').bxSlider({
+        moveSlides: 1,
+        maxSlides : 3,
+        auto: true,
+        pager: false,
+        useCSS: true,
+        slideWidth: 300,
+        shrinkItems: false
+    });
+}
