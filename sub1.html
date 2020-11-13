@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="pc">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@
 
 <body>
     <header id="header">
+        <p class="skip-menu"><a href="#container">본문 바로가기</a></p>
         <div class="tnb">
             <h1 class="tnb_logo">
                 <a href="#"><img src="./img/common/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
@@ -100,6 +101,7 @@
             </ul>
             <img src="./img/common/btn_allmenu.png" alt="전체 메뉴" class="all-menu-icon" onclick="openmenu()">
         </div>
+
     </header>
     <div id="container">
         <div class="all-menu" id="all_menu">
@@ -107,18 +109,18 @@
                 <img src="./img/common/allmenu-close-icon.png" alt="전체 메뉴 닫기" class="all-menu-close-icon"
                     onclick="closemenu()">
                 <ul class="all-menu__ul">
-                    <li>
+                    <li class="all-menu-active">
                         <a href="#">회사소개</a>
-                        <ul>
+                        <ul class="all-menu-respon">
                             <li><a href="#">Ceo 인사말</a></li>
                             <li><a href="#">회사연혁</a></li>
                             <li><a href="#">인증 및 수상현황</a></li>
                             <li><a href="#">오시는 길</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="all-menu-active">
                         <a href="#">세탁서비스</a>
-                        <ul>
+                        <ul class="all-menu-respon">
                             <li><a href="#">일반세탁</a></li>
                             <li><a href="#">고급세탁</a></li>
                             <li><a href="#">명품세탁</a></li>
@@ -128,9 +130,9 @@
                             <li><a href="#">특수오염세탁</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="all-menu-active">
                         <a href="#">고객센터</a>
-                        <ul>
+                        <ul class="all-menu-respon">
                             <li><a href="#">자주묻는 질문과 답</a></li>
                             <li><a href="#">고객유의사항</a></li>
                             <li><a href="#">고객불만 처리절차</a></li>
@@ -138,9 +140,9 @@
                             <li><a href="#">고객의 소리</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="all-menu-active">
                         <a href="#">가맹점 사업안내</a>
-                        <ul>
+                        <ul class="all-menu-respon">
                             <li><a href="#">가맹점 소개</a></li>
                             <li><a href="#">가맹점 개설 안내</a></li>
                             <li><a href="#">교육, 지원 시스템</a></li>
@@ -149,9 +151,9 @@
                             <li><a href="#">매장찾기</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="all-menu-active">
                         <a href="#">지사 사업안내</a>
-                        <ul>
+                        <ul class="all-menu-respon">
                             <li><a href="#">지사 소개</a></li>
                             <li><a href="#">지사 개설 안내</a></li>
                             <li><a href="#">교육, 지원 시스템</a></li>
@@ -159,9 +161,9 @@
                             <li><a href="#">전국 지사현황</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="all-menu-active">
                         <a href="#">세위사INFO</a>
-                        <ul>
+                        <ul class="all-menu-respon">
                             <li><a href="#">세탁을 위한 사람들 소식</a></li>
                             <li><a href="#">할인 이벤트</a></li>
                             <li><a href="#">보도자료</a></li>
@@ -170,6 +172,10 @@
                         </ul>
                     </li>
                 </ul>
+                <div class="all-menu-user_section">
+                    <a href="#" class="all-menu-rogin" onclick="openmenu_login()">로그인</a>
+                    <a href="#" class="all-menu-signup">회원가입</a>
+                </div>
             </div>
         </div>
         <div class="login-form" id="login-form">
@@ -178,23 +184,25 @@
             </h2>
             <img class="close_login" src="./img/common/allmenu-close-icon-login.png" alt="로그인 닫기"
                 onclick="closemenu_login()">
-            <div class="int-area">
-                <input type="text" name="id" id="id" autocomplete="off" required>
-                <label for="id">세탁을 위한 사람들 계정</label>
-            </div>
-            <div class="int-area">
-                <input type="password" name="pw" id="pw" autocomplete="off" required>
-                <label for="pw">비밀번호</label>
-            </div>
-            <div class="btn-area">
-                <button type="submit" id="btn">로그인</button>
-            </div>
-            <div class="caption">
-                <a href="">혹시 계정을 잊으셨나요?</a>
+            <div class="login-wrap">
+                <div class="int-area">
+                    <input type="text" name="id" id="id" autocomplete="off" required>
+                    <label for="id">세탁을 위한 사람들 계정</label>
+                </div>
+                <div class="int-area">
+                    <input type="password" name="pw" id="pw" autocomplete="off" required>
+                    <label for="pw">비밀번호</label>
+                </div>
+                <div class="btn-area">
+                    <button type="submit" id="btn">로그인</button>
+                </div>
+                <div class="caption">
+                    <a href="">혹시 계정을 잊으셨나요?</a>
+                </div>
             </div>
         </div>
         <div class="bg-slide">
-            <img src="./img/sub1/sub-bg-img.jpg" alt="자주묻는 질문과 답"></li>
+            <img src="./img/sub1/sub-bg-img.jpg" alt="세탁을 위한 사람들"></li>
         </div>
         <div class="sub-title-txt">
             <h2>고객센터</h2>
@@ -348,7 +356,11 @@
                 </div>
             </div>
         </div>
+        <div class="btn-top">
+            <a href="#header"><img src="./img/common/top-icon.jpg" alt="상단 바로가기"></a>
+        </div>
     </footer>
 </body>
 <script src="./js/index.js"></script>
+
 </html>
