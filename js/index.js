@@ -2,7 +2,7 @@ setTimeout(function() {
     window.onresize = function(){
         document.location.reload()
     };
-}, 3000);
+}, 0);
 // html - pc || tab_mob
 $(window).on('resize', windeowResizeHandler);
 function windeowResizeHandler(){
@@ -254,15 +254,17 @@ $(document).ready(function () {
         $(this).addClass('on');
     })
 })
-//
+//sub1-모바일 슬라이드
 if ($('html').hasClass('tab_mob')){
     $('.top-list-wrap').bxSlider({
         moveSlides: 1,
-        maxSlides : 3,
+        maxSlides : 4,
         auto: true,
         pager: false,
         useCSS: true,
         slideWidth: 300,
-        shrinkItems: false
+        shrinkItems: false,
+        slideMargin: 10,
+        controls: false
     });
 }
