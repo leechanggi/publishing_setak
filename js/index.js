@@ -265,6 +265,7 @@ if ($('html').hasClass('tab_mob')){
         slideWidth: 300,
         shrinkItems: false,
         slideMargin: 10,
-        controls: false
+        controls: false,
+        speed: 900
     });
 }
