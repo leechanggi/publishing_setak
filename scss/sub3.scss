@@ -231,7 +231,7 @@ body {
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.9);
         z-index: 9999;
-        top: -200vh;
+        top: -300vh;
         left: 0;
         transition: 0.7s;
 
@@ -244,17 +244,27 @@ body {
                 position: absolute;
                 top: -78px;
                 right: 0px;
+                width: 40px;
+                height: 40px;
                 cursor: pointer;
             }
 
             >.all-menu__ul {
                 display: block;
                 width: 1200px;
+                height: 70vh;
                 margin: 0 auto;
-                overflow: hidden;
+                overflow-x: auto;
+                overflow-y: scroll;
                 margin-top: 170px;
                 color: #fff;
                 position: relative;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
 
                 >li {
                     float: left;
@@ -262,6 +272,11 @@ body {
                     height: 370px;
                     padding: 0 37px;
                     text-align: center;
+                    display: block;
+
+                    & .on {
+                        display: block;
+                    }
 
                     >a {
                         display: block;
@@ -309,6 +324,10 @@ body {
                     }
                 }
             }
+
+            .all-menu-user_section {
+                display: none;
+            }
         }
     }
 
@@ -329,20 +348,33 @@ body {
         transition: 0.5s;
 
         >.login-logo {
-            padding-bottom: 50px;
-            margin-top: 200px;
+            padding-bottom: 3.125vh; //(640)
+            margin-top: 15.625vh; //(640)
         }
 
         >.close_login {
             position: absolute;
+            top: 20px;
+            right: 20px;
             width: 30px;
             height: 30px;
-            top: 40px;
-            right: 30px;
             cursor: pointer;
         }
 
-        >.int-area {
+        >.login-wrap {
+            width: 100%;
+            height: 55vh;
+            overflow-x: auto;
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .int-area {
             position: relative;
             margin: 0 auto;
             width: 300px;
@@ -382,8 +414,8 @@ body {
             }
         }
 
-        >.btn-area {
-            margin-top: 100px;
+        .btn-area {
+            margin-top: 7.8125vw; //(640)
 
             >button {
                 width: 250px;
@@ -831,6 +863,510 @@ body {
                     }
                 }
             }
+        }
+    }
+
+    >.btn-top {
+        width: 70px;
+        height: 70px;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+    }
+}
+@media(min-width : 768px)and(max-width : 1199px) {
+    #header {
+        width: 100%;
+        height: 80px;
+
+        &::before {
+            content: '';
+            width: 200px;
+            height: 40px;
+            background: url(../img/common/logo-formal.png) no-repeat 50% 50%;
+            background-size: cover;
+            top: 20px;
+            left: 10px;
+        }
+
+        .tnb {
+            display: none;
+        }
+        .gnb {
+            width: 100%;
+            height: 80px;
+
+            >.gnb_ul {
+                display: none;
+            }
+
+            .all-menu-icon {
+                top: 30px;
+                right: 20px;
+            }
+        }
+    }
+    #container {
+        .all-menu {
+            position: fixed;
+            width: 260px;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            top: 0;
+            left: -300vw;
+            transition: 0.7s;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+            .all-menu-wrap {
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+
+                >img {
+                    position: absolute;
+                    top: 0px;
+                    right: -40px;
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    box-shadow: 3px 0 5px gray;
+                }
+
+                >.all-menu-user_section {
+                    margin: 20px;
+                    display: block;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #fff;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 102px;
+                        top: 5px;
+                        width: 1px;
+                        height: 17px;
+                        background-color: #fff;
+                    }
+
+                    .all-menu-signup {
+                        margin-left: 20px;
+                    }
+                }
+
+                >.all-menu__ul {
+                    display: block;
+                    width: 100%;
+                    height: 60vh;
+                    margin: 0 auto;
+                    overflow-x: auto;
+                    overflow-y: scroll;
+                    margin-top: 100px;
+                    color: #fff;
+                    position: relative;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    .all-menu-active {
+                        &.on {
+                            &::after {
+                                background: url(../img/common/minus_i.png);
+                            }
+                        }
+                    }
+
+                    >li {
+                        float: none;
+                        width: auto;
+                        height: auto;
+                        padding: 0;
+                        text-align: center;
+                        position: relative;
+
+                        &:last-child {
+                            border-bottom: 1px solid $mainColor-2;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 25px;
+                            height: 25px;
+                            top: 7.5px;
+                            right: 10px;
+                            background: url(../img/common/plus_i.png) no-repeat 50% 50%;
+                            background-size: cover;
+                            cursor: pointer;
+                        }
+
+                        >a {
+                            position: relative;
+                            font-size: 22px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: left;
+                            text-indent: 20px;
+                            padding: 0;
+                            border-top: 1px solid $mainColor-2;
+                            border-bottom: none;
+                            font-weight: normal;
+                        }
+
+                        >ul {
+                            display: none;
+
+                            >li {
+                                font-size: 16px;
+                                height: 30px;
+                                line-height: 30px;
+                                text-align: left;
+                                text-indent: 30px;
+
+                                &:first-child {
+                                    padding-top: 0;
+                                    border-top: 1px solid #fff;
+                                }
+
+                                &:last-child {
+                                    margin-bottom: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .login-form {
+            z-index: 9999;
+        }
+
+        .bg-slide {
+            width: 1920px;
+            height: 285px;
+            overflow: hidden;
+        }
+
+        .sub-title-txt {
+            height: 285px;
+            padding-top: 145px;
+        }
+    }
+    #footer {
+        height: 100%;
+
+        &::before {
+            display: none;
+        }
+
+        >.footer-wrap {
+            width: 100%;
+
+            >.footer-sec-1 {
+                display: none;
+            }
+
+            >.footer-sec-2 {
+                >.sec-2-address {
+                    display: none;
+                }
+
+                >.sec-2-visit-num {
+                    >ul {
+                        overflow: hidden;
+                        clear: both;
+                        padding: 20px 0;
+                        margin: 0 20px;
+                        border-top: 1px solid #ccc;
+
+                        >li:nth-child(1) {
+                            position: static;
+                            float: left;
+                            width: 50%;
+                            text-align: center;
+                        }
+
+                        >li:nth-child(2) {
+                            position: static;
+                            float: left;
+                            width: 50%;
+                            text-align: center;
+                        }
+                    }
+
+                    &::after {
+                        content: 'COPYRIGHT (C) (주)유성 ALL RIGHTS RESEVED';
+                        display: block;
+                        width: 100%;
+                        height: 30px;
+                        background-color: #fff;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        >.btn-top {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    #header {
+        width: 100%;
+        height: 80px;
+
+        &::before {
+            content: '';
+            width: 200px;
+            height: 40px;
+            background: url(../img/common/logo-formal.png) no-repeat 50% 50%;
+            background-size: cover;
+            top: 20px;
+            left: 10px;
+        }
+
+        .tnb {
+            display: none;
+        }
+
+        .gnb {
+            width: 100%;
+            height: 80px;
+
+            >.gnb_ul {
+                display: none;
+            }
+
+            .all-menu-icon {
+                top: 30px;
+                right: 20px;
+            }
+        }
+    }
+
+    #container {
+        .all-menu {
+            position: fixed;
+            width: 260px;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            top: 0;
+            left: -300vw;
+            transition: 0.7s;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+            .all-menu-wrap {
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+
+                >img {
+                    position: absolute;
+                    top: 0px;
+                    right: -40px;
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    box-shadow: 3px 0 5px gray;
+                }
+
+                >.all-menu-user_section {
+                    margin: 20px;
+                    display: block;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #fff;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 102px;
+                        top: 5px;
+                        width: 1px;
+                        height: 17px;
+                        background-color: #fff;
+                    }
+
+                    .all-menu-signup {
+                        margin-left: 20px;
+                    }
+                }
+
+                >.all-menu__ul {
+                    display: block;
+                    width: 100%;
+                    height: 60vh;
+                    margin: 0 auto;
+                    overflow-x: auto;
+                    overflow-y: scroll;
+                    margin-top: 100px;
+                    color: #fff;
+                    position: relative;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    .all-menu-active {
+                        &.on {
+                            &::after {
+                                background: url(../img/common/minus_i.png);
+                            }
+                        }
+                    }
+
+                    >li {
+                        float: none;
+                        width: auto;
+                        height: auto;
+                        padding: 0;
+                        text-align: center;
+                        position: relative;
+
+                        &:last-child {
+                            border-bottom: 1px solid $mainColor-2;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 25px;
+                            height: 25px;
+                            top: 7.5px;
+                            right: 10px;
+                            background: url(../img/common/plus_i.png) no-repeat 50% 50%;
+                            background-size: cover;
+                            cursor: pointer;
+                        }
+
+                        >a {
+                            position: relative;
+                            font-size: 22px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: left;
+                            text-indent: 20px;
+                            padding: 0;
+                            border-top: 1px solid $mainColor-2;
+                            border-bottom: none;
+                            font-weight: normal;
+                        }
+
+                        >ul {
+                            display: none;
+
+                            >li {
+                                font-size: 16px;
+                                height: 30px;
+                                line-height: 30px;
+                                text-align: left;
+                                text-indent: 30px;
+
+                                &:first-child {
+                                    padding-top: 0;
+                                    border-top: 1px solid #fff;
+                                }
+
+                                &:last-child {
+                                    margin-bottom: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .login-form {
+            z-index: 9999;
+        }
+
+        .bg-slide {
+            width: 1920px;
+            height: 285px;
+            overflow: hidden;
+        }
+
+        .sub-title-txt {
+            height: 285px;
+            padding-top: 145px;
+        }
+    }
+    #footer {
+        height: 100%;
+
+        &::before {
+            display: none;
+        }
+
+        >.footer-wrap {
+            width: 100%;
+
+            >.footer-sec-1 {
+                display: none;
+            }
+
+            >.footer-sec-2 {
+                >.sec-2-address {
+                    display: none;
+                }
+
+                >.sec-2-visit-num {
+                    >ul {
+                        overflow: hidden;
+                        clear: both;
+                        padding: 20px 0;
+                        margin: 0 20px;
+                        border-top: 1px solid #ccc;
+
+                        >li:nth-child(1) {
+                            position: static;
+                            float: left;
+                            width: 50%;
+                            text-align: center;
+                        }
+
+                        >li:nth-child(2) {
+                            position: static;
+                            float: left;
+                            width: 50%;
+                            text-align: center;
+                        }
+                    }
+
+                    &::after {
+                        content: 'COPYRIGHT (C) (주)유성 ALL RIGHTS RESEVED';
+                        display: block;
+                        width: 100%;
+                        height: 30px;
+                        background-color: #fff;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        >.btn-top {
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
         }
     }
 }
