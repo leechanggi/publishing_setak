@@ -269,3 +269,24 @@ if ($('html').hasClass('tab_mob')){
         speed: 900
     });
 }
+//sub3-모두동의
+$(document).ready(function () {
+    $('.allSign').click(function () {
+        $('.step1').find('.step1Sub').attr('checked',true);
+    })
+})
+//sub3-아이디 중복확인 모달창
+$(document).ready(function () {
+    $('.iddpOpen').click(function () {
+        $('.id-dp-wrap').addClass('on');
+    });
+})
+$(document).ready(function () {
+    $('.iddpClose').click(function () {
+        $('#container').find('.id-dp-wrap.on').removeClass('on');
+    });
+});
+//addr-pop
+$(".addr-pop").click(function () {
+    window.open("addr-pop.html", "우편번호 검색", "width = 525, height = 370, left = 100, top = 100, scrollbars = 0, toolbar = 0, menubar = 0");
+})
