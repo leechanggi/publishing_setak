@@ -427,10 +427,6 @@ body {
   display: block;
 }
 
-#container > .all-menu .all-menu-wrap > .all-menu__ul > li .on {
-  display: block;
-}
-
 #container > .all-menu .all-menu-wrap > .all-menu__ul > li > a {
   display: block;
   font-size: 26px;
@@ -438,6 +434,11 @@ body {
   border-top: 3px solid #01a187;
   border-bottom: 1px solid #fff;
   font-weight: 500;
+  cursor: default;
+}
+
+#container > .all-menu .all-menu-wrap > .all-menu__ul > li > a .on {
+  display: block;
 }
 
 #container > .all-menu .all-menu-wrap > .all-menu__ul > li > ul > li {
@@ -1212,9 +1213,6 @@ body {
   #container .all-menu .all-menu-wrap > .all-menu__ul::-webkit-scrollbar {
     display: none;
   }
-  #container .all-menu .all-menu-wrap > .all-menu__ul .all-menu-active.on::after {
-    background: url(../img/common/minus_i.png);
-  }
   #container .all-menu .all-menu-wrap > .all-menu__ul > li {
     float: none;
     width: auto;
@@ -1225,17 +1223,6 @@ body {
   }
   #container .all-menu .all-menu-wrap > .all-menu__ul > li:last-child {
     border-bottom: 1px solid #01a187;
-  }
-  #container .all-menu .all-menu-wrap > .all-menu__ul > li::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 7.5px;
-    right: 10px;
-    background: url(../img/common/plus_i.png) no-repeat 50% 50%;
-    background-size: cover;
-    cursor: pointer;
   }
   #container .all-menu .all-menu-wrap > .all-menu__ul > li > a {
     position: relative;
@@ -1248,6 +1235,20 @@ body {
     border-top: 1px solid #01a187;
     border-bottom: none;
     font-weight: normal;
+  }
+  #container .all-menu .all-menu-wrap > .all-menu__ul > li > a::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 7.5px;
+    right: 10px;
+    background: url(../img/common/plus_i.png) no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+  }
+  #container .all-menu .all-menu-wrap > .all-menu__ul > li > a.on::after {
+    background: url(../img/common/minus_i.png);
   }
   #container .all-menu .all-menu-wrap > .all-menu__ul > li > ul {
     display: none;
@@ -1450,9 +1451,6 @@ body {
   #container .all-menu .all-menu-wrap > .all-menu__ul::-webkit-scrollbar {
     display: none;
   }
-  #container .all-menu .all-menu-wrap > .all-menu__ul .all-menu-active.on::after {
-    background: url(../img/common/minus_i.png);
-  }
   #container .all-menu .all-menu-wrap > .all-menu__ul > li {
     float: none;
     width: auto;
@@ -1463,17 +1461,6 @@ body {
   }
   #container .all-menu .all-menu-wrap > .all-menu__ul > li:last-child {
     border-bottom: 1px solid #01a187;
-  }
-  #container .all-menu .all-menu-wrap > .all-menu__ul > li::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 7.5px;
-    right: 10px;
-    background: url(../img/common/plus_i.png) no-repeat 50% 50%;
-    background-size: cover;
-    cursor: pointer;
   }
   #container .all-menu .all-menu-wrap > .all-menu__ul > li > a {
     position: relative;
@@ -1486,6 +1473,20 @@ body {
     border-top: 1px solid #01a187;
     border-bottom: none;
     font-weight: normal;
+  }
+  #container .all-menu .all-menu-wrap > .all-menu__ul > li > a::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 7.5px;
+    right: 10px;
+    background: url(../img/common/plus_i.png) no-repeat 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+  }
+  #container .all-menu .all-menu-wrap > .all-menu__ul > li > a.on::after {
+    background: url(../img/common/minus_i.png);
   }
   #container .all-menu .all-menu-wrap > .all-menu__ul > li > ul {
     display: none;

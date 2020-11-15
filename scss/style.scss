@@ -274,10 +274,6 @@ body {
           text-align: center;
           display: block;
 
-          & .on {
-            display: block;
-          }
-
           >a {
             display: block;
             font-size: 26px;
@@ -285,6 +281,10 @@ body {
             border-top: 3px solid $mainColor-2;
             border-bottom: 1px solid #fff;
             font-weight: 500;
+            cursor: default;
+            & .on {
+              display: block;
+            }
           }
 
           >ul {
@@ -1294,14 +1294,6 @@ body {
             display: none;
           }
 
-          .all-menu-active {
-            &.on {
-              &::after {
-                background: url(../img/common/minus_i.png);
-              }
-            }
-          }
-
           >li {
             float: none;
             width: auto;
@@ -1312,18 +1304,6 @@ body {
 
             &:last-child {
               border-bottom: 1px solid $mainColor-2;
-            }
-
-            &::after {
-              content: '';
-              position: absolute;
-              width: 25px;
-              height: 25px;
-              top: 7.5px;
-              right: 10px;
-              background: url(../img/common/plus_i.png) no-repeat 50% 50%;
-              background-size: cover;
-              cursor: pointer;
             }
 
             >a {
@@ -1337,6 +1317,22 @@ body {
               border-top: 1px solid $mainColor-2;
               border-bottom: none;
               font-weight: normal;
+              &::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                top: 7.5px;
+                right: 10px;
+                background: url(../img/common/plus_i.png) no-repeat 50% 50%;
+                background-size: cover;
+                cursor: pointer;
+              }
+              &.on {
+                &::after {
+                  background: url(../img/common/minus_i.png);
+                }
+              }
             }
 
             >ul {
@@ -1846,14 +1842,6 @@ body {
             display: none;
           }
 
-          .all-menu-active {
-            &.on {
-              &::after {
-                background: url(../img/common/minus_i.png);
-              }
-            }
-          }
-
           >li {
             float: none;
             width: auto;
@@ -1864,18 +1852,6 @@ body {
 
             &:last-child {
               border-bottom: 1px solid $mainColor-2;
-            }
-
-            &::after {
-              content: '';
-              position: absolute;
-              width: 25px;
-              height: 25px;
-              top: 7.5px;
-              right: 10px;
-              background: url(../img/common/plus_i.png) no-repeat 50% 50%;
-              background-size: cover;
-              cursor: pointer;
             }
 
             >a {
@@ -1889,6 +1865,22 @@ body {
               border-top: 1px solid $mainColor-2;
               border-bottom: none;
               font-weight: normal;
+              &::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                top: 7.5px;
+                right: 10px;
+                background: url(../img/common/plus_i.png) no-repeat 50% 50%;
+                background-size: cover;
+                cursor: pointer;
+              }
+              &.on {
+                &::after {
+                  background: url(../img/common/minus_i.png);
+                }
+              }
             }
 
             >ul {

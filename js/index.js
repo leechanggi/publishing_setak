@@ -2,7 +2,7 @@ setTimeout(function() {
     window.onresize = function(){
         document.location.reload()
     };
-}, 500);
+}, 1000);
 // html - pc || tab_mob
 $(window).on('resize', windeowResizeHandler);
 function windeowResizeHandler(){
@@ -57,8 +57,8 @@ function closemenu() {
 }
 $('.all-menu-active').click(function (a) {
     if ($('html').hasClass('tab_mob')){
-        $(this).children('.all-menu-respon').slideToggle()
-        $(this).siblings().children('.all-menu-respon').slideUp();
+        $(this).siblings('.all-menu-respon').slideToggle()
+        // $(this).siblings('.all-menu-respon').slideUp();
         if ($(this).hasClass('on')) {
             $(this).siblings().removeClass('on');
             $(this).removeClass('on');

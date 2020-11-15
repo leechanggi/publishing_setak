@@ -231,7 +231,7 @@ body {
   padding: 10px;
 }
 
-#container .addr-ch-wrap .addr-ch fieldset > label > p {
+#container .addr-ch-wrap .addr-ch fieldset > label > span {
   font-size: 14px;
   display: inline-block;
 }
@@ -242,7 +242,7 @@ body {
   border: 1px solid #ccc;
 }
 
-#container .addr-ch-wrap .addr-ch fieldset > label > input[type="submit"] {
+#container .addr-ch-wrap .addr-ch fieldset > input[type="submit"] {
   width: 40px;
   height: 25px;
   line-height: 1.2;
