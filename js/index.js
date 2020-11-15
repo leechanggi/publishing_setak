@@ -2,7 +2,7 @@ setTimeout(function() {
     window.onresize = function(){
         document.location.reload()
     };
-}, 300);
+}, 500);
 // html - pc || tab_mob
 $(window).on('resize', windeowResizeHandler);
 function windeowResizeHandler(){

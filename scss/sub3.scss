@@ -508,7 +508,8 @@ body {
                         right: -75px;
                         width: 14px;
                         height: 26px;
-                        background: url(../img/sub3/arr-right.png);
+                        background: url(../img/sub3/arr-right.png) no-repeat 0 0;
+                        background-size: cover;
                     }
                 }
                 &:nth-child(4){
@@ -603,7 +604,7 @@ body {
             .step2-txt_1{
                 width: 100%;
                 height: 133px;
-                padding: 30px 297.5px 30px 297.5px;
+                padding: 30px 297.5px;
                 overflow: hidden;
                 margin: 0 auto;
                 border-bottom: 1px solid #ccc;
@@ -700,6 +701,7 @@ body {
 
                     }
                     >.id_wrap{
+                        position: relative;
                         >a{
                             display: inline-block;
                             width: 76px;
@@ -1171,7 +1173,54 @@ body {
         .icon-img-wrap{
             .icon-img{
                 width: 100%;
-
+                >li{
+                    >a{
+                        &::after{
+                            top: 65px;
+                            right: -25%;
+                        }
+                    }
+                }
+            }
+        }
+        .join-wrap{
+            >.step1{
+                width: 100%;
+                >div{
+                    >p{
+                        width: calc(100vw - 60px);
+                    }
+                }
+            }
+            >.step2{
+                width: 100%;
+                .step2-txt_1{
+                    padding: 30px calc((100vw - 605px) / 2);
+                }
+            }
+            >.step3{
+                width: 100%;
+                >form{
+                    >ul{
+                        >.id_wrap{
+                            >span{
+                                font-size: 14px;
+                                &:last-child{
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                        .addr_wrap{
+                            >.addr-row2{
+                                >input[type="text"]{
+                                    &:nth-child(2){
+                                        margin-top: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -1422,6 +1471,120 @@ body {
         .sub-title-txt {
             height: 285px;
             padding-top: 145px;
+        }
+        .icon-img-wrap{
+            display: none;
+        }
+        .join-wrap{
+            >.step1{
+                margin-top: 100px;
+                width: 100%;
+                >h3{
+                    text-indent: 10px;
+                }
+                >div{
+                    >p{
+                        width: calc(100vw - 60px);
+                    }
+                }
+            }
+            >.step2{
+                width: 100%;
+                >h3{
+                    text-indent: 10px;
+                }
+                .step2-txt_1{
+                    padding: 30px calc((100vw - 605px) / 2);
+                    height: auto;
+                    >img{
+                        display: none;
+                    }
+                    >div{
+                        width: 360px;
+                        text-align: center;
+                        float: none;
+                        margin: 0 auto;
+                        padding: 14px 0;
+                    }
+                    a{
+                        float: none;
+                        margin: 0 auto;
+                    }
+                }
+                .step2-txt_2{
+                    >ul{
+                        >li{
+                            text-align: center;
+                            word-break: keep-all;
+                            text-indent: 0;
+                            padding-top: 5px;
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            >.step3{
+                width: 100%;
+                word-break: keep-all;
+                >h3{
+                    text-indent: 10px;
+                }
+                >form{
+                    >ul{
+                        >li{
+                            .col1{
+                                display: block;
+                                width: 110px;
+                                font-size: 18px;
+                            }
+                            input[type = text], input[type = password]{
+                                margin: 10px 0;
+                                width: calc(100vw - 60px);
+                            }
+                            input[type = radio]{
+                                top: 5px;
+                                left: 3px;
+                            }
+                        }
+                        >.id_wrap{
+                            >a{
+                                position: absolute;
+                                width: 70px;
+                                height: 25px;
+                                line-height: 25px;
+                                top: 30px;
+                                left: 85px;
+                            }
+                            >span{
+                                padding: 0;
+                                padding-bottom: 5px;
+                                &:last-child{
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                        .addr_wrap{
+                            padding: 0;
+                            height: 183px;
+                            >.addr-row1{
+                                >a{
+                                    position: absolute;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    top: 0;
+                                    left: 40px;
+                                }
+                            }
+                            >.addr-row2{
+                                top: 80px;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     #footer {
