@@ -1,14 +1,3 @@
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-// setTimeout(function() {
-//     window.onresize = function(){
-//         document.location.reload()
-//     };
-// }, 1000);
-=======
->>>>>>> 8c78698046bbcd7ff2a4136066be0648cdf0362e
->>>>>>> Stashed changes
 // html - pc || tab_mob
 $(window).on('resize', windeowResizeHandler);
 
