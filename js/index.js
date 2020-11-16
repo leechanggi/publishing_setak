@@ -1,14 +1,10 @@
-setTimeout(function() {
-    window.onresize = function(){
-        document.location.reload()
-    };
-}, 1000);
 // html - pc || tab_mob
 $(window).on('resize', windeowResizeHandler);
-function windeowResizeHandler(){
+
+function windeowResizeHandler() {
     var winWidth = $(this).innerWidth();
-    var scrollWidth  = 17
-    if (winWidth >= 1200 - scrollWidth ) {
+    var scrollWidth = 17
+    if (winWidth >= 1200 - scrollWidth) {
         $('html').removeClass('tab_mob')
         $('html').addClass('pc')
     } else {
@@ -17,6 +13,29 @@ function windeowResizeHandler(){
     }
 }
 $(window).trigger('resize');
+
+//PC <--> tab_mob 새로고침
+// $(document).ready(function () {
+//     var areaWidth = $("#footer").innerWidth();
+//     $("#footer").css("width", areaWidth)
+//     $(window).resize(function () {
+//         location.reload();
+//     })
+// })
+
+var filter = "win16|win32|win64|mac|macintel";
+if (navigator.platform) {
+    if (filter.indexOf(navigator.platform.toLowerCase()) >= 0) {
+        $(document).ready(function () {
+            var areaWidth = $("#footer").innerWidth();
+            $("#footer").css("width", areaWidth)
+            $(window).resize(function () {
+                location.reload();
+            })
+        })
+    } else {}
+}
+
 //GNB 메뉴//
 $(function () {
     var $firstMenu = $('.gnb > ul > li'),
@@ -45,6 +64,7 @@ function openmenu() {
     menu.style.top = "0";
     menu.style.left = "0";
 }
+
 function closemenu() {
     var menu = document.getElementById("all_menu");
     if ($('html').hasClass('pc')) {
@@ -56,7 +76,7 @@ function closemenu() {
     }
 }
 $('.all-menu-active').click(function (a) {
-    if ($('html').hasClass('tab_mob')){
+    if ($('html').hasClass('tab_mob')) {
         $(this).siblings('.all-menu-respon').slideToggle()
         // $(this).siblings('.all-menu-respon').slideUp();
         if ($(this).hasClass('on')) {
@@ -65,7 +85,7 @@ $('.all-menu-active').click(function (a) {
         } else {
             $(this).addClass('on').siblings().removeClass('on');
         }
-    }else{
+    } else {
         $(this).find('.all-menu-active.on').removeClass('on');
     }
     a.preventDefault();
@@ -74,7 +94,7 @@ $('.all-menu-active').click(function (a) {
 $(function () {
     $('.row2_slide_wrap').bxSlider({
         moveSlides: 1,
-        maxSlides : 2,
+        maxSlides: 2,
         auto: true,
         pager: true,
         useCSS: true,
@@ -201,7 +221,7 @@ $(btn).on('click', function () {
 var menu_login = document.getElementById("login-form");
 
 function closemenu_login() {
-    menu_login.style.right = "-100vw";
+    menu_login.style.right = "-150vw";
 }
 
 function openmenu_login() {
@@ -255,10 +275,10 @@ $(document).ready(function () {
     })
 })
 //sub1-모바일 슬라이드
-if ($('html').hasClass('tab_mob')){
+if ($('html').hasClass('tab_mob')) {
     $('.top-list-wrap').bxSlider({
         moveSlides: 1,
-        maxSlides : 4,
+        maxSlides: 4,
         auto: true,
         pager: false,
         useCSS: true,
@@ -272,7 +292,7 @@ if ($('html').hasClass('tab_mob')){
 //sub3-모두동의
 $(document).ready(function () {
     $('.allSign').click(function () {
-        $('.step1').find('.step1Sub').attr('checked',true);
+        $('.step1').find('.step1Sub').attr('checked', true);
     })
 })
 //sub3-아이디 중복확인 모달창

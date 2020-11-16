@@ -11,8 +11,8 @@ body {
     font-weight: normal;
 }
 
-#container{
-    >h4{
+#container {
+    >h4 {
         width: 525px;
         height: 40px;
         line-height: 40px;
@@ -20,26 +20,31 @@ body {
         background-color: $mainColor-1;
         text-align: center;
     }
-    .addr-ch-wrap{
-        .addr-ch{
+
+    .addr-ch-wrap {
+        .addr-ch {
             position: relative;
             width: 505px;
             height: 240px;
             margin: 10px;
-            > input[type="radio"]{
+
+            >input[type="radio"] {
                 position: absolute;
                 left: -9999px;
-                &:checked{
-                    + label{
+
+                &:checked {
+                    +label {
                         background-color: $mainColor-1;
                         color: #fff;
-                        + fieldset{
+
+                        +fieldset {
                             display: block;
                         }
                     }
                 }
             }
-            .old-addr-label{
+
+            .old-addr-label {
                 width: 80px;
                 height: 30px;
                 line-height: 28px;
@@ -53,7 +58,8 @@ body {
                 border: 1px solid $mainColor-1;
                 border-bottom: 2px solid $mainColor-1;
             }
-            .new-addr-label{
+
+            .new-addr-label {
                 width: 90px;
                 height: 30px;
                 line-height: 28px;
@@ -67,7 +73,8 @@ body {
                 border: 1px solid $mainColor-1;
                 border-bottom: 2px solid $mainColor-1;
             }
-            fieldset{
+
+            fieldset {
                 display: none;
                 position: absolute;
                 top: 28px;
@@ -77,18 +84,22 @@ body {
                 border-top: 2px solid $mainColor-1;
                 border-bottom: 2px solid $mainColor-1;
                 padding: 10px;
-                >label{
-                    >span{
+
+                >label {
+                    >span {
                         font-size: 14px;
                         display: inline-block;
                     }
-                    >input[type="search"]{
+
+                    >input[type="search"] {
                         width: 250px;
                         height: 25px;
                         border: 1px solid #ccc;
+                        -webkit-appearance: none;
                     }
                 }
-                >input[type="submit"]{
+
+                >input[type="submit"] {
                     width: 40px;
                     height: 25px;
                     line-height: 1.2;
@@ -101,7 +112,8 @@ body {
                     border: none;
                     vertical-align: top;
                 }
-                >ul{
+
+                >ul {
                     position: relative;
                     top: 20px;
                     width: 100%;
@@ -113,11 +125,13 @@ body {
                     font-size: 14px;
                     background-color: #eee;
                     color: $mainColor-3;
-                    >li{
-                        span{
+
+                    >li {
+                        span {
                             margin-right: 20px;
                         }
-                        &:hover{
+
+                        &:hover {
                             color: #000;
                         }
                     }
@@ -125,7 +139,8 @@ body {
             }
         }
     }
-    .add-foot{
+
+    .add-foot {
         padding: 10px;
         color: $mainColor-3;
         font-size: 14px;

@@ -103,6 +103,7 @@ body {
         background: none;
         border: none;
         vertical-align: top;
+        -webkit-appearance: none;
       }
 
       input[type="submit"] {
@@ -122,6 +123,10 @@ body {
     width: 1200px;
     height: 65px;
     margin: 0 auto;
+
+    >.gnb_logo-mobile {
+      display: none;
+    }
 
     >.gnb_ul {
       clear: both;
@@ -147,6 +152,7 @@ body {
             bottom: -23px;
             left: 50%;
             transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
             transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
             -webkit-transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
           }
@@ -282,6 +288,7 @@ body {
             border-bottom: 1px solid #fff;
             font-weight: 500;
             cursor: default;
+
             & .on {
               display: block;
             }
@@ -341,7 +348,7 @@ body {
     background: $mainColor-4;
     z-index: 9998;
     top: 0;
-    right: -100vw;
+    right: -150vw;
     box-shadow: 0px 0px 5px $mainColor-4;
     color: #fff;
     text-align: center;
@@ -451,11 +458,15 @@ body {
     height: 900px;
     overflow: hidden;
     top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
     z-index: -1;
     object-fit: cover;
     transform: scale(1.5);
+    -webkit-transform: scale(1.5);
     animation: scaleImage 5s ease-out forwards;
+    -webkit-animation: scaleImage 5s ease-out forwards;
   }
 
   .row1 {
@@ -631,6 +642,7 @@ body {
             top: 50%;
             left: 10px;
             transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
           }
 
           .bx-next {
@@ -642,6 +654,7 @@ body {
             top: 50%;
             right: 10px;
             transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
           }
         }
 
@@ -1198,16 +1211,6 @@ body {
     width: 100%;
     height: 80px;
 
-    &::before {
-      content: '';
-      width: 200px;
-      height: 40px;
-      background: url(../img/common/logo-formal.png) no-repeat 50% 50%;
-      background-size: cover;
-      top: 20px;
-      left: 10px;
-    }
-
     .tnb {
       display: none;
     }
@@ -1215,6 +1218,11 @@ body {
     .gnb {
       width: 100%;
       height: 80px;
+
+      >.gnb_logo-mobile {
+        display: block;
+        padding: 20px 0 0 20px;
+      }
 
       >.gnb_ul {
         display: none;
@@ -1317,6 +1325,7 @@ body {
               border-top: 1px solid $mainColor-2;
               border-bottom: none;
               font-weight: normal;
+
               &::after {
                 content: '';
                 position: absolute;
@@ -1328,6 +1337,7 @@ body {
                 background-size: cover;
                 cursor: pointer;
               }
+
               &.on {
                 &::after {
                   background: url(../img/common/minus_i.png);
@@ -1746,21 +1756,16 @@ body {
     width: 100%;
     height: 80px;
 
-    &::before {
-      content: '';
-      width: 200px;
-      height: 40px;
-      background: url(../img/common/logo-formal.png) no-repeat 50% 50%;
-      background-size: cover;
-      top: 20px;
-      left: 10px;
-    }
-
     .tnb {
       display: none;
     }
 
     .gnb {
+      >.gnb_logo-mobile {
+        display: block;
+        padding: 20px 0 0 20px;
+      }
+
       width: 100%;
       height: 80px;
 
@@ -1865,6 +1870,7 @@ body {
               border-top: 1px solid $mainColor-2;
               border-bottom: none;
               font-weight: normal;
+
               &::after {
                 content: '';
                 position: absolute;
@@ -1876,6 +1882,7 @@ body {
                 background-size: cover;
                 cursor: pointer;
               }
+
               &.on {
                 &::after {
                   background: url(../img/common/minus_i.png);
@@ -1969,14 +1976,14 @@ body {
         }
 
         .row2_list {
+          margin: 0 auto;
           text-align: center;
           padding-top: 40px;
 
           >.row2_ul {
-            margin: 0 auto;
 
             >li {
-              width: 46.74054758800522vw; //358.5px
+              width: calc((100vw - 32px) / 2);
               height: 57.36636245110821vw; //440px
               margin: 5px;
               padding: 0;
@@ -1991,11 +1998,11 @@ body {
               }
 
               >.hover-scale {
-                width: 46.74054758800522vw; //358.5px
+                width: calc((100vw - 32px) / 2);
                 height: 41.72099087353325vw; //320px
 
                 >img {
-                  width: 46.74054758800522vw; //358.5px
+                  width: calc((100vw - 32px) / 2);
                   height: 41.72099087353325vw; //320px
                 }
               }
