@@ -14,15 +14,6 @@ function windeowResizeHandler() {
 }
 $(window).trigger('resize');
 
-//PC <--> tab_mob 새로고침
-// $(document).ready(function () {
-//     var areaWidth = $("#footer").innerWidth();
-//     $("#footer").css("width", areaWidth)
-//     $(window).resize(function () {
-//         location.reload();
-//     })
-// })
-
 var filter = "win16|win32|win64|mac|macintel";
 if (navigator.platform) {
     if (filter.indexOf(navigator.platform.toLowerCase()) >= 0) {
