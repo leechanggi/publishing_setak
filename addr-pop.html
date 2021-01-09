@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-2.0.3.min.js"></script>
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/jquery.animateNumber.min.js"></script>
+    <link rel="stylesheet" href="./css/addr-pop.css">
+    <title>우편번호 검색</title>
+</head>
+
+<body>
+    <div id="container">
+        <h4>우편번호 찾기</h4>
+        <div class="addr-ch-wrap">
+            <div class="addr-ch">
+                <input type="radio" id="old-addr" name="addr" value="old-addr" checked>
+                <label for="old-addr" class="old-addr-label">지번주소</label>
+                <fieldset class="old-addr_search">
+                    <legend>지번주소로 검색하기</legend>
+                    <label for="old-addr_search">
+                        <span>지번주소 &#58; </span>
+                        <input type="search" id="old-addr_search" placeholder="예)압구정동, 종로3가, 영월읍">
+                    </label>
+                    <input type="submit" value="검색">
+                    <ul>
+                        <li><a href=""><span>08327</span>서울특별시 구로구 구로동 703-3</a></li>
+                        <li><a href=""><span>08327</span>서울특별시 구로구 구로동 1281 (한일유앤아이아파트)</a></li>
+                        <li><a href=""><span>08327</span>서울특별시 구로구 구로동 701-22</a></li>
+                        <li><a href=""><span>08327</span>서울특별시 구로구 구로동 701-186</a></li>
+                        <li><a href=""><span>08327</span>서울특별시 구로구 구로동 701-76 (구로현대아파트)</a></li>
+                        <li><a href=""><span>08317</span>서울특별시 구로구 구로동 390-178</a></li>
+                        <li><a href=""><span>08317</span>서울특별시 구로구 구로동 390-177</a></li>
+                        <li><a href=""><span>08317</span>서울특별시 구로구 구로동 390-175</a></li>
+                        <li><a href=""><span>08317</span>서울특별시 구로구 구로동 390-176</a></li>
+                        <li><a href=""><span>08317</span>서울특별시 구로구 구로동 390-165</a></li>
+                    </ul>
+                </fieldset>
+                <input type="radio" id="new-addr" name="addr" value="new-addr">
+                <label for="new-addr" class="new-addr-label">도로명주소</label>
+                <fieldset class="new-addr_search">
+                    <legend>도로명주소로 검색하기</legend>
+                    <label for="new-addr_search">
+                        <span>도로명&#40;건물명&#41; &#58; </span>
+                        <input type="search" id="new-addr_search" placeholder="예)강남구 강남대로 238, 노원구 중계로 4바길 5-1">
+                    </label>
+                    <input type="submit" value="검색">
+                    <ul>
+                        <li><a href=""><span>08327</span>서울특별시 구로구 가마산로 77 (구로동)</a></li>
+                        <li><a href=""><span>08327</span>서울특별시 구로구 가마산로 87 (구로동, 한일유앤아이아파트)</a></li>
+                        <li><a href=""><span>08327</span>서울특별시 구로구 가마산로 91-30 (구로동)</a></li>
+                        <li><a href=""><span>08327</span>서울특별시 구로구 가마산로 95 (구로동)</a></li>
+                        <li><a href=""><span>08327</span>서울특별시 구로구 가마산로 97 (구로동, 구로현대아파트)</a></li>
+                        <li><a href=""><span>08317</span>서울특별시 구로구 가마산로 134 (구로동)</a></li>
+                        <li><a href=""><span>08317</span>서울특별시 구로구 가마산로 134-4 (구로동)</a></li>
+                        <li><a href=""><span>08317</span>서울특별시 구로구 가마산로 134-8 (구로동)</a></li>
+                        <li><a href=""><span>08317</span>서울특별시 구로구 가마산로 134-10 (구로동)</a></li>
+                        <li><a href=""><span>08317</span>서울특별시 구로구 가마산로 134-11 (구로동)</a></li>
+                    </ul>
+                </fieldset>
+            </div>
+        </div>
+        <div class="add-foot">
+            <p>해외 주소의 경우 "해외"를 입력하세요.<br>&#40;To ship to foreign country, please enter "oversea"&#41;</p>
+        </div>
+    </div>
+</body>
+
+</html>

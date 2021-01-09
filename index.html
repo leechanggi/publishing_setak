@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="pc">
 
 <head>
   <meta charset="UTF-8">
@@ -9,32 +9,36 @@
   <script src="./js/jquery.bxslider.min.js"></script>
   <script src="./js/jquery.waypoints.min.js"></script>
   <script src="./js/jquery.animateNumber.min.js"></script>
-  <script src="./js/index.js"></script>
+  <link rel="shortcut icon" href="./img/common/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
   <title>세탁을 위한 사람들 | HOME</title>
 </head>
 
 <body>
   <header id="header">
+    <p class="skip-menu"><a href="#container">본문 바로가기</a></p>
     <div class="tnb">
       <h1 class="tnb_logo">
-        <a href="#"><img src="./img/main/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
+        <a href="./index.html"><img src="./img/common/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
       </h1>
       <ul class="tnb_user">
         <li><a href="#" onclick="openmenu_login()">로그인</a></li>
-        <li><a href="#">회원가입</a></li>
+        <li><a href="./sub3.html">회원가입</a></li>
       </ul>
       <form action="#" method="POST" class="tnb_form">
         <fieldset class="search">
           <legend>통합검색</legend>
           <label for="total_search">
             <input type="search" id="total_search" placeholder="매장명 또는 지역명을 입력하세요.">
-            <input type="submit" value="검색">
           </label>
+          <input type="submit" value="검색">
         </fieldset>
       </form>
     </div>
-    <div class="gnb">
+    <div class="gnb" id="gnb">
+      <h1 class="gnb_logo-mobile">
+        <a href="./index.html"><img src="./img/common/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
+      </h1>
       <ul class="gnb_ul">
         <li>
           <a href="#">회사소개</a>
@@ -58,9 +62,9 @@
           </ul>
         </li>
         <li>
-          <a href="#">고객센터</a>
+          <a href="./sub1.html">고객센터</a>
           <ul class="gnb_ul_ul-3">
-            <li><a href="#">자주묻는 질문과 답</a></li>
+            <li><a href="./sub1.html">자주묻는 질문과 답</a></li>
             <li><a href="#">고객유의사항</a></li>
             <li><a href="#">고객불만 처리절차</a></li>
             <li><a href="#">문의상담</a></li>
@@ -92,25 +96,25 @@
           <a href="#">세위사INFO</a>
           <ul class="gnb_ul_ul-6">
             <li><a href="#">세탁을 위한 사람들 소식</a></li>
-            <li><a href="#">할인 이벤트</a></li>
+            <li><a href="./sub2.html">할인 이벤트</a></li>
             <li><a href="#">보도자료</a></li>
             <li><a href="#">작업 사진</a></li>
             <li><a href="#">세탁자료실</a></li>
           </ul>
         </li>
       </ul>
-      <img src="./img/main/btn_allmenu.png" alt="전체 메뉴" class="all-menu-icon" onclick="openmenu()">
+      <img src="./img/common/btn_allmenu.png" alt="전체 메뉴" class="all-menu-icon" onclick="openmenu()">
     </div>
 
   </header>
   <div id="container">
     <div class="all-menu" id="all_menu">
       <div class="all-menu-wrap">
-        <img src="./img/main/allmenu-close-icon.png" alt="전체 메뉴 닫기" class="all-menu-close-icon" onclick="closemenu()">
+        <img src="./img/common/allmenu-close-icon.png" alt="전체 메뉴 닫기" class="all-menu-close-icon" onclick="closemenu()">
         <ul class="all-menu__ul">
           <li>
-            <a href="#">회사소개</a>
-            <ul>
+            <a class="all-menu-active" href="#">회사소개</a>
+            <ul class="all-menu-respon">
               <li><a href="#">Ceo 인사말</a></li>
               <li><a href="#">회사연혁</a></li>
               <li><a href="#">인증 및 수상현황</a></li>
@@ -118,8 +122,8 @@
             </ul>
           </li>
           <li>
-            <a href="#">세탁서비스</a>
-            <ul>
+            <a class="all-menu-active" href="#">세탁서비스</a>
+            <ul class="all-menu-respon">
               <li><a href="#">일반세탁</a></li>
               <li><a href="#">고급세탁</a></li>
               <li><a href="#">명품세탁</a></li>
@@ -130,9 +134,9 @@
             </ul>
           </li>
           <li>
-            <a href="#">고객센터</a>
-            <ul>
-              <li><a href="#">자주묻는 질문과 답</a></li>
+            <a class="all-menu-active" href="">고객센터</a>
+            <ul class="all-menu-respon">
+              <li><a href="./sub1.html">자주묻는 질문과 답</a></li>
               <li><a href="#">고객유의사항</a></li>
               <li><a href="#">고객불만 처리절차</a></li>
               <li><a href="#">문의상담</a></li>
@@ -140,8 +144,8 @@
             </ul>
           </li>
           <li>
-            <a href="#">가맹점 사업안내</a>
-            <ul>
+            <a class="all-menu-active" href="#">가맹점 사업안내</a>
+            <ul class="all-menu-respon">
               <li><a href="#">가맹점 소개</a></li>
               <li><a href="#">가맹점 개설 안내</a></li>
               <li><a href="#">교육, 지원 시스템</a></li>
@@ -151,8 +155,8 @@
             </ul>
           </li>
           <li>
-            <a href="#">지사 사업안내</a>
-            <ul>
+            <a class="all-menu-active" href="#">지사 사업안내</a>
+            <ul class="all-menu-respon">
               <li><a href="#">지사 소개</a></li>
               <li><a href="#">지사 개설 안내</a></li>
               <li><a href="#">교육, 지원 시스템</a></li>
@@ -161,40 +165,46 @@
             </ul>
           </li>
           <li>
-            <a href="#">세위사INFO</a>
-            <ul>
+            <a class="all-menu-active" href="#">세위사INFO</a>
+            <ul class="all-menu-respon">
               <li><a href="#">세탁을 위한 사람들 소식</a></li>
-              <li><a href="#">할인 이벤트</a></li>
+              <li><a href="./sub2.html">할인 이벤트</a></li>
               <li><a href="#">보도자료</a></li>
               <li><a href="#">작업 사진</a></li>
               <li><a href="#">세탁자료실</a></li>
             </ul>
           </li>
         </ul>
+        <div class="all-menu-user_section">
+          <a href="#" class="all-menu-rogin" onclick="openmenu_login()">로그인</a>
+          <a href="./sub3.html" class="all-menu-signup">회원가입</a>
+        </div>
       </div>
     </div>
     <div class="login-form" id="login-form">
       <h2 class="login-logo">
-        <a href="#"><img src="./img/main/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
+        <a href="#"><img src="./img/common/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
       </h2>
-        <img class="close_login" src="./img/main/allmenu-close-icon-login.png" alt="로그인 닫기" onclick="closemenu_login()">
-      <div class="int-area">
-        <input type="text" name="id" id="id" autocomplete="off" required>
-        <label for="id">세탁을 위한 사람들 계정</label>
-      </div>
-      <div class="int-area">
-        <input type="password" name="pw" id="pw" autocomplete="off" required>
-        <label for="pw">비밀번호</label>
-      </div>
-      <div class="btn-area">
-        <button type="submit" id="btn">로그인</button>
-      </div>
-      <div class="caption">
-        <a href="">혹시 계정을 잊으셨나요?</a>
+      <img class="close_login" src="./img/common/allmenu-close-icon-login.png" alt="로그인 닫기" onclick="closemenu_login()">
+      <div class="login-wrap">
+        <div class="int-area">
+          <input type="text" name="id" id="id" autocomplete="off" required>
+          <label for="id">세탁을 위한 사람들 계정</label>
+        </div>
+        <div class="int-area">
+          <input type="password" name="pw" id="pw" autocomplete="off" required>
+          <label for="pw">비밀번호</label>
+        </div>
+        <div class="btn-area">
+          <button type="submit" id="btn">로그인</button>
+        </div>
+        <div class="caption">
+          <a href="">혹시 계정을 잊으셨나요?</a>
+        </div>
       </div>
     </div>
     <div class="bg-slide">
-      <img src="./img/main/bg-slide-1.png" alt="세탁을 위한 사람들"></li>
+      <img src="./img/main/bg-slide-1.png" alt="세탁을 위한 사람들">
     </div>
     <div class="row1">
       <p>
@@ -205,19 +215,19 @@
     </div>
     <div class="row2">
       <div class="row2-wrap">
-        <h2>세탁을 위한 사람들 <em>가맹점 사업안내</em></h2>
+        <h2>세탁을 위한 사람들<em><br> 가맹점 사업안내</em></h2>
         <p>든든한 파트너 <em>세탁을 위한 사람들</em>이 여러분의 성공을 기원합니다.</p>
         <div class="row2_list">
           <ul class="row2_ul">
             <li>
               <a href="#" class="hover-scale">
                 <img src="./img/main/row-2-img-1.png" alt="가맹점 개설안내 시장조사 부터 개점까지 한눈에"></a>
-              <p><em>가맹점 개설안내</em><br>시장조사 부터 개점까지 한눈에</p>
+              <p><em>가맹점 개설안내</em><br>시장조사 부터 개점까지</p>
               <span class="btn_info"><a href="#">상세보기</a></span>
             </li>
             <li>
               <a href="#" class="hover-scale"><img src="./img/main/row-2-img-2.png" alt="교육,지원 시스템"></a>
-              <p><em>교육,지원 시스템</em><br>이론부터 현장실습까지 꼼꼼하게</p>
+              <p><em>교육,지원 시스템</em><br>이론부터 현장실습까지</p>
               <span class="btn_info"><a href="#">상세보기</a></span>
             </li>
             <li>
@@ -307,7 +317,7 @@
     </div>
     <div class="row3">
       <div class="row3-wrap">
-        <h3>대한민국 대표 세탁 전문 브랜드 <em>세탁을 위한 사람들</em></h3>
+        <h3>대한민국 대표 세탁 전문 브랜드 <em><br>세탁을 위한 사람들</em></h3>
         <ul class="row3-threshold">
           <li class="animate1" data-rate="1997"></li>
           <li class="animate2" data-rate="70"></li>
@@ -318,13 +328,13 @@
           <li>1997년 창립</li>
           <li>전국 70여개 가맹점</li>
           <li>전국 11개 지사</li>
-          <li>12단계 세탁전문가 과정</li>
+          <li>12단계 세탁 전문가 과정</li>
         </ul>
       </div>
     </div>
     <div class="row4">
       <div class="row4-wrap">
-        <h2>세탁을 위한 사람들 <em>세탁서비스</em></h2>
+        <h2>세탁을 위한 사람들 <em><br>세탁서비스</em></h2>
         <p>세탁을 위한 사람들은 차별화된 세탁서비스를 제공합니다.</p>
         <ul>
           <li class="sub-img-1">
@@ -345,7 +355,8 @@
           </li>
           <li class="sub-img-3">
             <a href="#">
-              <img src="./img/main/sub-img-3-1.png" alt="매주 수요일은 더 알뜰하게! 크리닝데이 혜택을 확인해 보세요" />
+              <img class="img-pc" src="./img/main/sub-img-3-1.png" alt="매주 수요일은 더 알뜰하게! 크리닝데이 혜택을 확인해 보세요">
+              <img class="img-mobile" src="./img/main/sub-img-3-3.png" alt="매주 수요일은 더 알뜰하게! 크리닝데이 혜택을 확인해 보세요">
               <img src="./img/main/sub-img-3-2.png" alt="이벤트" class="txt-img">
               <span><em>매주 수요일은 더 알뜰하게!</em><br>크리닝데이 혜택을 확인해
                 보세요<br><em>view</em></span>
@@ -360,7 +371,7 @@
       <div class="footer-sec-1">
         <ul>
           <li><a href="#">회사소개</a></li>
-          <li><a href="#">고객센터</a></li>
+          <li><a href="./sub1.html">고객센터</a></li>
           <li><a href="#">지사모집</a></li>
           <li><a href="#">가맹점모집</a></li>
           <li><a href="#">온라인상담</a></li>
@@ -375,12 +386,12 @@
         <div class="sec-2-visit-num">
           <ul>
             <li>
-              <img src="./img/main/visit_icon.png" alt="총방문자">
+              <img src="./img/common/visit_icon.png" alt="총방문자">
               <span class="sec-2-txt">총방문자<br></span>
               <span class="animate5" data-rate="1234567"></span>
             </li>
             <li>
-              <img src="./img/main/visit_icon.png" alt="오늘 방문자">
+              <img src="./img/common/visit_icon.png" alt="오늘 방문자">
               <span class="sec-2-txt">오늘 방문자<br></span>
               <span class="animate6" data-rate="1234"></span>
             </li>
@@ -388,7 +399,11 @@
         </div>
       </div>
     </div>
+    <div class="btn-top">
+      <a href="#header"><img src="./img/common/top-icon.jpg" alt="상단 바로가기"></a>
+    </div>
   </footer>
+  <script src="./js/index.js"></script>
 </body>
-<script src="./js/index.js"></script>
+
 </html>

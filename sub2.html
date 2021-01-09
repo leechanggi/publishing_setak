@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-2.0.3.min.js"></script>
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/jquery.animateNumber.min.js"></script>
+    <link rel="shortcut icon" href="./img/common/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/sub2.css">
+    <title>세탁을 위한 사람들 | 세위사INFO</title>
+</head>
+
+<body>
+    <header id="header">
+        <p class="skip-menu"><a href="#container">본문 바로가기</a></p>
+        <div class="tnb">
+            <h1 class="tnb_logo">
+                <a href="./index.html"><img src="./img/common/logo-formal.png"
+                        alt="세탁을 위한 사람들 For your Clean life" /></a>
+            </h1>
+            <ul class="tnb_user">
+                <li><a href="#" onclick="openmenu_login()">로그인</a></li>
+                <li><a href="./sub3.html">회원가입</a></li>
+            </ul>
+            <form action="#" method="POST" class="tnb_form">
+                <fieldset class="search">
+                    <legend>통합검색</legend>
+                    <label for="total_search">
+                        <input type="search" id="total_search" placeholder="매장명 또는 지역명을 입력하세요.">
+                    </label>
+                    <input type="submit" value="검색">
+                </fieldset>
+            </form>
+        </div>
+        <div class="gnb">
+            <h1 class="gnb_logo-mobile">
+                <a href="./index.html"><img src="./img/common/logo-formal.png"
+                        alt="세탁을 위한 사람들 For your Clean life" /></a>
+            </h1>
+            <ul class="gnb_ul">
+                <li>
+                    <a href="#">회사소개</a>
+                    <ul class="gnb_ul_ul-1">
+                        <li><a href="#">Ceo 인사말</a></li>
+                        <li><a href="#">회사연혁</a></li>
+                        <li><a href="#">인증 및 수상현황</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">세탁서비스</a>
+                    <ul class="gnb_ul_ul-2">
+                        <li><a href="#">일반세탁</a></li>
+                        <li><a href="#">고급세탁</a></li>
+                        <li><a href="#">명품세탁</a></li>
+                        <li><a href="#">가죽, 모피, 카펫</a></li>
+                        <li><a href="#">운동화, 구두, 부츠류</a></li>
+                        <li><a href="#">침구류</a></li>
+                        <li><a href="#">특수오염세탁</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./sub1.html">고객센터</a>
+                    <ul class="gnb_ul_ul-3">
+                        <li><a href="./sub1.html">자주묻는 질문과 답</a></li>
+                        <li><a href="#">고객유의사항</a></li>
+                        <li><a href="#">고객불만 처리절차</a></li>
+                        <li><a href="#">문의상담</a></li>
+                        <li><a href="#">고객의 소리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">가맹점 사업안내</a>
+                    <ul class="gnb_ul_ul-4">
+                        <li><a href="#">가맹점 소개</a></li>
+                        <li><a href="#">가맹점 개설 안내</a></li>
+                        <li><a href="#">교육, 지원 시스템</a></li>
+                        <li><a href="#">창업 FAQ</a></li>
+                        <li><a href="#">창업 문의상담</a></li>
+                        <li><a href="#">매장찾기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">지사 사업안내</a>
+                    <ul class="gnb_ul_ul-5">
+                        <li><a href="#">지사 소개</a></li>
+                        <li><a href="#">지사 개설 안내</a></li>
+                        <li><a href="#">교육, 지원 시스템</a></li>
+                        <li><a href="#">지사 개설 상담</a></li>
+                        <li><a href="#">전국 지사현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">세위사INFO</a>
+                    <ul class="gnb_ul_ul-6">
+                        <li><a href="#">세탁을 위한 사람들 소식</a></li>
+                        <li><a href="./sub2.html">할인 이벤트</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">작업 사진</a></li>
+                        <li><a href="#">세탁자료실</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <img src="./img/common/btn_allmenu.png" alt="전체 메뉴" class="all-menu-icon" onclick="openmenu()">
+        </div>
+
+    </header>
+    <div id="container">
+        <!-- common -->
+        <div class="all-menu" id="all_menu">
+            <div class="all-menu-wrap">
+                <img src="./img/common/allmenu-close-icon.png" alt="전체 메뉴 닫기" class="all-menu-close-icon"
+                    onclick="closemenu()">
+                <ul class="all-menu__ul">
+                    <li>
+                        <a class="all-menu-active" href="#">회사소개</a>
+                        <ul class="all-menu-respon">
+                            <li><a href="#">Ceo 인사말</a></li>
+                            <li><a href="#">회사연혁</a></li>
+                            <li><a href="#">인증 및 수상현황</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="all-menu-active" href="#">세탁서비스</a>
+                        <ul class="all-menu-respon">
+                            <li><a href="#">일반세탁</a></li>
+                            <li><a href="#">고급세탁</a></li>
+                            <li><a href="#">명품세탁</a></li>
+                            <li><a href="#">가죽, 모피, 카펫</a></li>
+                            <li><a href="#">운동화, 구두, 부츠류</a></li>
+                            <li><a href="#">침구류</a></li>
+                            <li><a href="#">특수오염세탁</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="all-menu-active" href="#">고객센터</a>
+                        <ul class="all-menu-respon">
+                            <li><a href="./sub1.html">자주묻는 질문과 답</a></li>
+                            <li><a href="#">고객유의사항</a></li>
+                            <li><a href="#">고객불만 처리절차</a></li>
+                            <li><a href="#">문의상담</a></li>
+                            <li><a href="#">고객의 소리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="all-menu-active" href="#">가맹점 사업안내</a>
+                        <ul class="all-menu-respon">
+                            <li><a href="#">가맹점 소개</a></li>
+                            <li><a href="#">가맹점 개설 안내</a></li>
+                            <li><a href="#">교육, 지원 시스템</a></li>
+                            <li><a href="#">창업 FAQ</a></li>
+                            <li><a href="#">창업 문의상담</a></li>
+                            <li><a href="#">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="all-menu-active" href="#">지사 사업안내</a>
+                        <ul class="all-menu-respon">
+                            <li><a href="#">지사 소개</a></li>
+                            <li><a href="#">지사 개설 안내</a></li>
+                            <li><a href="#">교육, 지원 시스템</a></li>
+                            <li><a href="#">지사 개설 상담</a></li>
+                            <li><a href="#">전국 지사현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="all-menu-active" href="#">세위사INFO</a>
+                        <ul class="all-menu-respon">
+                            <li><a href="#">세탁을 위한 사람들 소식</a></li>
+                            <li><a href="./sub2.html">할인 이벤트</a></li>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">작업 사진</a></li>
+                            <li><a href="#">세탁자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="all-menu-user_section">
+                    <a href="#" class="all-menu-rogin" onclick="openmenu_login()">로그인</a>
+                    <a href="./sub3.html" class="all-menu-signup">회원가입</a>
+                </div>
+            </div>
+        </div>
+        <div class="login-form" id="login-form">
+            <h2 class="login-logo">
+                <a href="#"><img src="./img/common/logo-formal.png" alt="세탁을 위한 사람들 For your Clean life" /></a>
+            </h2>
+            <img class="close_login" src="./img/common/allmenu-close-icon-login.png" alt="로그인 닫기"
+                onclick="closemenu_login()">
+            <div class="login-wrap">
+                <div class="int-area">
+                    <input type="text" name="id" id="id" autocomplete="off" required>
+                    <label for="id">세탁을 위한 사람들 계정</label>
+                </div>
+                <div class="int-area">
+                    <input type="password" name="pw" id="pw" autocomplete="off" required>
+                    <label for="pw">비밀번호</label>
+                </div>
+                <div class="btn-area">
+                    <button type="submit" id="btn">로그인</button>
+                </div>
+                <div class="caption">
+                    <a href="">혹시 계정을 잊으셨나요?</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-slide">
+            <img src="./img/sub2/sub2-bg-img.png" alt="세위사INFO">
+        </div>
+        <div class="sub-title-txt">
+            <h2>세위사<em>INFO</em></h2>
+            <p>
+                <a href="./index.html">HOME </a>&gt;
+                <a href="#">세위사INFO </a>&gt;
+                <a href="./sub2.html">할인 이벤트</a>
+            </p>
+        </div>
+        <div class="containerMenu">
+            <ul class="containerMenu__ul">
+                <li><a href="#" class="list">세탁을 위한 사람들 소식</a></li>
+                <li><a href="./sub2.html" class="list on">할인 이벤트</a></li>
+                <li><a href="#" class="list">보도자료</a></li>
+                <li><a href="#" class="list">작업 사진</a></li>
+                <li><a href="#" class="list">세탁자료실</a></li>
+            </ul>
+        </div>
+        <div class="container-search">
+            <form action="#" method="POST" class="container_form">
+                <fieldset class="search">
+                    <legend>자주묻는 질문과 답 통합검색</legend>
+                    <label for="total_search_faq">
+                        <input type="search" id="total_search_faq" placeholder="할인 이벤트를 검색하세요.">
+                    </label>
+                    <input type="submit" value="검색">
+                </fieldset>
+            </form>
+        </div>
+        <!-- details -->
+        <div class="wrap-event">
+            <ul>
+                <li>
+                    <ul>
+                        <li class="img-1">
+                            <img src="./img/sub2/list-1.png" alt="
+                            매주 토요일 침구류 30%할인">
+                            <span>매주 토요일 침구류<br>30% 할인</span>
+                        </li>
+                        <li class="img-1-1">
+                            <img src="./img/sub2/list-1-1.png" alt="매주 토요일 침구류 30%할인 (3/15~6/15 성수기 제외) 일부매장은 제외입니다.">
+                            <span>
+                                매주 토요일<br>침구류 30%할인<br>(3/15~6/15 성수기 제외)<br>일부매장은 제외입니다.
+                            </span>
+                            <a href="#">상세보기</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <li class="img-2">
+                            <img src="./img/sub2/list-2.png" alt="
+                            홈플러스 입점 매장 매주 목요일 전품목 10% 할인">
+                            <span>홈플러스 입점 매장<br>매주 목요일 전품목<br>10% 할인</span>
+                        </li>
+                        <li class="img-2-1">
+                            <img src="./img/sub2/list-2-1.png" alt="홈플러스 입점 매장 매주 목요일 전품목 10% 할인 일부 품목은 제외입니다.">
+                            <span>
+                                홈플러스 입점 매장<br>매주 목요일 전품목<br>10% 할인<br>일부 품목은 제외입니다.
+                            </span>
+                            <a href="#">상세보기</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <li class="img-3">
+                            <img src="./img/sub2/list-3.png" alt="
+                            로드샵 매장 매주 수요일 전품목 10% 할인">
+                            <span>로드샵 매장<br>매주 수요일 전품목<br>10% 할인</span>
+                        </li>
+                        <li class="img-3-1">
+                            <img src="./img/sub2/list-3-1.png" alt="로드샵 매장 매주 수요일 전품목 10% 세일 일부매장 / 일부품목제외">
+                            <span>
+                                로드샵 매장<br>매주 수요일 전품목<br>10% 세일<br>일부매장 / 일부품목제외
+                            </span>
+                            <a href="#">상세보기</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="img-4">
+                            <img src="./img/sub2/list-4.png" alt="
+                            병점 홈플러스 매장고객감사 이벤트">
+                            <span>병점 홈플러스 매장<br>고객감사 이벤트</span>
+                        </li>
+                        <li class="img-4-1">
+                            <img src="./img/sub2/list-4-1.png" alt="병점 홈플러스 매장 고객감사 이벤트! 2만원 이상 접수 시 고급 양말 세트 증정">
+                            <span>
+                                병점 홈플러스 매장<br>고객감사 이벤트!<br>2만원 이상 접수 시<br>고급 양말 세트 증정
+                            </span>
+                            <a href="#">상세보기</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <li class="img-5">
+                            <img src="./img/sub2/list-2.png" alt="진행이 완료된 이벤트 입니다.">
+                            <span>홈플러스 입점 매장<br>매주 목요일 전품목<br>10% 할인</span>
+                        </li>
+                        <li class="img-5-1">
+                            <img src="./img/sub2/list-2-1.png" alt="진행이 완료된 이벤트 입니다.">
+                            <span>
+                                홈플러스 입점 매장<br>매주 목요일 전품목<br>10% 할인<br>일부 품목은 제외입니다.
+                            </span>
+                            <a href="#">상세보기</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <li class="img-6">
+                            <img src="./img/sub2/list-3.png" alt="
+                            진행이 완료된 이벤트 입니다.">
+                            <span>로드샵 매장<br>매주 수요일 전품목<br>10% 할인</span>
+                        </li>
+                        <li class="img-6-1">
+                            <img src="./img/sub2/list-3-1.png" alt="진행이 완료된 이벤트 입니다.">
+                            <span>
+                                로드샵 매장<br>매주 수요일 전품목<br>10% 세일<br>일부매장 / 일부품목제외
+                            </span>
+                            <a href="#">상세보기</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- common -->
+        <div class="pager-list-wrap" id="pager-list-wrap">
+            <div class="pager-wrap">
+                <ul class="pagerList">
+                    <li class="first"><a href="#qna-list">첫 페이지 이동</a></li>
+                    <li class="prev"><a href="#qna-list">이전 페이지 이동</a></li>
+                    <li class="pageNumber active"><a href="#qna-list">1</a></li>
+                    <li class="pageNumber"><a href="#qna-list">2</a></li>
+                    <li class="pageNumber"><a href="#qna-list">3</a></li>
+                    <li class="pageNumber"><a href="#qna-list">4</a></li>
+                    <li class="pageNumber"><a href="#qna-list">5</a></li>
+                    <li class="next"><a href="#qna-list">다음 페이지 이동</a></li>
+                    <li class="last"><a href="#qna-list">마지막 페이지 이동</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-wrap">
+            <div class="footer-sec-1">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="./sub1.html">고객센터</a></li>
+                    <li><a href="#">지사모집</a></li>
+                    <li><a href="#">가맹점모집</a></li>
+                    <li><a href="#">온라인상담</a></li>
+                </ul>
+            </div>
+            <div class="footer-sec-2">
+                <address class="sec-2-address">
+                    경기도 광주시 독고개실 132-32 TEL. 1688-8489 FAX 031-762-1919
+                    <br>COPYRIGHT (C) (주)유성 ALL RIGHTS RESEVED <br>(주)유성 대표:유성천
+                    사업자번호:131-86-14966
+                </address>
+                <div class="sec-2-visit-num">
+                    <ul>
+                        <li>
+                            <img src="./img/common/visit_icon.png" alt="총방문자">
+                            <span class="sec-2-txt">총방문자<br></span>
+                            <span class="animate5" data-rate="1234567"></span>
+                        </li>
+                        <li>
+                            <img src="./img/common/visit_icon.png" alt="오늘 방문자">
+                            <span class="sec-2-txt">오늘 방문자<br></span>
+                            <span class="animate6" data-rate="1234"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="btn-top">
+            <a href="#header"><img src="./img/common/top-icon.jpg" alt="상단 바로가기"></a>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
